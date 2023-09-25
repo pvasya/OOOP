@@ -11,6 +11,9 @@ private:
 
 public:
     Date();
+    Date(int years, int months, int days, int hours,int minutes, int seconds);
+
+    void print();
 
     int getYear();
     void setYear(int year);
@@ -27,15 +30,11 @@ public:
 
     bool check();
 
-    void add(int years, int months, int days, int hours, int minutes, int seconds);
-    void subtract(int years, int months, int days, int hours, int minutes, int seconds);
-
-    void addSeconds(int seconds);
-    void addMinutes(int minutes);
-    void addHours(int hours);
-    void addDays(int days);
-    void addMonths(int months);
-    void addYears(int years);
+    void add(int year, int month, int day, int hour, int minute, int second);
+    void subtract(int year, int month, int day, int hour, int minute, int second);
 
     int calculateDayOfWeek();
+
+    int weekNumberMonth();
+    int weekNumberYear();
 };
