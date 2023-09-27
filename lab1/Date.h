@@ -8,6 +8,11 @@ private:
     int hour;
     int minute;
     int second;
+    bool isGrigorian;
+    int zone;
+
+    int getDaysInMonth(int year, int month);
+    bool ifDateInterval(int year1, int month1, int year2, int month2);
 
 public:
     Date();
@@ -37,4 +42,6 @@ public:
 
     int weekNumberMonth();
     int weekNumberYear();
+    void GregorianToJulian();
+    void JulianToGregorian();
 };

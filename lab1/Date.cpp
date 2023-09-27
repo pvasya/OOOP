@@ -9,9 +9,11 @@ Date::Date() {
     this->hour = rand() % 24;
     this->minute = rand() % 60;
     this->second = rand() % 60;
+    this->isGrigorian = true;
+    this->zone = 0;
 }
 
-Date::Date(int years, int months, int days, int hours,int minutes, int seconds): year(years), month(months), day(days), hour(hours),minute(minutes), second(seconds) {}
+Date::Date(int years, int months, int days, int hours,int minutes, int seconds): year(years), month(months), day(days), hour(hours),minute(minutes), second(seconds),isGrigorian(true),zone(0) {}
 
 void Date::print(){
     std::cout <<"Date " << year << "." << month << "." << day << "  Time " << hour << ":" << minute << " " << second << std::endl;
@@ -66,7 +68,7 @@ void Date::setSecond(int second){
     this->second = second;
 }
 
-int getDaysInMonth(int year, int month) {
+int Date::getDaysInMonth(int year, int month) {
     if (month == 2) {
         if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
             return 29;
@@ -81,6 +83,12 @@ int getDaysInMonth(int year, int month) {
     else {
         return 31;
     }
+}
+
+bool Date::ifDateInterval(int year1, int month1,int year2, int month2){
+    if (year1 > year || year > year2) return false;
+    if(month1 > month || month > month2) return false;
+    else return true;
 }
 
 bool Date::check() {
@@ -164,7 +172,7 @@ void Date::subtract(int year = 0, int month = 0, int day = 0, int hour = 0, int 
     }
 }
 
-int calculateDayWeek(int year, int month,int day) {
+int Date::calculateDayOfWeek() { // Zeller's congruence 
     if (month == 1 || month == 2) {
         year--;
         month += 10;
@@ -175,24 +183,59 @@ int calculateDayWeek(int year, int month,int day) {
     return result;
 }
 
-int Date::calculateDayOfWeek() { // Zeller's congruence 
-    return calculateDayWeek(year,month,day);
-}
-
 int Date::weekNumberMonth(){
-    int i = 7- calculateDayWeek(year, month, 1) + 1;
-    int weekNumberMonth = 1;
-    while (i < day) {
-        i += 7;
-        weekNumberMonth++;
-    }
-    return weekNumberMonth;
+    return (day-1)/7+1;
 }
 
 int Date::weekNumberYear(){
     int daysY = 0;
     for (int i = 1; i < month; i++) {
-        daysY += getDaysInMonth(year, i);
+        daysY += getDaysInMonth(year,i);
     }
-    return (daysY+day-1)/7+1;
+    daysY += day-1;
+    return daysY/7+1;
+}
+
+void Date::GregorianToJulian() {
+    if (isGrigorian == true) {
+        if (ifDateInterval(1, 3, 100, 2)) subtract(0, 0, 2, 0, 0, 0);
+        else if (ifDateInterval(100, 3, 200, 2)) subtract(0, 0, 1, 0, 0, 0);
+        else if (ifDateInterval(300, 3, 500, 2)) add(0, 0, 1, 0, 0, 0);
+        else if (ifDateInterval(500, 3, 600, 2)) add(0, 0, 2, 0, 0, 0);
+        else if (ifDateInterval(600, 3, 700, 2)) add(0, 0, 3, 0, 0, 0);
+        else if (ifDateInterval(700, 3, 900, 2)) add(0, 0, 4, 0, 0, 0);
+        else if (ifDateInterval(900, 3, 1000, 2)) add(0, 0, 5, 0, 0, 0);
+        else if (ifDateInterval(1000, 3, 1100, 2)) add(0, 0, 6, 0, 0, 0);
+        else if (ifDateInterval(1100, 3, 1300, 2)) add(0, 0, 7, 0, 0, 0);
+        else if (ifDateInterval(1300, 3, 1400, 2)) add(0, 0, 8, 0, 0, 0);
+        else if (ifDateInterval(1400, 3, 1500, 2)) add(0, 0, 9, 0, 0, 0);
+        else if (ifDateInterval(1500, 3, 1700, 2)) add(0, 0, 10, 0, 0, 0);
+        else if (ifDateInterval(1700, 3, 1800, 2)) add(0, 0, 11, 0, 0, 0);
+        else if (ifDateInterval(1800, 3, 1900, 2)) add(0, 0, 12, 0, 0, 0);
+        else if (ifDateInterval(1900, 3, 2100, 2)) add(0, 0, 13, 0, 0, 0);
+        else if (ifDateInterval(2100, 3, 2200, 2)) add(0, 0, 14, 0, 0, 0);
+        isGrigorian = false;
+    }
+}
+
+void Date::JulianToGregorian() {
+    if (isGrigorian == false) {
+        if (ifDateInterval(1, 3, 100, 2)) add(0, 0, 2, 0, 0, 0);
+        else if (ifDateInterval(100, 3, 200, 2)) add(0, 0, 1, 0, 0, 0);
+        else if (ifDateInterval(300, 3, 500, 2)) subtract(0, 0, 1, 0, 0, 0);
+        else if (ifDateInterval(500, 3, 600, 2)) subtract(0, 0, 2, 0, 0, 0);
+        else if (ifDateInterval(600, 3, 700, 2)) subtract(0, 0, 3, 0, 0, 0);
+        else if (ifDateInterval(700, 3, 900, 2)) subtract(0, 0, 4, 0, 0, 0);
+        else if (ifDateInterval(900, 3, 1000, 2)) subtract(0, 0, 5, 0, 0, 0);
+        else if (ifDateInterval(1000, 3, 1100, 2)) subtract(0, 0, 6, 0, 0, 0);
+        else if (ifDateInterval(1100, 3, 1300, 2)) subtract(0, 0, 7, 0, 0, 0);
+        else if (ifDateInterval(1300, 3, 1400, 2)) subtract(0, 0, 8, 0, 0, 0);
+        else if (ifDateInterval(1400, 3, 1500, 2)) subtract(0, 0, 9, 0, 0, 0);
+        else if (ifDateInterval(1500, 3, 1700, 2)) subtract(0, 0, 10, 0, 0, 0);
+        else if (ifDateInterval(1700, 3, 1800, 2)) subtract(0, 0, 11, 0, 0, 0);
+        else if (ifDateInterval(1800, 3, 1900, 2)) subtract(0, 0, 12, 0, 0, 0);
+        else if (ifDateInterval(1900, 3, 2100, 2)) subtract(0, 0, 13, 0, 0, 0);
+        else if (ifDateInterval(2100, 3, 2200, 2)) subtract(0, 0, 14, 0, 0, 0);
+        isGrigorian = true;
+    }
 }
