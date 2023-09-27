@@ -11,7 +11,7 @@ private:
     int hour;
     int minute;
     int second;
-    bool isGrigorian;
+    bool is_grigorian;
 
     int getDaysInMonth(int year, int month);
     bool ifDateInterval(int year1, int month1, int day1, int year2, int month2, int day2);

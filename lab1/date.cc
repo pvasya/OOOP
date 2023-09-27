@@ -1,4 +1,4 @@
-﻿#include "Date.h"
+﻿#include "date.h"
 
 Date::Date() {
     srand(time(NULL)); // seed random
@@ -8,10 +8,10 @@ Date::Date() {
     this->hour = rand() % 24;
     this->minute = rand() % 60;
     this->second = rand() % 60;
-    this->isGrigorian = true;
+    this->is_grigorian = true;
 }
 
-Date::Date(int years, int months, int days, int hours,int minutes, int seconds): year(years), month(months), day(days), hour(hours),minute(minutes), second(seconds),isGrigorian(true) {}
+Date::Date(int years, int months, int days, int hours,int minutes, int seconds): year(years), month(months), day(days), hour(hours),minute(minutes), second(seconds),is_grigorian(true) {}
 
 void Date::print(){
     std::cout <<"Date " << year << "." << month << "." << day << "  Time " << hour << ":" << minute << " " << second << std::endl;
@@ -134,16 +134,16 @@ void Date::add(int year, int month, int day, int hour, int minute, int second) {
         this->year++;
     }
 
-    int daysInMonth = getDaysInMonth(this->year, this->month);
+    int days_in_month = getDaysInMonth(this->year, this->month);
 
-    while (this->day > daysInMonth) {
-        this->day -= daysInMonth;
+    while (this->day > days_in_month) {
+        this->day -= days_in_month;
         this->month++;
         if (this->month > 12) {
             this->month -= 12;
             this->year++;
         }
-        daysInMonth = getDaysInMonth(this->year, this->month);
+        days_in_month = getDaysInMonth(this->year, this->month);
     }
 }
 
@@ -184,14 +184,14 @@ void Date::subtract(int year = 0, int month = 0, int day = 0, int hour = 0, int 
 }
 
 int Date::calculateDayOfWeek() { // Zeller's congruence 
-    int tempYear = year;
-    int tempMonth = month;
-    if (tempMonth == 1 || tempMonth == 2) {
-        tempYear--;
-        tempMonth += 10;
+    int temp_year = year;
+    int temp_month = month;
+    if (temp_month == 1 || temp_month == 2) {
+        temp_year--;
+        temp_month += 10;
     }
-    else tempMonth -= 2;
-    int result = (day + (31 * tempMonth) / 12 + tempYear + tempYear / 4 - tempYear / 100 + tempYear / 400) % 7;
+    else temp_month -= 2;
+    int result = (day + (31 * temp_month) / 12 + temp_year + temp_year / 4 - temp_year / 100 + temp_year / 400) % 7;
     if (result == 0) return 7;
     return result;
 }
@@ -201,12 +201,12 @@ int Date::weekNumberMonth(){
 }
 
 int Date::weekNumberYear(){
-    int daysY = 0;
+    int days_year = 0;
     for (int i = 1; i < month; i++) {
-        daysY += getDaysInMonth(year,i);
+        days_year += getDaysInMonth(year,i);
     }
-    daysY += day-1;
-    return daysY/7+1;
+    days_year += day-1;
+    return days_year/7+1;
 }
 
 int Date::weekNumberMonth2(){
@@ -214,15 +214,15 @@ int Date::weekNumberMonth2(){
 }
 
 int Date::weekNumberYear2(){
-    int daysY = day;
+    int days_year = day;
     for (int i = 1; i < month; i++) {
-        daysY += getDaysInMonth(year, i);
+        days_year += getDaysInMonth(year, i);
     }
-    return (daysY - 2 + calculateDayOfWeek(year, 1, 1)) / 7 + 1;
+    return (days_year - 2 + calculateDayOfWeek(year, 1, 1)) / 7 + 1;
 }
 
 void Date::GregorianToJulian() {
-    if (isGrigorian == true) {
+    if (is_grigorian == true) {
         if (ifDateInterval(1, 3,1, 100, 2,29)) add(0, 0, 2, 0, 0, 0);
         else if (ifDateInterval(100, 3 , 1, 200, 2,29)) add(0, 0, 1, 0, 0, 0);
         else if (ifDateInterval(300, 3,1, 500, 2,29)) subtract(0, 0, 1, 0, 0, 0);
@@ -239,12 +239,12 @@ void Date::GregorianToJulian() {
         else if (ifDateInterval(1800, 3,1, 1900, 2,29)) subtract(0, 0, 12, 0, 0, 0);
         else if (ifDateInterval(1900, 3,1, 2100, 2,29)) subtract(0, 0, 13, 0, 0, 0);
         else if (ifDateInterval(2100, 3,1, 2200, 2,29)) subtract(0, 0, 14, 0, 0, 0);
-        isGrigorian = false;
+        is_grigorian = false;
     }
 }
 
 void Date::JulianToGregorian() {
-    if (isGrigorian == false) {
+    if (is_grigorian == false) {
         if (ifDateInterval(1, 3, 1, 100, 2, 29)) subtract(0, 0, 2, 0, 0, 0);
         else if (ifDateInterval(100, 3, 1, 200, 2, 29)) subtract(0, 0, 1, 0, 0, 0);
         else if (ifDateInterval(300, 3, 1, 500, 2, 29)) add(0, 0, 1, 0, 0, 0);
@@ -261,7 +261,7 @@ void Date::JulianToGregorian() {
         else if (ifDateInterval(1800, 3, 1, 1900, 2, 29)) add(0, 0, 12, 0, 0, 0);
         else if (ifDateInterval(1900, 3, 1, 2100, 2, 29)) add(0, 0, 13, 0, 0, 0);
         else if (ifDateInterval(2100, 3, 1, 2200, 2, 29)) add(0, 0, 14, 0, 0, 0);
-        isGrigorian = true;
+        is_grigorian = true;
     }
 }
 
@@ -270,20 +270,20 @@ void Date::printAlternative(){
     std::string numbers[5] = { "перш", "друг", "трет", "четверт", "п'ят" };
     std::string months[12] = { "січня", "лютого", "березня", "квітня", "травня", "червня", "липня", "серпня", "вересня", "жовтня", "листопада", "грудня" };
     int i = 0;
-    int dayOfWeek = calculateDayOfWeek()-1;
+    int day_of_week = calculateDayOfWeek()-1;
     while (day-i*7-7>0) {
         i++;
     }
-    if (dayOfWeek == 0 || dayOfWeek == 1 || dayOfWeek == 3) {
+    if (day_of_week == 0 || day_of_week == 1 || day_of_week == 3) {
         if (i == 2) {
-            std::cout<<numbers[i]<<"ій "<<days[dayOfWeek]<<" "<<months[month-1] << std::endl;
+            std::cout<<numbers[i]<<"ій "<<days[day_of_week]<<" "<<months[month-1] << std::endl;
         }
-        else std::cout << numbers[i] << "ий " << days[dayOfWeek] << " " << months[month-1] << std::endl;
+        else std::cout << numbers[i] << "ий " << days[day_of_week] << " " << months[month-1] << std::endl;
     }
     else {
         if (i == 2) {
-            std::cout << numbers[i] << "я " << days[dayOfWeek] << " " << months[month-1] << std::endl;
+            std::cout << numbers[i] << "я " << days[day_of_week] << " " << months[month-1] << std::endl;
         }
-        else std::cout << numbers[i] << "а " << days[dayOfWeek] << " " << months[month-1] << std::endl;
+        else std::cout << numbers[i] << "а " << days[day_of_week] << " " << months[month-1] << std::endl;
     }
 }
