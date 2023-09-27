@@ -8,10 +8,9 @@ Date::Date() {
     this->hour = rand() % 24;
     this->minute = rand() % 60;
     this->second = rand() % 60;
-    this->is_grigorian = true;
 }
 
-Date::Date(int years, int months, int days, int hours,int minutes, int seconds): year(years), month(months), day(days), hour(hours),minute(minutes), second(seconds),is_grigorian(true) {}
+Date::Date(int years, int months, int days, int hours,int minutes, int seconds): year(years), month(months), day(days), hour(hours),minute(minutes), second(seconds) {}
 
 void Date::print(){
     std::cout <<"Date " << year << "." << month << "." << day << "  Time " << hour << ":" << minute << " " << second << std::endl;
