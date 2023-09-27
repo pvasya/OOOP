@@ -221,7 +221,7 @@ int Date::weekNumberYear2(){
 }
 
 void Date::GregorianToJulian() {
-    if (is_grigorian == true) {
+    if (is_gregorian == true) {
         if (ifDateInterval(1, 3,1, 100, 2,29)) add(0, 0, 2, 0, 0, 0);
         else if (ifDateInterval(100, 3 , 1, 200, 2,29)) add(0, 0, 1, 0, 0, 0);
         else if (ifDateInterval(300, 3,1, 500, 2,29)) subtract(0, 0, 1, 0, 0, 0);
@@ -238,12 +238,12 @@ void Date::GregorianToJulian() {
         else if (ifDateInterval(1800, 3,1, 1900, 2,29)) subtract(0, 0, 12, 0, 0, 0);
         else if (ifDateInterval(1900, 3,1, 2100, 2,29)) subtract(0, 0, 13, 0, 0, 0);
         else if (ifDateInterval(2100, 3,1, 2200, 2,29)) subtract(0, 0, 14, 0, 0, 0);
-        is_grigorian = false;
+        is_gregorian = false;
     }
 }
 
 void Date::JulianToGregorian() {
-    if (is_grigorian == false) {
+    if (is_gregorian == false) {
         if (ifDateInterval(1, 3, 1, 100, 2, 29)) subtract(0, 0, 2, 0, 0, 0);
         else if (ifDateInterval(100, 3, 1, 200, 2, 29)) subtract(0, 0, 1, 0, 0, 0);
         else if (ifDateInterval(300, 3, 1, 500, 2, 29)) add(0, 0, 1, 0, 0, 0);
@@ -260,7 +260,7 @@ void Date::JulianToGregorian() {
         else if (ifDateInterval(1800, 3, 1, 1900, 2, 29)) add(0, 0, 12, 0, 0, 0);
         else if (ifDateInterval(1900, 3, 1, 2100, 2, 29)) add(0, 0, 13, 0, 0, 0);
         else if (ifDateInterval(2100, 3, 1, 2200, 2, 29)) add(0, 0, 14, 0, 0, 0);
-        is_grigorian = true;
+        is_gregorian = true;
     }
 }
 
