@@ -1,5 +1,8 @@
 #pragma once
 
+#include <iostream>
+#include "string"
+
 class Date {
 private:
     int year;
@@ -9,11 +12,11 @@ private:
     int minute;
     int second;
     bool isGrigorian;
-    int zone;
 
     int getDaysInMonth(int year, int month);
-    bool ifDateInterval(int year1, int month1, int year2, int month2);
-
+    bool ifDateInterval(int year1, int month1, int day1, int year2, int month2, int day2);
+    int calculateDayOfWeek(int year, int month,int day);
+    
 public:
     Date();
     Date(int years, int months, int days, int hours,int minutes, int seconds);
@@ -42,6 +45,9 @@ public:
 
     int weekNumberMonth();
     int weekNumberYear();
+    int weekNumberMonth2(); // second solution
+    int weekNumberYear2(); // second solution
     void GregorianToJulian();
     void JulianToGregorian();
+    void printAlternative();
 };
