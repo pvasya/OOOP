@@ -3,7 +3,7 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
-#include "date.h"
+#include "Date.h"
 
 using namespace std;
 
@@ -44,7 +44,7 @@ public:
                 enqueue(rand() % 10000);
             }
         }
-         else if constexpr (is_same<T, string>::value) {
+        else if constexpr (is_same<T, string>::value) {
             string letters = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
             string random;
             for (int i = 0; i < count; i++) {
@@ -98,6 +98,29 @@ public:
         }
     };
     virtual void print() = 0;
+
+    virtual void serialize(ofstream& fout) = 0;
+    virtual void deserialize(ifstream& fin) = 0;
+
+    void writeToFile(string filename) {
+        ofstream fout(filename+".txt", ios::out | ios::binary);
+        if (!fout.is_open()) {
+            cerr << "ERROR" << std::endl;
+            return;
+        }
+        else serialize(fout);
+        fout.close();
+    }
+
+    void readFromFile(string filename) {
+        ifstream fin(filename+".txt", ios::in | ios::binary);
+        if (!fin.is_open()) {
+            cerr << "ERROR" << endl;
+            return;
+        }
+        else deserialize(fin);
+        fin.close();
+    }
 };
 
 template <typename T>
@@ -132,7 +155,7 @@ public:
 
     T dequeue() override {
         if (!head) throw "The queue is empty";
-        else{
+        else {
             T result = head->data;
             Node* temp = head;
             head = head->next;
@@ -169,6 +192,18 @@ public:
                 current = current->next;
             }
         }
+    }
+
+    void serialize(ofstream& fout) override {
+        int size = sizeof(*this);
+        fout.write((char*)&size, sizeof(size));
+        fout.write((char*)this, size);
+    }
+
+    void deserialize(ifstream& fin) override {
+        int size;
+        fin.read((char*)&size, sizeof(size));
+        fin.read((char*)this, size);
     }
 };
 
@@ -219,8 +254,27 @@ public:
         }
         else if constexpr (is_same<T, Date>::value) {
             for (auto& ele : elements) {
-                cout << ele.getYear() <<" " << ele.getMonth() << " " << ele.getDay() << " " << ele.getHour() << " " << ele.getMinute() << " " << ele.getSecond() << endl;
+                cout << ele.getYear() << " " << ele.getMonth() << " " << ele.getDay() << " " << ele.getHour() << " " << ele.getMinute() << " " << ele.getSecond() << endl;
             }
+        }
+    }
+
+    void serialize(ofstream& fout) override {
+        int size = elements.size();
+        fout.write((char*)&size, sizeof(size)); 
+        for (const T& item : elements) {
+            fout.write((char*)&item, sizeof(item));
+        }
+    }
+
+    void deserialize(ifstream& fin) override {
+        int size;
+        fin.read((char*)&size, sizeof(size));
+        elements.clear();
+        for (int i = 0; i < size; i++) {
+            T item;
+            fin.read((char*)&item, sizeof(item));
+            elements.push_back(item);
         }
     }
 };
@@ -333,5 +387,17 @@ public:
 
     void print() override {
         printInOrder(root);
+    }
+
+    void serialize(ofstream& fout) override {
+        int size = sizeof(*this);
+        fout.write((char*)&size, sizeof(size));
+        fout.write((char*)this, size);
+    }
+
+    void deserialize(ifstream& fin) override {
+        int size;
+        fin.read((char*)&size, sizeof(size));
+        fin.read((char*)this, size);
     }
 };
