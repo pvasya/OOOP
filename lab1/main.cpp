@@ -1,5 +1,5 @@
-#include"date.h"
-#include"priority_queue.h"
+#include"Date.h"
+#include"Priority_Queue.h"
 #include <iostream>
 
 using namespace std;
