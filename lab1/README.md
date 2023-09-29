@@ -12,3 +12,10 @@
 a. +* за обчислення додаткових параметрів, наприклад, номер тижня в місяці та в році   
 b. +* за альтернативні варіанти побудови дати та часу (наприклад, «перший вівторок листопада»)      
 e. +* за підтримку альтернативних календарів (юліанського, …)     
+
++ запис черги з пріоритетом у файл та зчитування з файлу
++ unit tests
+
+  Реалізовано класів 5 (PriorityQueue, LinkedListPriorityQueue, DynamicArrayPriorityQueue, BinarySearchTreePriorityQueue, Date)
+  Реалізовано полів 10 (int year, int month, int day, int hour, int minute, int second, bool is_gregorian, struct Node, vector elements, struct Node)
+  Реалізовано нетривіальних методів 21 (int getDaysInMonth, bool ifDateInterval, bool check, void add, void subtract, int calculateDayOfWeek, int weekNumberMonth, int weekNumberYear, int weekNumberMonth2, int weekNumberYear2, void GregorianToJulian, void JulianToGregorian, void print, void printAlternative, void enqueue, T dequeue, T peek, void generate, void print, void writeToFile, void readFromFile)
