@@ -1,7 +1,6 @@
 #pragma once
 
 #include <iostream>
-#include "string"
 
 class Date {
 private:
@@ -15,11 +14,11 @@ private:
 
     int getDaysInMonth(int year, int month);
     bool ifDateInterval(int year1, int month1, int day1, int year2, int month2, int day2);
-    int calculateDayOfWeek(int year, int month,int day);
-    
+    int calculateDayOfWeek(int year, int month, int day);
+
 public:
     Date();
-    Date(int years, int months, int days, int hours,int minutes, int seconds);
+    Date(int years, int months, int days, int hours, int minutes, int seconds);
 
     void print();
 
