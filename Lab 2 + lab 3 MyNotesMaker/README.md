@@ -1,6 +1,5 @@
 # Lab 2 + lab 3 MyNotesMaker
 
-QT Framework + Vosk Library
+QT Framework + SpeechRecognition Library
 
-![Screenshow](https://github.com/{pvasya}/{OOOP}/raw/{master}/{screenshot.png}/screenshot.png)
-
+![screenshot](https://github.com/pvasya/OOOP/assets/48941205/faf387bb-ccea-473d-a175-2e54f9dd44ea)
