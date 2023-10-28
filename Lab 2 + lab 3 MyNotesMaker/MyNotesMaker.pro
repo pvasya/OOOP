@@ -21,6 +21,7 @@ HEADERS += \
     mainwindow.h \
     savewindow.h \
     settingswindow.h \
+    src/vosk_api.h \
     view.h
 
 FORMS += \

@@ -19,7 +19,9 @@
         <file>img/settingblack.png</file>
         <file>img/unpinred-removebg.png</file>
         <file>img/unpin-removebg.png</file>
-        <file>img/voicetext.png</file>
-        <file>img/voicetextred.png</file>
+        <file>img/gpt.png</file>
+        <file>img/gptb.png</file>
+        <file>img/gptred.png</file>
+        <file>img/gptredb.png</file>
     </qresource>
 </RCC>

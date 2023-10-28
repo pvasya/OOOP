@@ -5,6 +5,9 @@
 #include "QFontDialog"
 #include "savewindow.h"
 
+#include <nlohmann/json.hpp>
+#include <liboai/include/liboai.h>
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -38,7 +41,7 @@ void MainWindow::on_settingsbtn_clicked()
     SettingsWindow settings;
     settings.setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
     settings.setModal(true);
-    settings.setGeometry(this->x() + 10, this->y() + 35,250,300);
+    settings.setGeometry(this->x() + 10, this->y() + 35,250,170);
     settings.exec();
 }
 
@@ -95,18 +98,8 @@ void MainWindow::on_pinbtn_clicked()
     show();
 }
 
-
-bool bclicked = false;
-
-void MainWindow::on_speechtextbtn_1_clicked()
+void MainWindow::on_gptbtn_1_clicked()
 {
-    if (bclicked) {
-        ui->speechtextbtn_1->setStyleSheet("QPushButton { border-image: url(:/img/voicetext.png); background-color: rgb(255, 0, 127); color: white;border-radius: 10px;padding: 10px;}");
-    }
-    else {
-        ui->speechtextbtn_1->setStyleSheet("QPushButton { border-image: url(:/img/voicetextred.png); background-color:rgb(0, 0, 255); color: white;border-radius: 10px;padding: 10px;}");
-    }
-    bclicked = !bclicked;
-    show();
+
 }
 

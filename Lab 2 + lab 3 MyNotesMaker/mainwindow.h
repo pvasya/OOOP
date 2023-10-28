@@ -35,7 +35,7 @@ private slots:
 
     void on_savebtn_clicked();
 
-    void on_speechtextbtn_1_clicked();
+    void on_gptbtn_1_clicked();
 
 private:
     Ui::MainWindow *ui;
