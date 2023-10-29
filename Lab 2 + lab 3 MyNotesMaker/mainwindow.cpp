@@ -4,15 +4,29 @@
 #include "history.h"
 #include "QFontDialog"
 #include "savewindow.h"
-
+#include "view.h"
+#include <QTime>
+#include <QTimer>
+#include <QFile>
+#include <curl/curl.h>
+#include "openai.hpp"
 #include <nlohmann/json.hpp>
-#include <liboai/include/liboai.h>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    if(QFile::exists("mynotemaker.json")){
+
+    }
+    else{
+
+    }
+
+    QTimer* timer = new QTimer(this);
+    connect(timer,SIGNAL(timeout()),this,SLOT(on_timeout()));
+    timer->start(60000);
 }
 
 MainWindow::~MainWindow()
@@ -100,6 +114,40 @@ void MainWindow::on_pinbtn_clicked()
 
 void MainWindow::on_gptbtn_1_clicked()
 {
+    openai::start();
+    std::string req = ui->plainTextEdit->toPlainText().toStdString();
+    nlohmann::json jsonRequest;
+    jsonRequest["model"] = "gpt-3.5-turbo";
+    jsonRequest["messages"] = {
+        {{"role", "user"}, {"content", req}}
+    };
+    jsonRequest["max_tokens"] = 7;
+    jsonRequest["temperature"] = 0;
+    auto chat = openai::chat().create(jsonRequest);
+    ui->plainTextEdit->setPlainText(QString::fromStdString(chat.dump(2)));
+}
 
+
+void MainWindow::on_gptbtn_2_clicked()
+{
+    openai::start();
+    std::string req = "Rewrite it correctly beautifully and give just the text: " + ui->plainTextEdit->toPlainText().toStdString();
+    nlohmann::json jsonRequest;
+    jsonRequest["model"] = "gpt-3.5-turbo";
+    jsonRequest["messages"] = {
+        {{"role", "user"}, {"content", req}}
+    };
+    jsonRequest["max_tokens"] = 7;
+    jsonRequest["temperature"] = 0;
+    auto chat = openai::chat().create(jsonRequest);
+    ui->plainTextEdit->setPlainText(QString::fromStdString(chat.dump(2)));
+}
+
+void MainWindow::on_timeout()
+{
+    View viewwin;
+    viewwin.setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
+    viewwin.setModal(true);
+    viewwin.exec();
 }
 

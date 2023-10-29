@@ -37,6 +37,10 @@ private slots:
 
     void on_gptbtn_1_clicked();
 
+    void on_gptbtn_2_clicked();
+
+    void on_timeout();
+
 private:
     Ui::MainWindow *ui;
     QGraphicsScene *scene;

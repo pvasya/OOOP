@@ -19,9 +19,9 @@ SOURCES += \
 HEADERS += \
     history.h \
     mainwindow.h \
+    openai.hpp \
     savewindow.h \
     settingswindow.h \
-    src/vosk_api.h \
     view.h
 
 FORMS += \
@@ -60,3 +60,7 @@ DISTFILES += \
     img/standartred-removebg.png \
     img/unpin-removebg.png \
     img/unpinred-removebg.png
+
+LIBS += -LC:/curl/lib
+LIBS += -lcurl
+INCLUDEPATH += C:/curl/include

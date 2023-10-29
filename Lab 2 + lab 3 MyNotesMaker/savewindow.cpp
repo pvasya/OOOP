@@ -1,5 +1,8 @@
 #include "savewindow.h"
 #include "ui_savewindow.h"
+#include <QFile>
+
+#include <nlohmann/json.hpp>
 
 SaveWindow::SaveWindow(QWidget *parent) :
     QDialog(parent),
@@ -22,19 +25,5 @@ void SaveWindow::on_cancel_clicked()
 void SaveWindow::on_save_clicked()
 {
     close();
-}
-
-
-
-void SaveWindow::on_horizontalSlider_sliderMoved(int position)
-{
-    ui->spinBox->setValue(position);
-}
-
-
-
-void SaveWindow::on_spinBox_valueChanged(int arg1)
-{
-    ui->horizontalSlider->setValue(arg1);
 }
 

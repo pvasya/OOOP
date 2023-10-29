@@ -1,5 +1,8 @@
 #include "settingswindow.h"
 #include "ui_settingswindow.h"
+#include <QFile>
+
+#include <nlohmann/json.hpp>
 
 SettingsWindow::SettingsWindow(QWidget *parent) :
     QDialog(parent),

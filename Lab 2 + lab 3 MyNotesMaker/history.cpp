@@ -1,5 +1,8 @@
 #include "history.h"
 #include "ui_history.h"
+#include <QFile>
+
+#include <nlohmann/json.hpp>
 
 History::History(QWidget *parent) :
     QDialog(parent),

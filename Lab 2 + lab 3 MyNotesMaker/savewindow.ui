@@ -127,61 +127,11 @@ QPushButton:pressed {
     <number>22</number>
    </property>
   </widget>
-  <widget class="QComboBox" name="comboBox">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>303</y>
-     <width>161</width>
-     <height>24</height>
-    </rect>
-   </property>
-   <item>
-    <property name="text">
-     <string>None</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>80s Alarm Clock Sound</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Spring (The Four Seasons)</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Nokia Tune Guitar</string>
-    </property>
-   </item>
-  </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>310</y>
-     <width>49</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QLabel {
-    font: 700 12pt &quot;Segoe Script&quot;;
-    color:rgb(255, 116, 16)
-}
-</string>
-   </property>
-   <property name="text">
-    <string>Music</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>80</y>
+     <y>96</y>
      <width>111</width>
      <height>21</height>
     </rect>
@@ -201,33 +151,17 @@ QPushButton:pressed {
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>100</y>
+     <y>136</y>
      <width>231</width>
      <height>201</height>
     </rect>
-   </property>
-  </widget>
-  <widget class="QSlider" name="horizontalSlider">
-   <property name="geometry">
-    <rect>
-     <x>100</x>
-     <y>340</y>
-     <width>81</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="maximum">
-    <number>59</number>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
    </property>
   </widget>
   <widget class="QTimeEdit" name="Time">
    <property name="geometry">
     <rect>
      <x>140</x>
-     <y>74</y>
+     <y>90</y>
      <width>81</width>
      <height>25</height>
     </rect>
@@ -243,52 +177,16 @@ QPushButton:pressed {
    </property>
    <property name="dateTime">
     <datetime>
-     <hour>0</hour>
+     <hour>22</hour>
      <minute>0</minute>
      <second>0</second>
      <year>2000</year>
      <month>1</month>
-     <day>2</day>
+     <day>1</day>
     </datetime>
    </property>
    <property name="currentSectionIndex">
     <number>0</number>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_5">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>340</y>
-     <width>81</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QLabel {
-    font: 700 12pt &quot;Segoe Script&quot;;
-    color:rgb(255, 116, 16)
-}
-</string>
-   </property>
-   <property name="text">
-    <string>Duration</string>
-   </property>
-  </widget>
-  <widget class="QSpinBox" name="spinBox">
-   <property name="geometry">
-    <rect>
-     <x>191</x>
-     <y>334</y>
-     <width>51</width>
-     <height>25</height>
-    </rect>
-   </property>
-   <property name="buttonSymbols">
-    <enum>QAbstractSpinBox::UpDownArrows</enum>
-   </property>
-   <property name="maximum">
-    <number>59</number>
    </property>
   </widget>
  </widget>

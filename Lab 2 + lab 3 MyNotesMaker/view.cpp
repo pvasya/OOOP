@@ -12,3 +12,9 @@ View::~View()
 {
     delete ui;
 }
+
+void View::on_cancel_clicked()
+{
+    close();
+}
+
