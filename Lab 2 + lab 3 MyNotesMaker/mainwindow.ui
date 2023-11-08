@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>300</width>
-    <height>450</height>
+    <height>480</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -313,7 +313,7 @@ QLabel:hover {
     <property name="geometry">
      <rect>
       <x>5</x>
-      <y>30</y>
+      <y>60</y>
       <width>267</width>
       <height>416</height>
      </rect>
@@ -389,6 +389,35 @@ QPushButton:pressed {
     </property>
     <property name="text">
      <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>251</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe Script</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(254, 234, 124);
+border-radius: 10px;</string>
+    </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="maxLength">
+     <number>32767</number>
     </property>
    </widget>
   </widget>

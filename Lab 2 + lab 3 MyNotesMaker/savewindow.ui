@@ -177,7 +177,7 @@ QPushButton:pressed {
    </property>
    <property name="dateTime">
     <datetime>
-     <hour>22</hour>
+     <hour>20</hour>
      <minute>0</minute>
      <second>0</second>
      <year>2000</year>

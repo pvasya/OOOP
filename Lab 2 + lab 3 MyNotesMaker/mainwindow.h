@@ -39,11 +39,12 @@ private slots:
 
     void on_gptbtn_2_clicked();
 
-    void on_timeout();
+public slots:
+    void slot(QString name, QString text, QFont font);
 
 private:
     Ui::MainWindow *ui;
-    QGraphicsScene *scene;
+
     void mousePressEvent(QMouseEvent *event);
     void mouseMoveEvent(QMouseEvent *event);
 

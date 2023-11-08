@@ -18,12 +18,12 @@ SaveWindow::~SaveWindow()
 
 void SaveWindow::on_cancel_clicked()
 {
-
+    close();
 }
 
 
 void SaveWindow::on_save_clicked()
 {
-    close();
+
 }
 

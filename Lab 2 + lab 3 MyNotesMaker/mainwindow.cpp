@@ -3,11 +3,9 @@
 #include "settingswindow.h"
 #include "history.h"
 #include "QFontDialog"
-#include "savewindow.h"
-#include "view.h"
-#include <QTime>
-#include <QTimer>
 #include <QFile>
+#include <QSettings>
+#include <QDir>
 #include <curl/curl.h>
 #include "openai.hpp"
 #include <nlohmann/json.hpp>
@@ -17,20 +15,15 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    if(QFile::exists("mynotemaker.json")){
 
-    }
-    else{
-
-    }
-
-    QTimer* timer = new QTimer(this);
-    connect(timer,SIGNAL(timeout()),this,SLOT(on_timeout()));
-    timer->start(60000);
+    QSettings settings(QDir::homePath()+ "/Desktop/mynotesmaker settings.ini", QSettings::IniFormat);
+    restoreGeometry(settings.value("geometry").toByteArray());
 }
 
 MainWindow::~MainWindow()
 {
+    QSettings settings(QDir::homePath()+ "/Desktop/mynotesmaker settings.ini", QSettings::IniFormat);
+    settings.setValue("geometry", saveGeometry());
     delete ui;
 }
 
@@ -52,21 +45,22 @@ void MainWindow::on_closebtn_clicked()
 
 void MainWindow::on_settingsbtn_clicked()
 {
-    SettingsWindow settings;
-    settings.setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
-    settings.setModal(true);
-    settings.setGeometry(this->x() + 10, this->y() + 35,250,170);
-    settings.exec();
+    SettingsWindow *settings = new SettingsWindow;
+    settings->setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
+    settings->setModal(true);
+    settings->setGeometry(this->x() + 10, this->y() + 35,250,170);
+    settings->show();
 }
 
 
 void MainWindow::on_historbtn_clicked()
 {
-    History historywin;
-    historywin.setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
-    historywin.setModal(true);
-    historywin.setGeometry(this->x() + 10, this->y() + 35,250,400);
-    historywin.exec();
+    History *historywin = new History;
+    historywin->setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
+    historywin->setModal(true);
+    historywin->setGeometry(this->x() + 10, this->y() + 35,250,430);
+    historywin->show();
+    connect(historywin, &History::open, this, &MainWindow::slot);
 }
 
 void MainWindow::on_toolsbtn_clicked()
@@ -80,10 +74,11 @@ void MainWindow::on_toolsbtn_clicked()
 
 void MainWindow::on_newbtn_clicked()
 {
-    ui->plainTextEdit->setPlainText("");
+    MainWindow *mainWindow = new MainWindow();
+    mainWindow->setWindowFlags(Qt::FramelessWindowHint);
+    mainWindow->setGeometry(this->x() + 30, this->y() + 30,300,480);
+    mainWindow->show();
 }
-
-
 
 void MainWindow::on_hidebtn_clicked()
 {
@@ -92,11 +87,44 @@ void MainWindow::on_hidebtn_clicked()
 
 void MainWindow::on_savebtn_clicked()
 {
-    SaveWindow savewin;
-    savewin.setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
-    savewin.setModal(true);
-    savewin.setGeometry(this->x() + 10, this->y() + 35,250,400);
-    savewin.exec();
+    QString filePath = QDir::homePath() + "/Desktop/mynotesmaker.json";
+    nlohmann::json data;
+    if (QFile::exists(filePath)) {
+        QFile existingFile(filePath);
+        if (existingFile.open(QFile::ReadOnly | QFile::Text)) {
+            QTextStream in(&existingFile);
+            QString jsonString = in.readAll();
+            existingFile.close();
+            try {
+                data = nlohmann::json::parse(jsonString.toStdString());
+            } catch (const std::exception& e) {
+                qWarning() << "Error parsing JSON: " << e.what();
+                return;
+            }
+            nlohmann::json note;
+            note["name"] = ui->lineEdit->text().toStdString();
+            note["text"] = ui->plainTextEdit->toPlainText().toStdString();
+            note["font"] = ui->plainTextEdit->font().toString().toStdString();
+            data.insert(data.begin(), note);
+        } else {
+            qWarning() << "Error reading the existing file.";
+        }
+    }
+    else {
+        nlohmann::json note;
+        note["name"] = ui->lineEdit->text().toStdString();
+        note["text"] = ui->plainTextEdit->toPlainText().toStdString();
+        note["font"] = ui->plainTextEdit->font().toString().toStdString();
+        data.push_back(note);
+    }
+    QFile file(filePath);
+    if (file.open(QFile::WriteOnly | QFile::Text)) {
+        QTextStream out(&file);
+        out << QString::fromStdString(data.dump());
+        file.close();
+    } else {
+        qWarning() << "ERROR";
+    }
 }
 
 void MainWindow::on_pinbtn_clicked()
@@ -114,40 +142,41 @@ void MainWindow::on_pinbtn_clicked()
 
 void MainWindow::on_gptbtn_1_clicked()
 {
-    openai::start();
+    openai::start("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");
     std::string req = ui->plainTextEdit->toPlainText().toStdString();
     nlohmann::json jsonRequest;
-    jsonRequest["model"] = "gpt-3.5-turbo";
+    QSettings settings(QDir::homePath()+ "/Desktop/mynotesmaker settings.ini", QSettings::IniFormat);
+    jsonRequest["model"] = settings.value("GPT version", QString("gpt-3.5-turbo")).toString().toStdString();
     jsonRequest["messages"] = {
         {{"role", "user"}, {"content", req}}
     };
-    jsonRequest["max_tokens"] = 7;
+    jsonRequest["max_tokens"] = 30;
     jsonRequest["temperature"] = 0;
     auto chat = openai::chat().create(jsonRequest);
-    ui->plainTextEdit->setPlainText(QString::fromStdString(chat.dump(2)));
+    ui->plainTextEdit->setPlainText(QString::fromStdString(chat["choices"][0]["message"]["content"].get<std::string>()));
 }
 
 
 void MainWindow::on_gptbtn_2_clicked()
 {
-    openai::start();
-    std::string req = "Rewrite it correctly beautifully and give just the text: " + ui->plainTextEdit->toPlainText().toStdString();
+    openai::start("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");
+    std::string req = "Rewrite it correctly, beautifully and give just the text: " + ui->plainTextEdit->toPlainText().toStdString();
     nlohmann::json jsonRequest;
-    jsonRequest["model"] = "gpt-3.5-turbo";
+    QSettings settings(QDir::homePath()+ "/Desktop/mynotesmaker settings.ini", QSettings::IniFormat);
+    jsonRequest["model"] = settings.value("GPT version", QString("gpt-3.5-turbo")).toString().toStdString();
     jsonRequest["messages"] = {
         {{"role", "user"}, {"content", req}}
     };
-    jsonRequest["max_tokens"] = 7;
+    jsonRequest["max_tokens"] = 30;
     jsonRequest["temperature"] = 0;
     auto chat = openai::chat().create(jsonRequest);
-    ui->plainTextEdit->setPlainText(QString::fromStdString(chat.dump(2)));
+    ui->plainTextEdit->setPlainText(QString::fromStdString(chat["choices"][0]["message"]["content"].get<std::string>()));
+
 }
 
-void MainWindow::on_timeout()
+void MainWindow::slot(QString name, QString text, QFont font)
 {
-    View viewwin;
-    viewwin.setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
-    viewwin.setModal(true);
-    viewwin.exec();
+    ui->lineEdit->setText(name);
+    ui->plainTextEdit->setPlainText(text);
+    ui->plainTextEdit->setFont(font);
 }
-

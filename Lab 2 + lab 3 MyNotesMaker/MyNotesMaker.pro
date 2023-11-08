@@ -12,24 +12,18 @@ SOURCES += \
     history.cpp \
     main.cpp \
     mainwindow.cpp \
-    savewindow.cpp \
-    settingswindow.cpp \
-    view.cpp
+    settingswindow.cpp
 
 HEADERS += \
     history.h \
     mainwindow.h \
     openai.hpp \
-    savewindow.h \
-    settingswindow.h \
-    view.h
+    settingswindow.h
 
 FORMS += \
     history.ui \
     mainwindow.ui \
-    savewindow.ui \
-    settingswindow.ui \
-    view.ui
+    settingswindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

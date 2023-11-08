@@ -18,8 +18,15 @@ public:
 private slots:
     void on_okbtn_clicked();
 
+    void on_deletebtn_clicked();
+
+    void on_openbtn_clicked();
+
 private:
     Ui::History *ui;
+
+signals:
+    void open(QString name, QString text, QFont font);
 };
 
 #endif // HISTORY_H

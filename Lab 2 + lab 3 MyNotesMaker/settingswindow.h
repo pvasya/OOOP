@@ -18,6 +18,10 @@ public:
 private slots:
     void on_okbtn_clicked();
 
+    void on_ukbtn_clicked();
+
+    void on_enbtn_clicked();
+
 private:
     Ui::SettingsWindow *ui;
 };
