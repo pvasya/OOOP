@@ -142,7 +142,7 @@ void MainWindow::on_pinbtn_clicked()
 
 void MainWindow::on_gptbtn_1_clicked()
 {
-    openai::start("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");
+    openai::start("key");
     std::string req = ui->plainTextEdit->toPlainText().toStdString();
     nlohmann::json jsonRequest;
     QSettings settings(QDir::homePath()+ "/Desktop/mynotesmaker settings.ini", QSettings::IniFormat);
@@ -159,7 +159,7 @@ void MainWindow::on_gptbtn_1_clicked()
 
 void MainWindow::on_gptbtn_2_clicked()
 {
-    openai::start("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");
+    openai::start("key");
     std::string req = "Rewrite it correctly, beautifully and give just the text: " + ui->plainTextEdit->toPlainText().toStdString();
     nlohmann::json jsonRequest;
     QSettings settings(QDir::homePath()+ "/Desktop/mynotesmaker settings.ini", QSettings::IniFormat);
