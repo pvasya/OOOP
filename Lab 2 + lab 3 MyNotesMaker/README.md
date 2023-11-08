@@ -1,5 +1,5 @@
 # Lab 2 + lab 3 MyNotesMaker
 
-QT Framework + Library
+QT Framework + openai-cpp https://github.com/olrea/openai-cpp
 
-![screenshot](https://github.com/pvasya/OOOP/assets/48941205/78fd2991-2189-4629-92d6-b9f8c06e6f25)
+![screenshot](https://github.com/pvasya/OOOP/assets/48941205/721ea1e7-a9ab-4951-b70e-daed869d081f)
