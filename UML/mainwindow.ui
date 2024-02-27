@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>300</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="images.qrc">
+    <normaloff>:/img/icon.jpg</normaloff>:/img/icon.jpg</iconset>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"> background-color: rgb(253, 223, 70);
+</string>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="hidebtn">
+    <property name="geometry">
+     <rect>
+      <x>245</x>
+      <y>4</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	
+	border-image: url(:/img/hide-removebg.png);
+    background-color: orange;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+QPushButton:hover {
+	border: 4px;
+	
+	border-image: url(:/img/hidered-removebg.png);
+    background-color:rgb(255, 255, 0) ;
+}
+
+QPushButton:pressed {
+    background-color:rgb(255, 140, 0) ;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pinbtn">
+    <property name="geometry">
+     <rect>
+      <x>215</x>
+      <y>4</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: orange;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+QPushButton:hover {
+	border: 4px;
+    background-color:rgb(255, 255, 0) ;
+}
+
+QPushButton:pressed {
+    background-color:rgb(255, 140, 0) ;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="images.qrc">
+      <normaloff>:/img/pin-removebg.png</normaloff>:/img/pin-removebg.png</iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="newbtn">
+    <property name="geometry">
+     <rect>
+      <x>275</x>
+      <y>40</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border-image: url(:/img/new.png);
+    background-color: rgb(85, 170, 255);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+QPushButton:hover {
+border-image: url(:/img/newred.png);
+    background-color:rgb(255, 185, 192);
+}
+
+QPushButton:pressed {
+    background-color:rgb(255, 140, 0) ;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="savebtn">
+    <property name="geometry">
+     <rect>
+      <x>275</x>
+      <y>70</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border-image: url(:/img/save.png);
+    background-color: rgb(85, 170, 255);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+QPushButton:hover {
+border-image: url(:/img/savered.png);
+    background-color:rgb(255, 185, 192);
+}
+
+QPushButton:pressed {
+    background-color:rgb(255, 140, 0) ;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="historbtn">
+    <property name="geometry">
+     <rect>
+      <x>275</x>
+      <y>100</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border-image: url(:/img/history.png);
+    background-color: rgb(85, 170, 255);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+QPushButton:hover {
+	border-image: url(:/img/historyred.png);
+    background-color:rgb(255, 185, 192);
+}
+
+QPushButton:pressed {
+    background-color:rgb(255, 140, 0) ;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="settingsbtn">
+    <property name="geometry">
+     <rect>
+      <x>275</x>
+      <y>410</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border-image: url(:/img/settingblack.png);
+    background-color: rgb(255, 0, 255);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+QPushButton:hover {
+	border:4px;
+	
+	border-image: url(:/img/setting.png);
+    background-color:rgb(255, 185, 192);
+}
+
+QPushButton:pressed {
+    background-color:rgb(255, 140, 0) ;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="toolsbtn">
+    <property name="geometry">
+     <rect>
+      <x>275</x>
+      <y>150</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border-image: url(:/img/edit.png);
+    background-color: rgb(255, 0, 127);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+QPushButton:hover {
+	border-image: url(:/img/editred.png);
+    background-color:rgb(255, 185, 192);
+}
+
+QPushButton:pressed {
+    background-color:rgb(255, 140, 0) ;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="closebtn">
+    <property name="geometry">
+     <rect>
+      <x>275</x>
+      <y>4</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border-image: url(:/img/close_btn_icon.png);
+    background-color: orange;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+QPushButton:hover {
+	border: 4px;
+	border-image: url(:/img/close_btn_iconred.png);
+    background-color:rgb(255, 255, 0) ;
+}
+
+QPushButton:pressed {
+    background-color:rgb(255, 140, 0) ;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>211</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { 
+	background-color: rgba(0, 0, 0, 0);
+    border: none; 
+	font: 700 14pt &quot;Segoe Script&quot;;
+    color: rgb(255, 136, 0);
+}
+
+QLabel:hover {
+    color: rgb(255, 255, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>   MyNotesMaker</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="plainTextEdit">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>60</y>
+      <width>267</width>
+      <height>416</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe Script</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(255, 250, 119);
+border-radius: 10px;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="gptbtn_1">
+    <property name="geometry">
+     <rect>
+      <x>275</x>
+      <y>180</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border-image: url(:/img/gpt.png);
+    background-color: rgb(255, 0, 127);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+QPushButton:hover {
+	border-image: url(:/img/gptred.png);
+    background-color:rgb(255, 185, 192);
+}
+
+QPushButton:pressed {
+    background-color:rgb(255, 140, 0) ;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="gptbtn_2">
+    <property name="geometry">
+     <rect>
+      <x>275</x>
+      <y>210</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border-image: url(:/img/gptb.png);
+    background-color: rgb(255, 0, 127);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+QPushButton:hover {
+	border-image: url(:/img/gptredb.png);
+    background-color:rgb(255, 185, 192);
+}
+
+QPushButton:pressed {
+    background-color:rgb(255, 140, 0) ;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>6</x>
+      <y>30</y>
+      <width>265</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe Script</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(254, 234, 124);
+border-radius: 10px;</string>
+    </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="maxLength">
+     <number>50</number>
+    </property>
+   </widget>
+  </widget>
+  <action name="actiongffhf">
+   <property name="text">
+    <string>gffhf</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
+ <connections/>
+</ui>

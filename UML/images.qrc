@@ -1,0 +1,28 @@
+<RCC>
+    <qresource prefix="/img"/>
+    <qresource prefix="/">
+        <file>img/close_btn_icon.png</file>
+        <file>img/close_btn_iconred.png</file>
+        <file>img/edit.png</file>
+        <file>img/editred.png</file>
+        <file>img/hidered-removebg.png</file>
+        <file>img/hide-removebg.png</file>
+        <file>img/history.png</file>
+        <file>img/historyred.png</file>
+        <file>img/new.png</file>
+        <file>img/newred.png</file>
+        <file>img/pinred-removebg.png</file>
+        <file>img/pin-removebg.png</file>
+        <file>img/save.png</file>
+        <file>img/savered.png</file>
+        <file>img/setting.png</file>
+        <file>img/settingblack.png</file>
+        <file>img/unpinred-removebg.png</file>
+        <file>img/unpin-removebg.png</file>
+        <file>img/gpt.png</file>
+        <file>img/gptb.png</file>
+        <file>img/gptred.png</file>
+        <file>img/gptredb.png</file>
+        <file>img/icon.jpg</file>
+    </qresource>
+</RCC>

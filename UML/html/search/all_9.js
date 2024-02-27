@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['on_5fclosebtn_5fclicked_0',['on_closebtn_clicked',['../class_main_window.html#a3dabceb6a7e2b92afe3728159e44f32a',1,'MainWindow']]],
+  ['on_5fdeletebtn_5fclicked_1',['on_deletebtn_clicked',['../class_history_window.html#aad9491c61292cd839c69cae7c091fe61',1,'HistoryWindow']]],
+  ['on_5fgptbtn_5f1_5fclicked_2',['on_gptbtn_1_clicked',['../class_main_window.html#aaadc43c107d1f6bdf69d242b55afae83',1,'MainWindow']]],
+  ['on_5fgptbtn_5f2_5fclicked_3',['on_gptbtn_2_clicked',['../class_main_window.html#a0ccc911e0fcd4ae7f679bed1d33ff446',1,'MainWindow']]],
+  ['on_5fhidebtn_5fclicked_4',['on_hidebtn_clicked',['../class_main_window.html#aa77ed89af535738575ede83f5f62b375',1,'MainWindow']]],
+  ['on_5fhistorbtn_5fclicked_5',['on_historbtn_clicked',['../class_main_window.html#a97343f8ee500e26eb2697012825f020d',1,'MainWindow']]],
+  ['on_5flistwidget_5fitemdoubleclicked_6',['on_listWidget_itemDoubleClicked',['../class_history_window.html#a926f6e5860d4ace5103d1c86adc947d8',1,'HistoryWindow']]],
+  ['on_5fnewbtn_5fclicked_7',['on_newbtn_clicked',['../class_main_window.html#a2d81baa08498e5a8ed7d48678d991008',1,'MainWindow']]],
+  ['on_5fokbtn_5fclicked_8',['on_okbtn_clicked',['../class_history_window.html#a57d511afabf6f56136d522472227bac5',1,'HistoryWindow::on_okbtn_clicked()'],['../class_settings_window.html#a83200f5223b05bd2ad08c5414026285e',1,'SettingsWindow::on_okbtn_clicked()']]],
+  ['on_5fopenbtn_5fclicked_9',['on_openbtn_clicked',['../class_history_window.html#a44918424ac5df40b592a1e4619fec5a1',1,'HistoryWindow']]],
+  ['on_5fpinbtn_5fclicked_10',['on_pinbtn_clicked',['../class_main_window.html#ae2a56a67a78558708e31529f4a2a3c93',1,'MainWindow']]],
+  ['on_5fprobtn_5fclicked_11',['on_probtn_clicked',['../class_settings_window.html#a035d126410a184aa770cfbee05623c48',1,'SettingsWindow']]],
+  ['on_5fsavebtn_5fclicked_12',['on_savebtn_clicked',['../class_main_window.html#ad8217df79790f9e2460399eda4c3e4ca',1,'MainWindow']]],
+  ['on_5fsettingsbtn_5fclicked_13',['on_settingsbtn_clicked',['../class_main_window.html#a41a78e069102640c2f7d6b107169754f',1,'MainWindow']]],
+  ['on_5fstandartbtn_5fclicked_14',['on_standartbtn_clicked',['../class_settings_window.html#af400933c458a3cf588b7bd72efdae360',1,'SettingsWindow']]],
+  ['on_5ftoolsbtn_5fclicked_15',['on_toolsbtn_clicked',['../class_main_window.html#a36144848a25226be032e980bca890b30',1,'MainWindow']]],
+  ['openai_16',['OpenAI',['../classopenai_1_1__detail_1_1_open_a_i.html',1,'openai::_detail']]],
+  ['opennote_17',['openNote',['../class_history_window.html#a8c28d737dbf103851b1efb15f71733fa',1,'HistoryWindow']]]
+];

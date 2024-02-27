@@ -20,3 +20,5 @@
 *.filters
 lab1/.vs/lab1/v17/.suo
 lab1/x64/Debug/lab1.vcxproj.FileListAbsolute.txt
+build-MyNotesMaker-Desktop_Qt_6_6_2_MinGW_64_bit-Debug/
+build-MyNotesMaker-Desktop_Qt_6_6_2_MinGW_64_bit-Release/

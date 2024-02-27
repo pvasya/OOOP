@@ -1,0 +1,2935 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;\red0\green128\blue0;\red96\green64\blue32;\rede0\green128\blue0;\red128\green0\blue0;\red128\green96\blue32;\red0\green32\blue128;\red0\green128\blue128;\red255\green0\blue255;\red0\green0\blue0;\red112\green0\blue112;\red255\green0\blue0;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\paperw11900\paperh16840\margl1800\margr1800\margt1440\margb1440\gutter0\ltrsect}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 5;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext50 Code Example 9;}
+{\s50\li3600\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext51 Code Example 10;}
+{\s51\li3960\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext52 Code Example 11;}
+{\s52\li4320\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 12;}
+{\s53\li4680\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 13;}
+{\s60\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext61 List Continue 0;}
+{\s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext62 List Continue 1;}
+{\s62\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext63 List Continue 2;}
+{\s63\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext64 List Continue 3;}
+{\s64\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext65 List Continue 4;}
+{\s65\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext66 List Continue 5;}
+{\s66\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext67 List Continue 6;}
+{\s67\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext68 List Continue 7;}
+{\s68\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext69 List Continue 8;}
+{\s69\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext70 List Continue 9;}
+{\s70\li3600\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext71 List Continue 10;}
+{\s71\li3960\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext72 List Continue 11;}
+{\s72\li4320\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 12;}
+{\s73\li4680\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 13;}
+{\s80\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext81 DescContinue 0;}
+{\s81\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext82 DescContinue 1;}
+{\s82\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext83 DescContinue 2;}
+{\s83\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext84 DescContinue 3;}
+{\s84\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext85 DescContinue 4;}
+{\s85\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext86 DescContinue 5;}
+{\s86\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext87 DescContinue 6;}
+{\s87\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext88 DescContinue 7;}
+{\s88\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext89 DescContinue 8;}
+{\s89\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext90 DescContinue 9;}
+{\s90\li3600\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext91 DescContinue 10;}
+{\s91\li3960\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext92 DescContinue 11;}
+{\s92\li4320\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 12;}
+{\s93\li4680\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 13;}
+{\s100\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext101 LatexTOC 0;}
+{\s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext102 LatexTOC 1;}
+{\s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext103 LatexTOC 2;}
+{\s103\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext104 LatexTOC 3;}
+{\s104\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext105 LatexTOC 4;}
+{\s105\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext106 LatexTOC 5;}
+{\s106\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext107 LatexTOC 6;}
+{\s107\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext108 LatexTOC 7;}
+{\s108\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext109 LatexTOC 8;}
+{\s109\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext110 LatexTOC 9;}
+{\s110\li3600\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext111 LatexTOC 10;}
+{\s111\li3960\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext112 LatexTOC 11;}
+{\s112\li4320\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 12;}
+{\s113\li4680\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 13;}
+{\s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext121 \sautoupd List Bullet 0;}
+{\s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext122 \sautoupd List Bullet 1;}
+{\s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext123 \sautoupd List Bullet 2;}
+{\s123\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext124 \sautoupd List Bullet 3;}
+{\s124\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext125 \sautoupd List Bullet 4;}
+{\s125\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext126 \sautoupd List Bullet 5;}
+{\s126\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext127 \sautoupd List Bullet 6;}
+{\s127\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext128 \sautoupd List Bullet 7;}
+{\s128\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext129 \sautoupd List Bullet 8;}
+{\s129\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext130 \sautoupd List Bullet 9;}
+{\s130\fi-360\li3960\widctlpar\jclisttab\tx3960{\*\pn \pnlvlbody\ilvl0\ls11\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext131 \sautoupd List Bullet 10;}
+{\s131\fi-360\li4320\widctlpar\jclisttab\tx4320{\*\pn \pnlvlbody\ilvl0\ls12\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext132 \sautoupd List Bullet 11;}
+{\s132\fi-360\li4680\widctlpar\jclisttab\tx4680{\*\pn \pnlvlbody\ilvl0\ls13\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 12;}
+{\s133\fi-360\li5040\widctlpar\jclisttab\tx5040{\*\pn \pnlvlbody\ilvl0\ls14\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 13;}
+{\s140\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext141 \sautoupd List Enum 0;}
+{\s141\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext142 \sautoupd List Enum 1;}
+{\s142\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext143 \sautoupd List Enum 2;}
+{\s143\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext144 \sautoupd List Enum 3;}
+{\s144\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext145 \sautoupd List Enum 4;}
+{\s145\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext146 \sautoupd List Enum 5;}
+{\s146\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext147 \sautoupd List Enum 6;}
+{\s147\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext148 \sautoupd List Enum 7;}
+{\s148\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext149 \sautoupd List Enum 8;}
+{\s149\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext150 \sautoupd List Enum 9;}
+{\s150\fi-360\li3960\widctlpar\fs20\cgrid \sbasedon0 \snext151 \sautoupd List Enum 10;}
+{\s151\fi-360\li4320\widctlpar\fs20\cgrid \sbasedon0 \snext152 \sautoupd List Enum 11;}
+{\s152\fi-360\li4680\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 12;}
+{\s153\fi-360\li5040\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 13;}
+}
+{\info 
+{\title {\comment MyNotesMaker  {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+1.0 \par
+}}MyNotesMaker}
+{\comment Generated by doxygen 1.10.0.}
+}\pard\plain 
+\sectd\pgnlcrm
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+\vertalc\qc\par\par\par\par\par\par\par
+\pard\plain \s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid 
+{\field\fldedit {\*\fldinst TITLE \\*MERGEFORMAT}{\fldrslt MyNotesMaker}}\par
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+\par
+\par\par\par\par\par\par\par\par\par\par\par\par
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+{\field\fldedit {\*\fldinst AUTHOR \\*MERGEFORMAT}{\fldrslt AUTHOR}}\par
+Version 1.0\par\page\page\vertalt
+\pard\plain 
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Table of Contents\par
+\pard\plain \par
+{\field\fldedit {\*\fldinst TOC \\f \\*MERGEFORMAT}{\fldrslt Table of contents}}\par
+\pard\plain 
+\sect \sbkpage \pgndec \pgnrestart
+\sect \sectd \sbknone
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+\par \pard\plain 
+\pard\plain \s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+My Personal Index Page\par \pard\plain 
+{\tc\tcl1 \v My Personal Index Page}
+{\xe \v My Personal Index Page}
+{\bkmkstart AAAAAAAAGZ}
+{\bkmkend AAAAAAAAGZ}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+{\bkmkstart AAAAAAAAHA}
+{\bkmkend AAAAAAAAHA}
+{{\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Introduction
+\par}
+{\tc\tcl2 \v Introduction}
+\'D0\'9F\'D1\'80\'D0\'BE\'D0\'B3\'D1\'80\'D0\'B0\'D0\'BC\'D0\'B0 MyNotesMaker - \'D1\'86\'D0\'B5 \'D0\'B7\'D1\'80\'D1\'83\'D1\'87\'D0\'BD\'D0\'B8\'D0\'B9 \'D1\'96\'D0\'BD\'D1\'81\'D1\'82\'D1\'80\'D1\'83\'D0\'BC\'D0\'B5\'D0\'BD\'D1\'82 \'D0\'B4\'D0\'BB\'D1\'8F \'D1\'81\'D1\'82\'D0\'B2\'D0\'BE\'D1\'80\'D0\'B5\'D0\'BD\'D0\'BD\'D1\'8F, \'D0\'B7\'D0\'B1\'D0\'B5\'D1\'80\'D0\'B5\'D0\'B6\'D0\'B5\'D0\'BD\'D0\'BD\'D1\'8F \'D1\'82\'D0\'B0 \'D1\'83\'D0\'BF\'D1\'80\'D0\'B0\'D0\'B2\'D0\'BB\'D1\'96\'D0\'BD\'D0\'BD\'D1\'8F \'D0\'BD\'D0\'BE\'D1\'82\'D0\'B0\'D1\'82\'D0\'BA\'D0\'B0\'D0\'BC\'D0\'B8. \'D0\'97\'D0\'B0\'D0\'B2\'D0\'B4\'D1\'8F\'D0\'BA\'D0\'B8 \'D0\'BF\'D1\'80\'D0\'BE\'D1\'81\'D1\'82\'D0\'BE\'D0\'BC\'D1\'83 \'D1\'82\'D0\'B0 \'D1\'96\'D0\'BD\'D1\'82\'D1\'83\'D1\'97\'D1\'82\'D0\'B8\'D0\'B2\'D0\'BD\'D0\'BE \'D0\'B7\'D1\'80\'D0\'BE\'D0\'B7\'D1\'83\'D0\'BC\'D1\'96\'D0\'BB\'D0\'BE\'D0\'BC\'D1\'83 \'D1\'96\'D0\'BD\'D1\'82\'D0\'B5\'D1\'80\'D1\'84\'D0\'B5\'D0\'B9\'D1\'81\'D1\'83 \'D0\'BA\'D0\'BE\'D1\'80\'D0\'B8\'D1\'81\'D1\'82\'D1\'83\'D0\'B2\'D0\'B0\'D1\'87\'D0\'B0, MyNotesMaker \'D0\'B4\'D0\'BE\'D0\'B7\'D0\'B2\'D0\'BE\'D0\'BB\'D1\'8F\'D1\'94 \'D0\'BB\'D0\'B5\'D0\'B3\'D0\'BA\'D0\'BE \'D1\'81\'D1\'82\'D0\'B2\'D0\'BE\'D1\'80\'D1\'8E\'D0\'B2\'D0\'B0\'D1\'82\'D0\'B8 \'D0\'BD\'D0\'BE\'D0\'B2\'D1\'96 \'D0\'BD\'D0\'BE\'D1\'82\'D0\'B0\'D1\'82\'D0\'BA\'D0\'B8, \'D1\'80\'D0\'B5\'D0\'B4\'D0\'B0\'D0\'B3\'D1\'83\'D0\'B2\'D0\'B0\'D1\'82\'D0\'B8 \'D0\'B2\'D0\'B6\'D0\'B5 \'D1\'96\'D1\'81\'D0\'BD\'D1\'83\'D1\'8E\'D1\'87\'D1\'96 \'D1\'82\'D0\'B0 \'D1\'88\'D0\'B2\'D0\'B8\'D0\'B4\'D0\'BA\'D0\'BE \'D0\'B7\'D0\'BD\'D0\'B0\'D1\'85\'D0\'BE\'D0\'B4\'D0\'B8\'D1\'82\'D0\'B8 \'D0\'BF\'D0\'BE\'D1\'82\'D1\'80\'D1\'96\'D0\'B1\'D0\'BD\'D1\'83 \'D1\'96\'D0\'BD\'D1\'84\'D0\'BE\'D1\'80\'D0\'BC\'D0\'B0\'D1\'86\'D1\'96\'D1\'8E. \par}
+{\bkmkstart AAAAAAAAHB}
+{\bkmkend AAAAAAAAHB}
+{{\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\'D0\'9E\'D1\'81\'D0\'BD\'D0\'BE\'D0\'B2\'D0\'BD\'D1\'96 \'D0\'BC\'D0\'BE\'D0\'B6\'D0\'BB\'D0\'B8\'D0\'B2\'D0\'BE\'D1\'81\'D1\'82\'D1\'96 \'D0\'BF\'D1\'80\'D0\'BE\'D0\'B3\'D1\'80\'D0\'B0\'D0\'BC\'D0\'B8 \'D0\'B2\'D0\'BA\'D0\'BB\'D1\'8E\'D1\'87\'D0\'B0\'D1\'8E\'D1\'82\'D1\'8C:
+\par}
+{\tc\tcl2 \v \'D0\'9E\'D1\'81\'D0\'BD\'D0\'BE\'D0\'B2\'D0\'BD\'D1\'96 \'D0\'BC\'D0\'BE\'D0\'B6\'D0\'BB\'D0\'B8\'D0\'B2\'D0\'BE\'D1\'81\'D1\'82\'D1\'96 \'D0\'BF\'D1\'80\'D0\'BE\'D0\'B3\'D1\'80\'D0\'B0\'D0\'BC\'D0\'B8 \'D0\'B2\'D0\'BA\'D0\'BB\'D1\'8E\'D1\'87\'D0\'B0\'D1\'8E\'D1\'82\'D1\'8C:}
+{\bkmkstart AAAAAAAAHC}
+{\bkmkend AAAAAAAAHC}
+{{\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+\'D0\'A1\'D1\'82\'D0\'B2\'D0\'BE\'D1\'80\'D0\'B5\'D0\'BD\'D0\'BD\'D1\'8F \'D1\'82\'D0\'B0 \'D1\'80\'D0\'B5\'D0\'B4\'D0\'B0\'D0\'B3\'D1\'83\'D0\'B2\'D0\'B0\'D0\'BD\'D0\'BD\'D1\'8F \'D0\'BD\'D0\'BE\'D1\'82\'D0\'B0\'D1\'82\'D0\'BE\'D0\'BA:
+\par}
+{\tc\tcl3 \v \'D0\'A1\'D1\'82\'D0\'B2\'D0\'BE\'D1\'80\'D0\'B5\'D0\'BD\'D0\'BD\'D1\'8F \'D1\'82\'D0\'B0 \'D1\'80\'D0\'B5\'D0\'B4\'D0\'B0\'D0\'B3\'D1\'83\'D0\'B2\'D0\'B0\'D0\'BD\'D0\'BD\'D1\'8F \'D0\'BD\'D0\'BE\'D1\'82\'D0\'B0\'D1\'82\'D0\'BE\'D0\'BA:}
+\'D0\'9A\'D0\'BE\'D1\'80\'D0\'B8\'D1\'81\'D1\'82\'D1\'83\'D0\'B2\'D0\'B0\'D1\'87\'D1\'96 \'D0\'BC\'D0\'BE\'D0\'B6\'D1\'83\'D1\'82\'D1\'8C \'D1\'81\'D1\'82\'D0\'B2\'D0\'BE\'D1\'80\'D1\'8E\'D0\'B2\'D0\'B0\'D1\'82\'D0\'B8 \'D0\'BD\'D0\'BE\'D0\'B2\'D1\'96 \'D0\'BD\'D0\'BE\'D1\'82\'D0\'B0\'D1\'82\'D0\'BA\'D0\'B8, \'D0\'B4\'D0\'BE\'D0\'B4\'D0\'B0\'D0\'B2\'D0\'B0\'D1\'82\'D0\'B8 \'D1\'82\'D0\'B5\'D0\'BA\'D1\'81\'D1\'82, \'D1\'84\'D0\'BE\'D1\'80\'D0\'BC\'D0\'B0\'D1\'82\'D1\'83\'D0\'B2\'D0\'B0\'D1\'82\'D0\'B8 \'D0\'B9\'D0\'BE\'D0\'B3\'D0\'BE, \'D0\'B2\'D0\'B8\'D0\'B1\'D0\'B8\'D1\'80\'D0\'B0\'D1\'82\'D0\'B8 \'D1\'88\'D1\'80\'D0\'B8\'D1\'84\'D1\'82\'D0\'B8. \par}
+{\bkmkstart AAAAAAAAHD}
+{\bkmkend AAAAAAAAHD}
+{{\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+\'D0\'97\'D0\'B1\'D0\'B5\'D1\'80\'D0\'B5\'D0\'B6\'D0\'B5\'D0\'BD\'D0\'BD\'D1\'8F \'D0\'BD\'D0\'BE\'D1\'82\'D0\'B0\'D1\'82\'D0\'BE\'D0\'BA:
+\par}
+{\tc\tcl3 \v \'D0\'97\'D0\'B1\'D0\'B5\'D1\'80\'D0\'B5\'D0\'B6\'D0\'B5\'D0\'BD\'D0\'BD\'D1\'8F \'D0\'BD\'D0\'BE\'D1\'82\'D0\'B0\'D1\'82\'D0\'BE\'D0\'BA:}
+\'D0\'A3\'D1\'81\'D1\'96 \'D1\'81\'D1\'82\'D0\'B2\'D0\'BE\'D1\'80\'D0\'B5\'D0\'BD\'D1\'96 \'D0\'BD\'D0\'BE\'D1\'82\'D0\'B0\'D1\'82\'D0\'BA\'D0\'B8 \'D0\'B7\'D0\'B1\'D0\'B5\'D1\'80\'D1\'96\'D0\'B3\'D0\'B0\'D1\'8E\'D1\'82\'D1\'8C\'D1\'81\'D1\'8F \'D0\'B2 \'D1\'81\'D0\'BF\'D0\'B5\'D1\'86\'D1\'96\'D0\'B0\'D0\'BB\'D1\'8C\'D0\'BD\'D0\'BE\'D0\'BC\'D1\'83 \'D1\'84\'D0\'B0\'D0\'B9\'D0\'BB\'D1\'96 \'D1\'83 \'D1\'84\'D0\'BE\'D1\'80\'D0\'BC\'D0\'B0\'D1\'82\'D1\'96 JSON, \'D1\'89\'D0\'BE \'D0\'B4\'D0\'BE\'D0\'B7\'D0\'B2\'D0\'BE\'D0\'BB\'D1\'8F\'D1\'94 \'D0\'B7\'D0\'B1\'D0\'B5\'D1\'80\'D1\'96\'D0\'B3\'D0\'B0\'D1\'82\'D0\'B8 \'D1\'96\'D0\'BD\'D1\'84\'D0\'BE\'D1\'80\'D0\'BC\'D0\'B0\'D1\'86\'D1\'96\'D1\'8E \'D1\'83 \'D1\'81\'D1\'82\'D1\'80\'D1\'83\'D0\'BA\'D1\'82\'D1\'83\'D1\'80\'D0\'BE\'D0\'B2\'D0\'B0\'D0\'BD\'D0\'BE\'D0\'BC\'D1\'83 \'D0\'B2\'D0\'B8\'D0\'B3\'D0\'BB\'D1\'8F\'D0\'B4\'D1\'96 \'D1\'82\'D0\'B0 \'D0\'BB\'D0\'B5\'D0\'B3\'D0\'BA\'D0\'BE \'D0\'BE\'D0\'B1\'D0\'BC\'D1\'96\'D0\'BD\'D1\'8E\'D0\'B2\'D0\'B0\'D1\'82\'D0\'B8\'D1\'81\'D1\'8F \'D0\'BD\'D0\'B5\'D1\'8E. \par}
+{\bkmkstart AAAAAAAAHE}
+{\bkmkend AAAAAAAAHE}
+{{\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+\'D0\'A3\'D0\'BF\'D1\'80\'D0\'B0\'D0\'B2\'D0\'BB\'D1\'96\'D0\'BD\'D0\'BD\'D1\'8F \'D0\'BD\'D0\'BE\'D1\'82\'D0\'B0\'D1\'82\'D0\'BA\'D0\'B0\'D0\'BC\'D0\'B8:
+\par}
+{\tc\tcl3 \v \'D0\'A3\'D0\'BF\'D1\'80\'D0\'B0\'D0\'B2\'D0\'BB\'D1\'96\'D0\'BD\'D0\'BD\'D1\'8F \'D0\'BD\'D0\'BE\'D1\'82\'D0\'B0\'D1\'82\'D0\'BA\'D0\'B0\'D0\'BC\'D0\'B8:}
+\'D0\'9A\'D0\'BE\'D1\'80\'D0\'B8\'D1\'81\'D1\'82\'D1\'83\'D0\'B2\'D0\'B0\'D1\'87\'D1\'96 \'D0\'BC\'D0\'BE\'D0\'B6\'D1\'83\'D1\'82\'D1\'8C \'D1\'88\'D0\'B2\'D0\'B8\'D0\'B4\'D0\'BA\'D0\'BE \'D0\'BF\'D0\'B5\'D1\'80\'D0\'B5\'D0\'B3\'D0\'BB\'D1\'8F\'D0\'B4\'D0\'B0\'D1\'82\'D0\'B8 \'D1\'81\'D0\'BF\'D0\'B8\'D1\'81\'D0\'BE\'D0\'BA \'D1\'81\'D1\'82\'D0\'B2\'D0\'BE\'D1\'80\'D0\'B5\'D0\'BD\'D0\'B8\'D1\'85 \'D0\'BD\'D0\'BE\'D1\'82\'D0\'B0\'D1\'82\'D0\'BE\'D0\'BA, \'D0\'B2\'D0\'B8\'D0\'B1\'D0\'B8\'D1\'80\'D0\'B0\'D1\'82\'D0\'B8 \'D0\'BD\'D0\'BE\'D1\'82\'D0\'B0\'D1\'82\'D0\'BA\'D0\'B8 \'D0\'B4\'D0\'BB\'D1\'8F \'D0\'B2\'D1\'96\'D0\'B4\'D0\'BA\'D1\'80\'D0\'B8\'D1\'82\'D1\'82\'D1\'8F \'D1\'82\'D0\'B0 \'D0\'B2\'D0\'B8\'D0\'B4\'D0\'B0\'D0\'BB\'D1\'8F\'D1\'82\'D0\'B8 \'D0\'BD\'D0\'B5\'D0\'BF\'D0\'BE\'D1\'82\'D1\'80\'D1\'96\'D0\'B1\'D0\'BD\'D1\'96 \'D0\'B7\'D0\'B0\'D0\'BF\'D0\'B8\'D1\'81\'D0\'B8. \par}
+{\bkmkstart AAAAAAAAHF}
+{\bkmkend AAAAAAAAHF}
+{{\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+\'D0\'9D\'D0\'B0\'D0\'BB\'D0\'B0\'D1\'88\'D1\'82\'D1\'83\'D0\'B2\'D0\'B0\'D0\'BD\'D0\'BD\'D1\'8F \'D0\'BF\'D1\'80\'D0\'BE\'D0\'B3\'D1\'80\'D0\'B0\'D0\'BC\'D0\'B8:
+\par}
+{\tc\tcl3 \v \'D0\'9D\'D0\'B0\'D0\'BB\'D0\'B0\'D1\'88\'D1\'82\'D1\'83\'D0\'B2\'D0\'B0\'D0\'BD\'D0\'BD\'D1\'8F \'D0\'BF\'D1\'80\'D0\'BE\'D0\'B3\'D1\'80\'D0\'B0\'D0\'BC\'D0\'B8:}
+\'D0\'9F\'D1\'80\'D0\'BE\'D0\'B3\'D1\'80\'D0\'B0\'D0\'BC\'D0\'B0 \'D0\'BC\'D0\'B0\'D1\'94 \'D0\'BD\'D0\'B0\'D0\'B1\'D1\'96\'D1\'80 \'D0\'BD\'D0\'B0\'D0\'BB\'D0\'B0\'D1\'88\'D1\'82\'D1\'83\'D0\'B2\'D0\'B0\'D0\'BD\'D1\'8C, \'D1\'89\'D0\'BE \'D0\'B4\'D0\'BE\'D0\'B7\'D0\'B2\'D0\'BE\'D0\'BB\'D1\'8F\'D1\'94 \'D0\'B7\'D0\'BC\'D1\'96\'D0\'BD\'D1\'8E\'D0\'B2\'D0\'B0\'D1\'82\'D0\'B8 \'D1\'80\'D0\'BE\'D0\'B7\'D0\'BC\'D1\'96\'D1\'80 \'D1\'82\'D0\'B0 \'D1\'81\'D1\'82\'D0\'B8\'D0\'BB\'D1\'8C \'D1\'88\'D1\'80\'D0\'B8\'D1\'84\'D1\'82\'D1\'83. \par}
+{\bkmkstart AAAAAAAAHG}
+{\bkmkend AAAAAAAAHG}
+{{\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+\'D0\'97\'D0\'B1\'D0\'B5\'D1\'80\'D0\'B5\'D0\'B6\'D0\'B5\'D0\'BD\'D0\'BD\'D1\'8F \'D0\'BD\'D0\'BE\'D1\'82\'D0\'B0\'D1\'82\'D0\'BE\'D0\'BA:
+\par}
+{\tc\tcl3 \v \'D0\'97\'D0\'B1\'D0\'B5\'D1\'80\'D0\'B5\'D0\'B6\'D0\'B5\'D0\'BD\'D0\'BD\'D1\'8F \'D0\'BD\'D0\'BE\'D1\'82\'D0\'B0\'D1\'82\'D0\'BE\'D0\'BA:}
+MyNotesMaker - \'D1\'86\'D0\'B5 \'D1\'96\'D0\'B4\'D0\'B5\'D0\'B0\'D0\'BB\'D1\'8C\'D0\'BD\'D0\'B8\'D0\'B9 \'D1\'96\'D0\'BD\'D1\'81\'D1\'82\'D1\'80\'D1\'83\'D0\'BC\'D0\'B5\'D0\'BD\'D1\'82 \'D0\'B4\'D0\'BB\'D1\'8F \'D1\'82\'D0\'B8\'D1\'85, \'D1\'85\'D1\'82\'D0\'BE \'D1\'88\'D1\'83\'D0\'BA\'D0\'B0\'D1\'94 \'D0\'BF\'D1\'80\'D0\'BE\'D1\'81\'D1\'82\'D0\'B8\'D0\'B9, \'D0\'B5\'D1\'84\'D0\'B5\'D0\'BA\'D1\'82\'D0\'B8\'D0\'B2\'D0\'BD\'D0\'B8\'D0\'B9 \'D1\'82\'D0\'B0 \'D0\'B7\'D1\'80\'D1\'83\'D1\'87\'D0\'BD\'D0\'B8\'D0\'B9 \'D1\'81\'D0\'BF\'D0\'BE\'D1\'81\'D1\'96\'D0\'B1 \'D1\'81\'D1\'82\'D0\'B2\'D0\'BE\'D1\'80\'D1\'8E\'D0\'B2\'D0\'B0\'D1\'82\'D0\'B8 \'D1\'82\'D0\'B0 \'D0\'BE\'D1\'80\'D0\'B3\'D0\'B0\'D0\'BD\'D1\'96\'D0\'B7\'D0\'BE\'D0\'B2\'D1\'83\'D0\'B2\'D0\'B0\'D1\'82\'D0\'B8 \'D1\'81\'D0\'B2\'D0\'BE\'D1\'97 \'D0\'BD\'D0\'BE\'D1\'82\'D0\'B0\'D1\'82\'D0\'BA\'D0\'B8. \par}
+\par}
+}}
+\par \pard\plain 
+\par \pard\plain 
+\pard\plain \s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Lab 2 + lab 3 MyNotesMaker\par \pard\plain 
+{\tc\tcl1 \v Lab 2 + lab 3 MyNotesMaker}
+{\xe \v Lab 2 + lab 3 MyNotesMaker}
+{\bkmkstart AAAAAAAAAF}
+{\bkmkend AAAAAAAAAF}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{\bkmkstart AAAAAAAAAG}
+{\bkmkend AAAAAAAAAG}
+ QT Framework + openai-cpp {\f2 https://github.com/olrea/openai-cpp}\par
+ \par
+}}
+
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Hierarchical Index\par \pard\plain 
+{\tc \v Hierarchical Index}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Class Hierarchy\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid This inheritance list is sorted roughly, but not completely, alphabetically:}
+{
+\par
+\pard\plain \s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+openai::_detail::CategoryAudio\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACH \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+openai::_detail::CategoryChat\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACM \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+openai::_detail::CategoryCompletion\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACQ \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+openai::_detail::CategoryEdit\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACU \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+openai::_detail::CategoryEmbedding\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACY \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+openai::_detail::CategoryFile\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADC \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+openai::_detail::CategoryFineTune\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADK \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+openai::_detail::CategoryImage\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADU \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+openai::_detail::CategoryModel\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEA \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+openai::_detail::CategoryModeration\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEF \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+openai::_detail::FileRequest\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEJ \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+openai::_detail::OpenAI\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEM \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+QDialog
+{
+\par
+\pard\plain \s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+HistoryWindow\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAH \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+SettingsWindow\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABN \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+}\par
+QMainWindow
+{
+\par
+\pard\plain \s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+MainWindow\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAU \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+}\par
+QObject
+{
+\par
+\pard\plain \s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+Test_MyNotesMaker\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABX \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+}\par
+openai::_detail::Response\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFW \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+openai::_detail::Session\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAGA \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Class Index\par \pard\plain 
+{\tc \v Class Index}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Class List\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Here are the classes, structs, unions and interfaces with brief descriptions:}
+{
+\par
+\pard\plain \s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\b {\b openai::_detail::CategoryAudio} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACH \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b openai::_detail::CategoryChat} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACM \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b openai::_detail::CategoryCompletion} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACQ \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b openai::_detail::CategoryEdit} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACU \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b openai::_detail::CategoryEmbedding} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACY \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b openai::_detail::CategoryFile} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADC \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b openai::_detail::CategoryFineTune} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADK \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b openai::_detail::CategoryImage} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADU \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b openai::_detail::CategoryModel} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEA \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b openai::_detail::CategoryModeration} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEF \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b openai::_detail::FileRequest} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEJ \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b HistoryWindow} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAH \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b MainWindow} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAU \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b openai::_detail::OpenAI} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEM \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b openai::_detail::Response} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFW \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b openai::_detail::Session} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAGA \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b SettingsWindow} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABN \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b Test_MyNotesMaker} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABX \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+\par}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+File Index\par \pard\plain 
+{\tc \v File Index}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+File List\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Here is a list of all documented files with brief descriptions:}
+{
+\par
+\pard\plain \s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\b {\b historywindow.h} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAA \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b mainwindow.h} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAB \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b openai.hpp} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAC \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b settingswindow.h} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAD \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b test_mynotesmaker.h} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAE \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+\par}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Class Documentation{\tc \v Class Documentation}
+\par \pard\plain 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+openai::_detail::CategoryAudio Struct Reference\par \pard\plain 
+{\tc\tcl2 \v openai::_detail::CategoryAudio}
+{\xe \v openai::_detail::CategoryAudio}
+{\bkmkstart AAAAAAAACH}
+{\bkmkend AAAAAAAACH}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Json {\b transcribe} (Json input){\bkmkstart AAAAAAAACI}
+{\bkmkend AAAAAAAACI}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Json {\b translate} (Json input){\bkmkstart AAAAAAAACJ}
+{\bkmkend AAAAAAAACJ}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b CategoryAudio} ({\b OpenAI} &openai){\bkmkstart AAAAAAAACK}
+{\bkmkend AAAAAAAACK}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Private Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b OpenAI} & {\b openai_}{\bkmkstart AAAAAAAACL}
+{\bkmkend AAAAAAAACL}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+openai.hpp\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+openai::_detail::CategoryChat Struct Reference\par \pard\plain 
+{\tc\tcl2 \v openai::_detail::CategoryChat}
+{\xe \v openai::_detail::CategoryChat}
+{\bkmkstart AAAAAAAACM}
+{\bkmkend AAAAAAAACM}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Json {\b create} (Json input){\bkmkstart AAAAAAAACN}
+{\bkmkend AAAAAAAACN}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b CategoryChat} ({\b OpenAI} &openai){\bkmkstart AAAAAAAACO}
+{\bkmkend AAAAAAAACO}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Private Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b OpenAI} & {\b openai_}{\bkmkstart AAAAAAAACP}
+{\bkmkend AAAAAAAACP}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+openai.hpp\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+openai::_detail::CategoryCompletion Struct Reference\par \pard\plain 
+{\tc\tcl2 \v openai::_detail::CategoryCompletion}
+{\xe \v openai::_detail::CategoryCompletion}
+{\bkmkstart AAAAAAAACQ}
+{\bkmkend AAAAAAAACQ}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Json {\b create} (Json input){\bkmkstart AAAAAAAACR}
+{\bkmkend AAAAAAAACR}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b CategoryCompletion} ({\b OpenAI} &openai){\bkmkstart AAAAAAAACS}
+{\bkmkend AAAAAAAACS}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Private Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b OpenAI} & {\b openai_}{\bkmkstart AAAAAAAACT}
+{\bkmkend AAAAAAAACT}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+openai.hpp\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+openai::_detail::CategoryEdit Struct Reference\par \pard\plain 
+{\tc\tcl2 \v openai::_detail::CategoryEdit}
+{\xe \v openai::_detail::CategoryEdit}
+{\bkmkstart AAAAAAAACU}
+{\bkmkend AAAAAAAACU}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Json {\b create} (Json input){\bkmkstart AAAAAAAACV}
+{\bkmkend AAAAAAAACV}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b CategoryEdit} ({\b OpenAI} &openai){\bkmkstart AAAAAAAACW}
+{\bkmkend AAAAAAAACW}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Private Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b OpenAI} & {\b openai_}{\bkmkstart AAAAAAAACX}
+{\bkmkend AAAAAAAACX}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+openai.hpp\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+openai::_detail::CategoryEmbedding Struct Reference\par \pard\plain 
+{\tc\tcl2 \v openai::_detail::CategoryEmbedding}
+{\xe \v openai::_detail::CategoryEmbedding}
+{\bkmkstart AAAAAAAACY}
+{\bkmkend AAAAAAAACY}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Json {\b create} (Json input){\bkmkstart AAAAAAAACZ}
+{\bkmkend AAAAAAAACZ}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b CategoryEmbedding} ({\b OpenAI} &openai){\bkmkstart AAAAAAAADA}
+{\bkmkend AAAAAAAADA}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Private Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b OpenAI} & {\b openai_}{\bkmkstart AAAAAAAADB}
+{\bkmkend AAAAAAAADB}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+openai.hpp\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+openai::_detail::CategoryFile Struct Reference\par \pard\plain 
+{\tc\tcl2 \v openai::_detail::CategoryFile}
+{\xe \v openai::_detail::CategoryFile}
+{\bkmkstart AAAAAAAADC}
+{\bkmkend AAAAAAAADC}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Json {\b list} (){\bkmkstart AAAAAAAADD}
+{\bkmkend AAAAAAAADD}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Json {\b upload} (Json input){\bkmkstart AAAAAAAADE}
+{\bkmkend AAAAAAAADE}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Json {\b del} (const std::string &file){\bkmkstart AAAAAAAADF}
+{\bkmkend AAAAAAAADF}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Json {\b retrieve} (const std::string &file_id){\bkmkstart AAAAAAAADG}
+{\bkmkend AAAAAAAADG}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Json {\b content} (const std::string &file_id){\bkmkstart AAAAAAAADH}
+{\bkmkend AAAAAAAADH}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b CategoryFile} ({\b OpenAI} &openai){\bkmkstart AAAAAAAADI}
+{\bkmkend AAAAAAAADI}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Private Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b OpenAI} & {\b openai_}{\bkmkstart AAAAAAAADJ}
+{\bkmkend AAAAAAAADJ}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+openai.hpp\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+openai::_detail::CategoryFineTune Struct Reference\par \pard\plain 
+{\tc\tcl2 \v openai::_detail::CategoryFineTune}
+{\xe \v openai::_detail::CategoryFineTune}
+{\bkmkstart AAAAAAAADK}
+{\bkmkend AAAAAAAADK}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Json {\b create} (Json input){\bkmkstart AAAAAAAADL}
+{\bkmkend AAAAAAAADL}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Json {\b list} (){\bkmkstart AAAAAAAADM}
+{\bkmkend AAAAAAAADM}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Json {\b retrieve} (const std::string &fine_tune_id){\bkmkstart AAAAAAAADN}
+{\bkmkend AAAAAAAADN}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Json {\b content} (const std::string &fine_tune_id){\bkmkstart AAAAAAAADO}
+{\bkmkend AAAAAAAADO}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Json {\b cancel} (const std::string &fine_tune_id){\bkmkstart AAAAAAAADP}
+{\bkmkend AAAAAAAADP}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Json {\b events} (const std::string &fine_tune_id){\bkmkstart AAAAAAAADQ}
+{\bkmkend AAAAAAAADQ}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Json {\b del} (const std::string &model){\bkmkstart AAAAAAAADR}
+{\bkmkend AAAAAAAADR}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b CategoryFineTune} ({\b OpenAI} &openai){\bkmkstart AAAAAAAADS}
+{\bkmkend AAAAAAAADS}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Private Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b OpenAI} & {\b openai_}{\bkmkstart AAAAAAAADT}
+{\bkmkend AAAAAAAADT}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+openai.hpp\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+openai::_detail::CategoryImage Struct Reference\par \pard\plain 
+{\tc\tcl2 \v openai::_detail::CategoryImage}
+{\xe \v openai::_detail::CategoryImage}
+{\bkmkstart AAAAAAAADU}
+{\bkmkend AAAAAAAADU}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Json {\b create} (Json input){\bkmkstart AAAAAAAADV}
+{\bkmkend AAAAAAAADV}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Json {\b edit} (Json input){\bkmkstart AAAAAAAADW}
+{\bkmkend AAAAAAAADW}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Json {\b variation} (Json input){\bkmkstart AAAAAAAADX}
+{\bkmkend AAAAAAAADX}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b CategoryImage} ({\b OpenAI} &openai){\bkmkstart AAAAAAAADY}
+{\bkmkend AAAAAAAADY}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Private Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b OpenAI} & {\b openai_}{\bkmkstart AAAAAAAADZ}
+{\bkmkend AAAAAAAADZ}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+openai.hpp\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+openai::_detail::CategoryModel Struct Reference\par \pard\plain 
+{\tc\tcl2 \v openai::_detail::CategoryModel}
+{\xe \v openai::_detail::CategoryModel}
+{\bkmkstart AAAAAAAAEA}
+{\bkmkend AAAAAAAAEA}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Json {\b list} (){\bkmkstart AAAAAAAAEB}
+{\bkmkend AAAAAAAAEB}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Json {\b retrieve} (const std::string &model){\bkmkstart AAAAAAAAEC}
+{\bkmkend AAAAAAAAEC}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b CategoryModel} ({\b OpenAI} &openai){\bkmkstart AAAAAAAAED}
+{\bkmkend AAAAAAAAED}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Private Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b OpenAI} & {\b openai_}{\bkmkstart AAAAAAAAEE}
+{\bkmkend AAAAAAAAEE}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+openai.hpp\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+openai::_detail::CategoryModeration Struct Reference\par \pard\plain 
+{\tc\tcl2 \v openai::_detail::CategoryModeration}
+{\xe \v openai::_detail::CategoryModeration}
+{\bkmkstart AAAAAAAAEF}
+{\bkmkend AAAAAAAAEF}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Json {\b create} (Json input){\bkmkstart AAAAAAAAEG}
+{\bkmkend AAAAAAAAEG}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b CategoryModeration} ({\b OpenAI} &openai){\bkmkstart AAAAAAAAEH}
+{\bkmkend AAAAAAAAEH}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Private Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b OpenAI} & {\b openai_}{\bkmkstart AAAAAAAAEI}
+{\bkmkend AAAAAAAAEI}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+openai.hpp\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+openai::_detail::FileRequest Struct Reference\par \pard\plain 
+{\tc\tcl2 \v openai::_detail::FileRequest}
+{\xe \v openai::_detail::FileRequest}
+{\bkmkstart AAAAAAAAEJ}
+{\bkmkend AAAAAAAAEJ}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+std::string {\b file}{\bkmkstart AAAAAAAAEK}
+{\bkmkend AAAAAAAAEK}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+std::string {\b purpose}{\bkmkstart AAAAAAAAEL}
+{\bkmkend AAAAAAAAEL}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+openai.hpp\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+HistoryWindow Class Reference\par \pard\plain 
+{\tc\tcl2 \v HistoryWindow}
+{\xe \v HistoryWindow}
+{\bkmkstart AAAAAAAAAH}
+{\bkmkend AAAAAAAAAH}
+Inheritance diagram for HistoryWindow:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_history_window.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Signals\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b open} (QString name, QString text, QFont font){\bkmkstart AAAAAAAAAI}
+{\bkmkend AAAAAAAAAI}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b HistoryWindow} (QWidget *parent=nullptr){\bkmkstart AAAAAAAAAJ}
+{\bkmkend AAAAAAAAAJ}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Private Slots\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b on_okbtn_clicked} (){\bkmkstart AAAAAAAAAK}
+{\bkmkend AAAAAAAAAK}
+\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'D0\'97\'D0\'B0\'D0\'BA\'D1\'80\'D0\'B8\'D1\'82\'D1\'82\'D1\'8F \'D0\'B2\'D1\'96\'D0\'BA\'D0\'BD\'D0\'B0 \'D1\'96\'D1\'81\'D1\'82\'D0\'BE\'D1\'80\'D1\'96\'D1\'97 \'D0\'BD\'D0\'BE\'D1\'82\'D0\'B0\'D1\'82\'D0\'BE\'D0\'BA }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b on_deletebtn_clicked} (){\bkmkstart AAAAAAAAAL}
+{\bkmkend AAAAAAAAAL}
+\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'D0\'92\'D0\'B8\'D0\'B4\'D0\'B0\'D0\'BB\'D0\'B5\'D0\'BD\'D0\'BD\'D1\'8F \'D0\'B2\'D0\'B8\'D0\'B1\'D1\'80\'D0\'B0\'D0\'BD\'D0\'BE\'D0\'B3\'D0\'BE \'D0\'BD\'D0\'BE\'D1\'82\'D0\'B0\'D1\'82\'D0\'BA\'D0\'B0 }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b on_openbtn_clicked} (){\bkmkstart AAAAAAAAAM}
+{\bkmkend AAAAAAAAAM}
+\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'D0\'92\'D1\'96\'D0\'B4\'D0\'BA\'D1\'80\'D0\'B8\'D1\'82\'D1\'82\'D1\'8F \'D0\'B2\'D0\'B8\'D0\'B1\'D1\'80\'D0\'B0\'D0\'BD\'D0\'BE\'D0\'B3\'D0\'BE \'D0\'BD\'D0\'BE\'D1\'82\'D0\'B0\'D1\'82\'D0\'BA\'D0\'B0 \'D0\'BA\'D0\'BD\'D0\'BE\'D0\'BF\'D0\'BA\'D0\'BE\'D1\'8E Open. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b on_listWidget_itemDoubleClicked} (QListWidgetItem *item){\bkmkstart AAAAAAAAAN}
+{\bkmkend AAAAAAAAAN}
+\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'D0\'92\'D1\'96\'D0\'B4\'D0\'BA\'D1\'80\'D0\'B8\'D1\'82\'D1\'82\'D1\'8F \'D0\'B2\'D0\'B8\'D0\'B1\'D1\'80\'D0\'B0\'D0\'BD\'D0\'BE\'D0\'B3\'D0\'BE \'D0\'BD\'D0\'BE\'D1\'82\'D0\'B0\'D1\'82\'D0\'BA\'D0\'B0 \'D0\'BF\'D0\'BE\'D0\'B4\'D0\'B2\'D1\'96\'D0\'B9\'D0\'BD\'D0\'B8\'D0\'BC \'D0\'BD\'D0\'B0\'D1\'82\'D0\'B8\'D1\'81\'D0\'BD\'D0\'B5\'D0\'BD\'D0\'BD\'D1\'8F\'D0\'BC \'D0\'BB\'D1\'96\'D0\'B2\'D0\'BE\'D1\'97 \'D0\'BA\'D0\'BD\'D0\'BE\'D0\'BF\'D0\'BA\'D0\'B8 \'D0\'BC\'D0\'B8\'D1\'88\'D1\'96 }{
+}\par
+}\par}
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Private Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b openNote} (QListWidgetItem *selectedItem)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'D0\'92\'D1\'96\'D0\'B4\'D0\'BA\'D1\'80\'D0\'B8\'D1\'82\'D1\'82\'D1\'8F \'D0\'B2\'D0\'B8\'D0\'B1\'D1\'80\'D0\'B0\'D0\'BD\'D0\'BE\'D0\'B3\'D0\'BE \'D0\'BD\'D0\'BE\'D1\'82\'D0\'B0\'D1\'82\'D0\'BA\'D0\'B0 }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b mousePressEvent} (QMouseEvent *event){\bkmkstart AAAAAAAAAO}
+{\bkmkend AAAAAAAAAO}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b mouseMoveEvent} (QMouseEvent *event){\bkmkstart AAAAAAAAAP}
+{\bkmkend AAAAAAAAAP}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Private Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Ui::History * {\b ui}{\bkmkstart AAAAAAAAAQ}
+{\bkmkend AAAAAAAAAQ}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+QPoint {\b cur_pos}{\bkmkstart AAAAAAAAAR}
+{\bkmkend AAAAAAAAAR}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+QPoint {\b new_pos}{\bkmkstart AAAAAAAAAS}
+{\bkmkend AAAAAAAAAS}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Function Documentation\par
+\pard\plain 
+{\xe \v openNote\:HistoryWindow}
+{\xe \v HistoryWindow\:openNote}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void HistoryWindow::openNote (QListWidgetItem *  {\i selectedItem}){\f2 [private]}}}
+\par
+{\bkmkstart AAAAAAAAAT}
+{\bkmkend AAAAAAAAAT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'D0\'92\'D1\'96\'D0\'B4\'D0\'BA\'D1\'80\'D0\'B8\'D1\'82\'D1\'82\'D1\'8F \'D0\'B2\'D0\'B8\'D0\'B1\'D1\'80\'D0\'B0\'D0\'BD\'D0\'BE\'D0\'B3\'D0\'BE \'D0\'BD\'D0\'BE\'D1\'82\'D0\'B0\'D1\'82\'D0\'BA\'D0\'B0 }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid    {\cf18 void} HistoryWindow::openNote(QListWidgetItem* selectedItem) \{\par
+        {\cf19 if} (selectedItem) \{\par
+            QString itemName = selectedItem->text();\par
+\par
+            nlohmann::json data;\par
+            QString filePath = QDir::homePath() + {\cf22 "/Desktop/mynotesmaker.json"};\par
+\par
+            {\cf19 if} (QFile::exists(filePath)) \{\par
+                QFile existingFile(filePath);\par
+                {\cf19 if} (existingFile.open(QFile::ReadOnly | QFile::Text)) \{\par
+                    QTextStream in(&existingFile);\par
+                    QString jsonString = in.readAll();\par
+                    existingFile.close();\par
+                    {\cf19 try} \{\par
+                        data = nlohmann::json::parse(jsonString.toStdString());\par
+                    \} {\cf19 catch} ({\cf17 const} std::exception& e) \{\par
+                        qWarning() << {\cf22 "Error parsing JSON: "} << e.what();\par
+                    \}\par
+                    {\cf19 for} ({\cf17 const} {\cf17 auto}& item : data) \{\par
+                        {\cf19 if} (QString::fromStdString(item[{\cf22 "name"}]) == itemName) \{\par
+                            QString name = QString::fromStdString(item[{\cf22 "name"}]);\par
+                            QString text = QString::fromStdString(item[{\cf22 "text"}]);\par
+                            QString fontString = QString::fromStdString(item[{\cf22 "font"}]);\par
+                            QFont font;\par
+                            font.fromString(fontString);\par
+                            emit open(name,text,font);\par
+                            close();\par
+                            {\cf19 break};\par
+                        \}\par
+                    \}\par
+                \} {\cf19 else} \{\par
+                    qWarning() << {\cf22 "Error"};\par
+                \}\par
+            \}\par
+        \}\par
+\}\par
+}
+ \par
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following files:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+historywindow.h\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+historywindow.cpp\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+MainWindow Class Reference\par \pard\plain 
+{\tc\tcl2 \v MainWindow}
+{\xe \v MainWindow}
+{\bkmkstart AAAAAAAAAU}
+{\bkmkend AAAAAAAAAU}
+Inheritance diagram for MainWindow:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_main_window.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Slots\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b slot} (QString name, QString text, QFont font){\bkmkstart AAAAAAAAAV}
+{\bkmkend AAAAAAAAAV}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b MainWindow} (QWidget *parent=nullptr){\bkmkstart AAAAAAAAAW}
+{\bkmkend AAAAAAAAAW}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Private Slots\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b on_closebtn_clicked} (){\bkmkstart AAAAAAAAAX}
+{\bkmkend AAAAAAAAAX}
+\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'D0\'97\'D0\'B0\'D0\'BA\'D1\'80\'D0\'B8\'D1\'82\'D1\'82\'D1\'8F \'D0\'BF\'D1\'80\'D0\'BE\'D0\'B3\'D1\'80\'D0\'B0\'D0\'BC\'D0\'B8 }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b on_settingsbtn_clicked} (){\bkmkstart AAAAAAAAAY}
+{\bkmkend AAAAAAAAAY}
+\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'D0\'92\'D1\'96\'D0\'B4\'D0\'BA\'D1\'80\'D0\'B8\'D1\'82\'D1\'82\'D1\'8F \'D0\'BD\'D0\'B0\'D0\'BB\'D0\'B0\'D1\'88\'D1\'82\'D1\'83\'D0\'B2\'D0\'B0\'D0\'BD\'D1\'8C \'D0\'BF\'D1\'80\'D0\'BE\'D0\'B3\'D1\'80\'D0\'B0\'D0\'BC\'D0\'B8 }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b on_historbtn_clicked} (){\bkmkstart AAAAAAAAAZ}
+{\bkmkend AAAAAAAAAZ}
+\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'D0\'92\'D1\'96\'D0\'B4\'D0\'BA\'D1\'80\'D0\'B8\'D1\'82\'D1\'82\'D1\'8F \'D1\'96\'D1\'81\'D1\'82\'D0\'BE\'D1\'80\'D1\'96\'D1\'97 \'D0\'BD\'D0\'BE\'D1\'82\'D0\'B0\'D1\'82\'D0\'BA\'D1\'96\'D0\'B2 }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b on_toolsbtn_clicked} (){\bkmkstart AAAAAAAABA}
+{\bkmkend AAAAAAAABA}
+\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'D0\'97\'D0\'BC\'D1\'96\'D0\'BD\'D0\'B0 \'D1\'88\'D1\'80\'D0\'B8\'D1\'84\'D1\'82\'D1\'83 }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b on_newbtn_clicked} (){\bkmkstart AAAAAAAABB}
+{\bkmkend AAAAAAAABB}
+\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'D0\'92\'D1\'96\'D0\'B4\'D0\'BA\'D1\'80\'D0\'B8\'D1\'82\'D1\'82\'D1\'8F \'D0\'BD\'D0\'BE\'D0\'B2\'D0\'BE\'D0\'B3\'D0\'BE \'D0\'B2\'D1\'96\'D0\'BA\'D0\'BD\'D0\'B0 \'D0\'BF\'D1\'80\'D0\'BE\'D0\'B3\'D1\'80\'D0\'B0\'D0\'BC\'D0\'B8 }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b on_hidebtn_clicked} (){\bkmkstart AAAAAAAABC}
+{\bkmkend AAAAAAAABC}
+\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'D0\'9F\'D1\'80\'D0\'B8\'D1\'85\'D0\'BE\'D0\'B2\'D0\'B0\'D1\'82\'D0\'B8 \'D0\'B2\'D1\'96\'D0\'BA\'D0\'BD\'D0\'BE \'D0\'BF\'D1\'80\'D0\'BE\'D0\'B3\'D1\'80\'D0\'B0\'D0\'BC\'D0\'B8 }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b on_pinbtn_clicked} (){\bkmkstart AAAAAAAABD}
+{\bkmkend AAAAAAAABD}
+\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'D0\'97\'D0\'B0\'D0\'BA\'D1\'80\'D1\'96\'D0\'BF\'D0\'B8\'D1\'82\'D0\'B8 \'D0\'B2\'D1\'96\'D0\'BA\'D0\'BD\'D0\'BE \'D0\'BF\'D1\'80\'D0\'BE\'D0\'B3\'D1\'80\'D0\'B0\'D0\'BC\'D0\'B8 }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b on_savebtn_clicked} (){\bkmkstart AAAAAAAABE}
+{\bkmkend AAAAAAAABE}
+\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'D0\'97\'D0\'B1\'D0\'B5\'D1\'80\'D0\'B5\'D0\'B3\'D1\'82\'D0\'B8 \'D0\'BD\'D0\'BE\'D1\'82\'D0\'B0\'D1\'82\'D0\'BA\'D1\'83 }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b on_gptbtn_1_clicked} (){\bkmkstart AAAAAAAABF}
+{\bkmkend AAAAAAAABF}
+\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'D0\'97\'D0\'B0\'D0\'BF\'D0\'B8\'D1\'82 \'D0\'B4\'D0\'BE OpenAI, \'D0\'BE\'D1\'87\'D1\'96\'D0\'BA\'D1\'83\'D1\'94\'D1\'82\'D1\'8C\'D1\'81\'D1\'8F \'D0\'B2\'D1\'96\'D0\'B4\'D0\'BF\'D0\'BE\'D0\'B2\'D1\'96\'D0\'B4\'D1\'8C \'D0\'BD\'D0\'B0 \'D0\'B7\'D0\'B0\'D0\'BF\'D0\'B8\'D1\'82 }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b on_gptbtn_2_clicked} (){\bkmkstart AAAAAAAABG}
+{\bkmkend AAAAAAAABG}
+\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'D0\'97\'D0\'B0\'D0\'BF\'D0\'B8\'D1\'82 \'D0\'B4\'D0\'BE OpenAI, \'D0\'BE\'D1\'87\'D1\'96\'D0\'BA\'D1\'83\'D1\'94\'D1\'82\'D1\'8C\'D1\'81\'D1\'8F \'D0\'BF\'D0\'BE\'D0\'BB\'D1\'96\'D0\'BF\'D1\'88\'D0\'B5\'D0\'BD\'D0\'BD\'D1\'8F \'D1\'82\'D0\'B5\'D0\'BA\'D1\'81\'D1\'82\'D1\'83 \'D0\'B2\'D0\'B2\'D0\'B5\'D0\'B4\'D0\'B5\'D0\'BD\'D0\'BE\'D0\'B3\'D0\'BE \'D0\'BD\'D0\'BE\'D1\'82\'D0\'B0\'D1\'82\'D0\'BA\'D0\'B0 }{
+}\par
+}\par}
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Private Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b gpt} (QString text, QString key)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'D0\'97\'D0\'B0\'D0\'BF\'D0\'B8\'D1\'82 \'D0\'B4\'D0\'BE OpenAI. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b mousePressEvent} (QMouseEvent *event){\bkmkstart AAAAAAAABH}
+{\bkmkend AAAAAAAABH}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b mouseMoveEvent} (QMouseEvent *event){\bkmkstart AAAAAAAABI}
+{\bkmkend AAAAAAAABI}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Private Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Ui::MainWindow * {\b ui}{\bkmkstart AAAAAAAABJ}
+{\bkmkend AAAAAAAABJ}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+QPoint {\b cur_pos}{\bkmkstart AAAAAAAABK}
+{\bkmkend AAAAAAAABK}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+QPoint {\b new_pos}{\bkmkstart AAAAAAAABL}
+{\bkmkend AAAAAAAABL}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Function Documentation\par
+\pard\plain 
+{\xe \v gpt\:MainWindow}
+{\xe \v MainWindow\:gpt}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void MainWindow::gpt (QString  {\i text}, QString  {\i key}){\f2 [private]}}}
+\par
+{\bkmkstart AAAAAAAABM}
+{\bkmkend AAAAAAAABM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'D0\'97\'D0\'B0\'D0\'BF\'D0\'B8\'D1\'82 \'D0\'B4\'D0\'BE OpenAI. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Parameters\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i text} \cell }{- \'D1\'82\'D0\'B5\'D0\'BA\'D1\'81\'D1\'82 \'D0\'B2\'D0\'B2\'D0\'B5\'D0\'B4\'D0\'B5\'D0\'BD\'D0\'B8\'D0\'B9 \'D0\'BA\'D0\'BE\'D1\'80\'D0\'B8\'D1\'81\'D1\'82\'D1\'83\'D0\'B2\'D0\'B0\'D1\'87\'D0\'B5\'D0\'BC \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i key} \cell }{- OpenAI \'D0\'BA\'D0\'BB\'D1\'8E\'D1\'87 {
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid {\cf18 void} MainWindow::gpt(QString text, QString key)\{\par
+     openai::start(key.toStdString());\par
+     std::string req = text.toStdString() + ui->plainTextEdit->toPlainText().toStdString();\par
+     nlohmann::json jsonRequest;\par
+     QSettings settings(QDir::homePath()+ {\cf22 "/Desktop/mynotesmaker settings.ini"}, QSettings::IniFormat);\par
+     jsonRequest[{\cf22 "model"}] = settings.value({\cf22 "GPT version"}, QString({\cf22 "gpt-3.5-turbo"})).toString().toStdString();\par
+     jsonRequest[{\cf22 "messages"}] = \{\par
+         \{\{{\cf22 "role"}, {\cf22 "user"}\}, \{{\cf22 "content"}, req\}\}\par
+     \};\par
+     jsonRequest[{\cf22 "max_tokens"}] = 300;\par
+     jsonRequest[{\cf22 "temperature"}] = 0;\par
+     {\cf17 auto} chat = openai::chat().create(jsonRequest);\par
+     ui->plainTextEdit->setPlainText(QString::fromStdString(chat[{\cf22 "choices"}][0][{\cf22 "message"}][{\cf22 "content"}].get<std::string>()));\par
+ \}\par
+}
+ \cell }
+{\row }
+}
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following files:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+mainwindow.h\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+mainwindow.cpp\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+openai::_detail::OpenAI Class Reference\par \pard\plain 
+{\tc\tcl2 \v openai::_detail::OpenAI}
+{\xe \v openai::_detail::OpenAI}
+{\bkmkstart AAAAAAAAEM}
+{\bkmkend AAAAAAAAEM}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b OpenAI} (const std::string &token="", const std::string &organization="", bool throw_exception=true, const std::string &api_base_url=""){\bkmkstart AAAAAAAAEN}
+{\bkmkend AAAAAAAAEN}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b OpenAI} (const {\b OpenAI} &)=delete{\bkmkstart AAAAAAAAEO}
+{\bkmkend AAAAAAAAEO}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b OpenAI} & {\b operator=} (const {\b OpenAI} &)=delete{\bkmkstart AAAAAAAAEP}
+{\bkmkend AAAAAAAAEP}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b OpenAI} ({\b OpenAI} &&)=delete{\bkmkstart AAAAAAAAEQ}
+{\bkmkend AAAAAAAAEQ}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b OpenAI} & {\b operator=} ({\b OpenAI} &&)=delete{\bkmkstart AAAAAAAAER}
+{\bkmkend AAAAAAAAER}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b setProxy} (const std::string &url){\bkmkstart AAAAAAAAES}
+{\bkmkend AAAAAAAAES}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b setThrowException} (bool throw_exception){\bkmkstart AAAAAAAAET}
+{\bkmkend AAAAAAAAET}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b setMultiformPart} (const std::pair< std::string, std::string > &filefield_and_filepath, const std::map< std::string, std::string > &fields){\bkmkstart AAAAAAAAEU}
+{\bkmkend AAAAAAAAEU}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Json {\b post} (const std::string &suffix, const std::string &data, const std::string &contentType){\bkmkstart AAAAAAAAEV}
+{\bkmkend AAAAAAAAEV}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Json {\b get} (const std::string &suffix, const std::string &data=""){\bkmkstart AAAAAAAAEW}
+{\bkmkend AAAAAAAAEW}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Json {\b post} (const std::string &suffix, const Json &json, const std::string &contentType="application/json"){\bkmkstart AAAAAAAAEX}
+{\bkmkend AAAAAAAAEX}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Json {\b del} (const std::string &suffix){\bkmkstart AAAAAAAAEY}
+{\bkmkend AAAAAAAAEY}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+std::string {\b easyEscape} (const std::string &text){\bkmkstart AAAAAAAAEZ}
+{\bkmkend AAAAAAAAEZ}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b debug} () const{\bkmkstart AAAAAAAAFA}
+{\bkmkend AAAAAAAAFA}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b setBaseUrl} (const std::string &url){\bkmkstart AAAAAAAAFB}
+{\bkmkend AAAAAAAAFB}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+std::string {\b getBaseUrl} () const{\bkmkstart AAAAAAAAFC}
+{\bkmkend AAAAAAAAFC}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b CategoryModel} {\b model} \{*this\}{\bkmkstart AAAAAAAAFD}
+{\bkmkend AAAAAAAAFD}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b CategoryCompletion} {\b completion} \{*this\}{\bkmkstart AAAAAAAAFE}
+{\bkmkend AAAAAAAAFE}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b CategoryEdit} {\b edit} \{*this\}{\bkmkstart AAAAAAAAFF}
+{\bkmkend AAAAAAAAFF}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b CategoryImage} {\b image} \{*this\}{\bkmkstart AAAAAAAAFG}
+{\bkmkend AAAAAAAAFG}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b CategoryEmbedding} {\b embedding} \{*this\}{\bkmkstart AAAAAAAAFH}
+{\bkmkend AAAAAAAAFH}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b CategoryFile} {\b file} \{*this\}{\bkmkstart AAAAAAAAFI}
+{\bkmkend AAAAAAAAFI}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b CategoryFineTune} {\b fine_tune} \{*this\}{\bkmkstart AAAAAAAAFJ}
+{\bkmkend AAAAAAAAFJ}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b CategoryModeration} {\b moderation} \{*this\}{\bkmkstart AAAAAAAAFK}
+{\bkmkend AAAAAAAAFK}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b CategoryChat} {\b chat} \{*this\}{\bkmkstart AAAAAAAAFL}
+{\bkmkend AAAAAAAAFL}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b CategoryAudio} {\b audio} \{*this\}{\bkmkstart AAAAAAAAFM}
+{\bkmkend AAAAAAAAFM}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Private Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b setParameters} (const std::string &suffix, const std::string &data, const std::string &contentType=""){\bkmkstart AAAAAAAAFN}
+{\bkmkend AAAAAAAAFN}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b checkResponse} (const Json &json){\bkmkstart AAAAAAAAFO}
+{\bkmkend AAAAAAAAFO}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b isJson} (const std::string &data){\bkmkstart AAAAAAAAFP}
+{\bkmkend AAAAAAAAFP}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b trigger_error} (const std::string &msg){\bkmkstart AAAAAAAAFQ}
+{\bkmkend AAAAAAAAFQ}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Private Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+std::string {\b base_url}{\bkmkstart AAAAAAAAFR}
+{\bkmkend AAAAAAAAFR}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b Session} {\b session_}{\bkmkstart AAAAAAAAFS}
+{\bkmkend AAAAAAAAFS}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+std::string {\b token_}{\bkmkstart AAAAAAAAFT}
+{\bkmkend AAAAAAAAFT}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+std::string {\b organization_}{\bkmkstart AAAAAAAAFU}
+{\bkmkend AAAAAAAAFU}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b throw_exception_}{\bkmkstart AAAAAAAAFV}
+{\bkmkend AAAAAAAAFV}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+openai.hpp\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+openai::_detail::Response Struct Reference\par \pard\plain 
+{\tc\tcl2 \v openai::_detail::Response}
+{\xe \v openai::_detail::Response}
+{\bkmkstart AAAAAAAAFW}
+{\bkmkend AAAAAAAAFW}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+std::string {\b text}{\bkmkstart AAAAAAAAFX}
+{\bkmkend AAAAAAAAFX}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b is_error}{\bkmkstart AAAAAAAAFY}
+{\bkmkend AAAAAAAAFY}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+std::string {\b error_message}{\bkmkstart AAAAAAAAFZ}
+{\bkmkend AAAAAAAAFZ}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+openai.hpp\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+openai::_detail::Session Class Reference\par \pard\plain 
+{\tc\tcl2 \v openai::_detail::Session}
+{\xe \v openai::_detail::Session}
+{\bkmkstart AAAAAAAAGA}
+{\bkmkend AAAAAAAAGA}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b Session} (bool throw_exception){\bkmkstart AAAAAAAAGB}
+{\bkmkend AAAAAAAAGB}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b Session} (bool throw_exception, std::string proxy_url){\bkmkstart AAAAAAAAGC}
+{\bkmkend AAAAAAAAGC}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b initCurl} (){\bkmkstart AAAAAAAAGD}
+{\bkmkend AAAAAAAAGD}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b ignoreSSL} (){\bkmkstart AAAAAAAAGE}
+{\bkmkend AAAAAAAAGE}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b setUrl} (const std::string &url){\bkmkstart AAAAAAAAGF}
+{\bkmkend AAAAAAAAGF}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b setToken} (const std::string &token, const std::string &organization){\bkmkstart AAAAAAAAGG}
+{\bkmkend AAAAAAAAGG}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b setProxyUrl} (const std::string &url){\bkmkstart AAAAAAAAGH}
+{\bkmkend AAAAAAAAGH}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b setBody} (const std::string &data){\bkmkstart AAAAAAAAGI}
+{\bkmkend AAAAAAAAGI}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b setMultiformPart} (const std::pair< std::string, std::string > &filefield_and_filepath, const std::map< std::string, std::string > &fields){\bkmkstart AAAAAAAAGJ}
+{\bkmkend AAAAAAAAGJ}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b Response} {\b getPrepare} (){\bkmkstart AAAAAAAAGK}
+{\bkmkend AAAAAAAAGK}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b Response} {\b postPrepare} (const std::string &contentType=""){\bkmkstart AAAAAAAAGL}
+{\bkmkend AAAAAAAAGL}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b Response} {\b deletePrepare} (){\bkmkstart AAAAAAAAGM}
+{\bkmkend AAAAAAAAGM}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b Response} {\b makeRequest} (const std::string &contentType=""){\bkmkstart AAAAAAAAGN}
+{\bkmkend AAAAAAAAGN}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+std::string {\b easyEscape} (const std::string &text){\bkmkstart AAAAAAAAGO}
+{\bkmkend AAAAAAAAGO}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Static Private Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+static size_t {\b writeFunction} (void *ptr, size_t size, size_t nmemb, std::string *data){\bkmkstart AAAAAAAAGP}
+{\bkmkend AAAAAAAAGP}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Private Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+CURL * {\b curl_}{\bkmkstart AAAAAAAAGQ}
+{\bkmkend AAAAAAAAGQ}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+CURLcode {\b res_}{\bkmkstart AAAAAAAAGR}
+{\bkmkend AAAAAAAAGR}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+curl_mime * {\b mime_form_} = nullptr{\bkmkstart AAAAAAAAGS}
+{\bkmkend AAAAAAAAGS}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+std::string {\b url_}{\bkmkstart AAAAAAAAGT}
+{\bkmkend AAAAAAAAGT}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+std::string {\b proxy_url_}{\bkmkstart AAAAAAAAGU}
+{\bkmkend AAAAAAAAGU}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+std::string {\b token_}{\bkmkstart AAAAAAAAGV}
+{\bkmkend AAAAAAAAGV}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+std::string {\b organization_}{\bkmkstart AAAAAAAAGW}
+{\bkmkend AAAAAAAAGW}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b throw_exception_}{\bkmkstart AAAAAAAAGX}
+{\bkmkend AAAAAAAAGX}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+std::mutex {\b mutex_request_}{\bkmkstart AAAAAAAAGY}
+{\bkmkend AAAAAAAAGY}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following file:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+openai.hpp\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+SettingsWindow Class Reference\par \pard\plain 
+{\tc\tcl2 \v SettingsWindow}
+{\xe \v SettingsWindow}
+{\bkmkstart AAAAAAAABN}
+{\bkmkend AAAAAAAABN}
+Inheritance diagram for SettingsWindow:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_settings_window.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b SettingsWindow} (QWidget *parent=nullptr){\bkmkstart AAAAAAAABO}
+{\bkmkend AAAAAAAABO}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Private Slots\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b on_okbtn_clicked} (){\bkmkstart AAAAAAAABP}
+{\bkmkend AAAAAAAABP}
+\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'D0\'97\'D0\'B0\'D0\'BA\'D1\'80\'D0\'B8\'D1\'82\'D1\'82\'D1\'8F \'D0\'B2\'D1\'96\'D0\'BA\'D0\'BD\'D0\'B0 \'D0\'BD\'D0\'B0\'D0\'BB\'D0\'B0\'D1\'88\'D1\'82\'D1\'83\'D0\'B2\'D0\'B0\'D0\'BD\'D1\'8C }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b on_standartbtn_clicked} (){\bkmkstart AAAAAAAABQ}
+{\bkmkend AAAAAAAABQ}
+\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'D0\'92\'D0\'B8\'D0\'B1\'D1\'96\'D1\'80 ChatGPT 3.5 Turbo. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b on_probtn_clicked} (){\bkmkstart AAAAAAAABR}
+{\bkmkend AAAAAAAABR}
+\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\'D0\'92\'D0\'B8\'D0\'B1\'D1\'96\'D1\'80 ChatGPT 3.5 Turbo 16k. }{
+}\par
+}\par}
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Private Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b mousePressEvent} (QMouseEvent *event){\bkmkstart AAAAAAAABS}
+{\bkmkend AAAAAAAABS}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b mouseMoveEvent} (QMouseEvent *event){\bkmkstart AAAAAAAABT}
+{\bkmkend AAAAAAAABT}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Private Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+Ui::SettingsWindow * {\b ui}{\bkmkstart AAAAAAAABU}
+{\bkmkend AAAAAAAABU}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+QPoint {\b cur_pos}{\bkmkstart AAAAAAAABV}
+{\bkmkend AAAAAAAABV}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+QPoint {\b new_pos}{\bkmkstart AAAAAAAABW}
+{\bkmkend AAAAAAAABW}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following files:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+settingswindow.h\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+settingswindow.cpp\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Test_MyNotesMaker Class Reference\par \pard\plain 
+{\tc\tcl2 \v Test_MyNotesMaker}
+{\xe \v Test_MyNotesMaker}
+{\bkmkstart AAAAAAAABX}
+{\bkmkend AAAAAAAABX}
+Inheritance diagram for Test_MyNotesMaker:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "class_test___my_notes_maker.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+{\b Test_MyNotesMaker} (QObject *parent=nullptr){\bkmkstart AAAAAAAABY}
+{\bkmkend AAAAAAAABY}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Private Slots\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b testMainWindowHideButton} (){\bkmkstart AAAAAAAABZ}
+{\bkmkend AAAAAAAABZ}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b testMainWindowPinButton} (){\bkmkstart AAAAAAAACA}
+{\bkmkend AAAAAAAACA}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b testMainWindowLineEdit} (){\bkmkstart AAAAAAAACB}
+{\bkmkend AAAAAAAACB}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b testMainWindowPlainTextEdit} (){\bkmkstart AAAAAAAACC}
+{\bkmkend AAAAAAAACC}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b testMainWindowLineEditEnter} (){\bkmkstart AAAAAAAACD}
+{\bkmkend AAAAAAAACD}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b testHistoryOpenNote} (){\bkmkstart AAAAAAAACE}
+{\bkmkend AAAAAAAACE}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b testHistoryDeleteButton} (){\bkmkstart AAAAAAAACF}
+{\bkmkend AAAAAAAACF}
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+void {\b testHistoryCancleButton} (){\bkmkstart AAAAAAAACG}
+{\bkmkend AAAAAAAACG}
+\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following files:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+test_mynotesmaker.h\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+test_mynotesmaker.cpp\par
+}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+File Documentation{\tc \v File Documentation}
+\par \pard\plain 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+historywindow.h\par \pard\plain 
+{\bkmkstart AAAAAAAAAA}
+{\bkmkend AAAAAAAAAA}
+{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 1 {\cf21 #ifndef HISTORYWINDOW_H}\par
+2 {\cf21 #define HISTORYWINDOW_H}\par
+3 \par
+4 {\cf21 #include <QDialog>}\par
+5 {\cf21 #include<QListWidget>}\par
+6 {\cf21 #include <QMouseEvent>}\par
+7 {\cf21 #include <QPoint>}\par
+8 \par
+9 {\cf17 namespace }Ui \{\par
+10 {\cf17 class }History;\par
+11 \}\par
+12 \par
+13 {\cf17 class }HistoryWindow : {\cf17 public} QDialog\par
+14 \{\par
+15     Q_OBJECT\par
+16 \par
+17 {\cf17 public}:\par
+18     {\cf17 explicit} HistoryWindow(QWidget *parent = {\cf17 nullptr});\par
+19     ~HistoryWindow();\par
+20 \par
+21 {\cf17 private} slots:\par
+25     {\cf18 void} on_okbtn_clicked();\par
+29     {\cf18 void} on_deletebtn_clicked();\par
+33     {\cf18 void} on_openbtn_clicked();\par
+37     {\cf18 void} on_listWidget_itemDoubleClicked(QListWidgetItem *item);\par
+38 \par
+39 {\cf17 private}:\par
+40     Ui::History *ui;\par
+82     {\cf18 void} openNote(QListWidgetItem* selectedItem);\par
+83 \par
+84     {\cf18 void} mousePressEvent(QMouseEvent *event);\par
+85     {\cf18 void} mouseMoveEvent(QMouseEvent *event);\par
+86 \par
+87     QPoint cur_pos;\par
+88     QPoint new_pos;\par
+89 \par
+90 signals:\par
+91     {\cf18 void} open(QString name, QString text, QFont font);\par
+92 \};\par
+93 \par
+94 {\cf21 #endif }{\cf20 // HISTORYWINDOW_H}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+mainwindow.h\par \pard\plain 
+{\bkmkstart AAAAAAAAAB}
+{\bkmkend AAAAAAAAAB}
+{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 1 \par
+20 {\cf21 #ifndef MAINWINDOW_H}\par
+21 {\cf21 #define MAINWINDOW_H}\par
+22 \par
+23 {\cf21 #include <QMainWindow>}\par
+24 {\cf21 #include <QMouseEvent>}\par
+25 {\cf21 #include <QPoint>}\par
+26 {\cf21 #include <QGraphicsScene>}\par
+27 \par
+28 QT_BEGIN_NAMESPACE\par
+29 {\cf17 namespace }Ui \{ {\cf17 class }MainWindow; \}\par
+30 QT_END_NAMESPACE\par
+31 \par
+32 {\cf17 class }MainWindow : {\cf17 public} QMainWindow\par
+33 \{\par
+34     Q_OBJECT\par
+35 \par
+36 {\cf17 public}:\par
+37     MainWindow(QWidget *parent = {\cf17 nullptr});\par
+38     ~MainWindow();\par
+39 \par
+40 \par
+41 {\cf17 private} slots:\par
+45     {\cf18 void} on_closebtn_clicked();\par
+49     {\cf18 void} on_settingsbtn_clicked();\par
+53     {\cf18 void} on_historbtn_clicked();\par
+57     {\cf18 void} on_toolsbtn_clicked();\par
+61     {\cf18 void} on_newbtn_clicked();\par
+65     {\cf18 void} on_hidebtn_clicked();\par
+69     {\cf18 void} on_pinbtn_clicked();\par
+73     {\cf18 void} on_savebtn_clicked();\par
+74 \par
+78     {\cf18 void} on_gptbtn_1_clicked();\par
+79 \par
+84     {\cf18 void} on_gptbtn_2_clicked();\par
+85 \par
+86 {\cf17 public} slots:\par
+87     {\cf18 void} slot(QString name, QString text, QFont font);\par
+88 \par
+89 {\cf17 private}:\par
+90     Ui::MainWindow *ui;\par
+91 \par
+113     {\cf18 void} gpt(QString text, QString key);\par
+114     {\cf18 void} mousePressEvent(QMouseEvent *event);\par
+115     {\cf18 void} mouseMoveEvent(QMouseEvent *event);\par
+116 \par
+117     QPoint cur_pos;\par
+118     QPoint new_pos;\par
+119 \};\par
+120 \par
+121 {\cf21 #endif }{\cf20 // MAINWINDOW_H}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+openai.hpp\par \pard\plain 
+{\bkmkstart AAAAAAAAAC}
+{\bkmkend AAAAAAAAAC}
+{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 1 {\cf20 // The MIT License (MIT)}\par
+2 {\cf20 //}\par
+3 {\cf20 // Copyright (c) 2023 Olrea, Florian Dang}\par
+4 {\cf20 //}\par
+5 {\cf20 // Permission is hereby granted, free of charge, to any person obtaining a copy}\par
+6 {\cf20 // of this software and associated documentation files (the "Software"), to deal}\par
+7 {\cf20 // in the Software without restriction, including without limitation the rights}\par
+8 {\cf20 // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell}\par
+9 {\cf20 // copies of the Software, and to permit persons to whom the Software is}\par
+10 {\cf20 // furnished to do so, subject to the following conditions:}\par
+11 {\cf20 //}\par
+12 {\cf20 // The above copyright notice and this permission notice shall be included in all}\par
+13 {\cf20 // copies or substantial portions of the Software.}\par
+14 {\cf20 //}\par
+15 {\cf20 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR}\par
+16 {\cf20 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,}\par
+17 {\cf20 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE}\par
+18 {\cf20 // AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER}\par
+19 {\cf20 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,}\par
+20 {\cf20 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE}\par
+21 {\cf20 // SOFTWARE.}\par
+22 \par
+23 {\cf21 #ifndef OPENAI_HPP_}\par
+24 {\cf21 #define OPENAI_HPP_}\par
+25 \par
+26 \par
+27 {\cf21 #if OPENAI_VERBOSE_OUTPUT}\par
+28 {\cf21 #pragma message ("OPENAI_VERBOSE_OUTPUT is ON")}\par
+29 {\cf21 #endif}\par
+30 \par
+31 {\cf21 #include <iostream>}\par
+32 {\cf21 #include <stdexcept>}\par
+33 {\cf21 #include <string>}\par
+34 {\cf21 #include <vector>}\par
+35 {\cf21 #include <sstream>}\par
+36 {\cf21 #include <mutex>}\par
+37 {\cf21 #include <cstdlib>}\par
+38 {\cf21 #include <map>}\par
+39 \par
+40 {\cf21 #ifndef CURL_STATICLIB}\par
+41 {\cf21 #include <curl/curl.h>}\par
+42 {\cf21 #else}\par
+43 {\cf21 #include "curl/curl.h"}\par
+44 {\cf21 #endif}\par
+45 \par
+46 {\cf21 #include <nlohmann/json.hpp>}  {\cf20 // nlohmann/json}\par
+47 \par
+48 {\cf17 namespace }openai \{\par
+49 \par
+50 {\cf17 namespace }_detail \{\par
+51 \par
+52 {\cf20 // Json alias}\par
+53 {\cf17 using }Json = nlohmann::json;\par
+54 \par
+55 {\cf17 struct }Response \{\par
+56     std::string text;\par
+57     {\cf18 bool}        is_error;\par
+58     std::string error_message;\par
+59 \};\par
+60 \par
+61 {\cf20 // Simple curl Session inspired by CPR}\par
+62 {\cf17 class }Session \{\par
+63 {\cf17 public}:\par
+64     Session({\cf18 bool} throw_exception) : throw_exception_\{throw_exception\} \{\par
+65         initCurl();\par
+66         ignoreSSL();\par
+67     \}\par
+68 \par
+69     Session({\cf18 bool} throw_exception, std::string proxy_url) : throw_exception_\{ throw_exception \} \{\par
+70         initCurl();\par
+71         ignoreSSL();\par
+72         setProxyUrl(proxy_url);\par
+73     \}\par
+74 \par
+75     ~Session() \{\par
+76         curl_easy_cleanup(curl_);\par
+77         curl_global_cleanup();\par
+78         {\cf19 if} (mime_form_ != {\cf17 nullptr}) \{\par
+79             curl_mime_free(mime_form_);\par
+80         \}\par
+81     \}\par
+82 \par
+83     {\cf18 void} initCurl() \{\par
+84         curl_global_init(CURL_GLOBAL_ALL);\par
+85         curl_ = curl_easy_init();\par
+86         {\cf19 if} (curl_ == {\cf17 nullptr}) \{\par
+87             {\cf19 throw} std::runtime_error({\cf22 "curl cannot initialize"}); {\cf20 // here we throw it shouldn't happen}\par
+88         \}\par
+89     \}\par
+90 \par
+91     {\cf18 void} ignoreSSL() \{\par
+92         curl_easy_setopt(curl_, CURLOPT_SSL_VERIFYPEER, 0L);\par
+93     \}\par
+94 \par
+95     {\cf18 void} setUrl({\cf17 const} std::string& url) \{ url_ = url; \}\par
+96 \par
+97     {\cf18 void} setToken({\cf17 const} std::string& token, {\cf17 const} std::string& organization) \{\par
+98         token_ = token;\par
+99         organization_ = organization;\par
+100     \}\par
+101     {\cf18 void} setProxyUrl({\cf17 const} std::string& url) \{\par
+102         proxy_url_ = url;\par
+103         curl_easy_setopt(curl_, CURLOPT_PROXY, proxy_url_.c_str());\par
+104 \par
+105     \}\par
+106 \par
+107     {\cf18 void} setBody({\cf17 const} std::string& data);\par
+108     {\cf18 void} setMultiformPart({\cf17 const} std::pair<std::string, std::string>& filefield_and_filepath, {\cf17 const} std::map<std::string, std::string>& fields);\par
+109 \par
+110     Response getPrepare();\par
+111     Response postPrepare({\cf17 const} std::string& contentType = {\cf22 ""});\par
+112     Response deletePrepare();\par
+113     Response makeRequest({\cf17 const} std::string& contentType = {\cf22 ""});\par
+114     std::string easyEscape({\cf17 const} std::string& text);\par
+115 \par
+116 {\cf17 private}:\par
+117     {\cf17 static} {\cf18 size_t} writeFunction({\cf18 void}* ptr, {\cf18 size_t} size, {\cf18 size_t} nmemb, std::string* data) \{\par
+118         data->append(({\cf18 char}*) ptr, size * nmemb);\par
+119         {\cf19 return} size * nmemb;\par
+120     \}\par
+121 \par
+122 {\cf17 private}:\par
+123     CURL*       curl_;\par
+124     CURLcode    res_;\par
+125     curl_mime   *mime_form_ = {\cf17 nullptr};\par
+126     std::string url_;\par
+127     std::string proxy_url_;\par
+128     std::string token_;\par
+129     std::string organization_;\par
+130 \par
+131     {\cf18 bool}        throw_exception_;\par
+132     std::mutex  mutex_request_;\par
+133 \};\par
+134 \par
+135 {\cf17 inline} {\cf18 void} Session::setBody({\cf17 const} std::string& data) \{\par
+136     {\cf19 if} (curl_) \{\par
+137         curl_easy_setopt(curl_, CURLOPT_POSTFIELDSIZE, data.length());\par
+138         curl_easy_setopt(curl_, CURLOPT_POSTFIELDS, data.data());\par
+139     \}\par
+140 \}\par
+141 \par
+142 {\cf17 inline} {\cf18 void} Session::setMultiformPart({\cf17 const} std::pair<std::string, std::string>& fieldfield_and_filepath, {\cf17 const} std::map<std::string, std::string>& fields) \{\par
+143     {\cf20 // https://curl.se/libcurl/c/curl_mime_init.html}\par
+144     {\cf19 if} (curl_) \{\par
+145         {\cf19 if} (mime_form_ != {\cf17 nullptr}) \{\par
+146             curl_mime_free(mime_form_);\par
+147             mime_form_ = {\cf17 nullptr};\par
+148         \}\par
+149         curl_mimepart *field = {\cf17 nullptr};\par
+150 \par
+151         mime_form_ = curl_mime_init(curl_);\par
+152 \par
+153         field = curl_mime_addpart(mime_form_);\par
+154         curl_mime_name(field, fieldfield_and_filepath.first.c_str());\par
+155         curl_mime_filedata(field, fieldfield_and_filepath.second.c_str());\par
+156 \par
+157         {\cf19 for} ({\cf17 const} {\cf17 auto} &field_pair : fields) \{\par
+158             field = curl_mime_addpart(mime_form_);\par
+159             curl_mime_name(field, field_pair.first.c_str());\par
+160             curl_mime_data(field, field_pair.second.c_str(), CURL_ZERO_TERMINATED);\par
+161         \}\par
+162 \par
+163         curl_easy_setopt(curl_, CURLOPT_MIMEPOST, mime_form_);\par
+164     \}\par
+165 \}\par
+166 \par
+167 {\cf17 inline} Response Session::getPrepare() \{\par
+168     {\cf19 if} (curl_) \{\par
+169         curl_easy_setopt(curl_, CURLOPT_HTTPGET, 1L);\par
+170         curl_easy_setopt(curl_, CURLOPT_POST, 0L);\par
+171         curl_easy_setopt(curl_, CURLOPT_NOBODY, 0L);\par
+172     \}\par
+173     {\cf19 return} makeRequest();\par
+174 \}\par
+175 \par
+176 {\cf17 inline} Response Session::postPrepare({\cf17 const} std::string& contentType) \{\par
+177     {\cf19 return} makeRequest(contentType);\par
+178 \}\par
+179 \par
+180 {\cf17 inline} Response Session::deletePrepare() \{\par
+181     {\cf19 if} (curl_) \{\par
+182         curl_easy_setopt(curl_, CURLOPT_HTTPGET, 0L);\par
+183         curl_easy_setopt(curl_, CURLOPT_NOBODY, 0L);\par
+184         curl_easy_setopt(curl_, CURLOPT_CUSTOMREQUEST, {\cf22 "DELETE"});\par
+185     \}\par
+186     {\cf19 return} makeRequest();\par
+187 \}\par
+188 \par
+189 {\cf17 inline} Response Session::makeRequest({\cf17 const} std::string& contentType) \{\par
+190     std::lock_guard<std::mutex> lock(mutex_request_);\par
+191 \par
+192     {\cf17 struct }curl_slist* headers = NULL;\par
+193     {\cf19 if} (!contentType.empty()) \{\par
+194         headers = curl_slist_append(headers, std::string\{{\cf22 "Content-Type: "} + contentType\}.c_str());\par
+195         {\cf19 if} (contentType == {\cf22 "multipart/form-data"}) \{\par
+196             headers = curl_slist_append(headers, {\cf22 "Expect:"});\par
+197         \}\par
+198     \}\par
+199     headers = curl_slist_append(headers, std::string\{{\cf22 "Authorization: Bearer "} + token_\}.c_str());\par
+200     {\cf19 if} (!organization_.empty()) \{\par
+201         headers = curl_slist_append(headers, std::string\{{\cf22 "OpenAI-Organization: "} + organization_\}.c_str());\par
+202     \}\par
+203     curl_easy_setopt(curl_, CURLOPT_HTTPHEADER, headers);\par
+204     curl_easy_setopt(curl_, CURLOPT_URL, url_.c_str());\par
+205 \par
+206     std::string response_string;\par
+207     std::string header_string;\par
+208     curl_easy_setopt(curl_, CURLOPT_WRITEFUNCTION, writeFunction);\par
+209     curl_easy_setopt(curl_, CURLOPT_WRITEDATA, &response_string);\par
+210     curl_easy_setopt(curl_, CURLOPT_HEADERDATA, &header_string);\par
+211 \par
+212     res_ = curl_easy_perform(curl_);\par
+213 \par
+214     {\cf18 bool} is_error = {\cf17 false};\par
+215     std::string error_msg\{\};\par
+216     {\cf19 if}(res_ != CURLE_OK) \{\par
+217         is_error = {\cf17 true};\par
+218         error_msg = {\cf22 "OpenAI curl_easy_perform() failed: "} + std::string\{curl_easy_strerror(res_)\};\par
+219         {\cf19 if} (throw_exception_) \{\par
+220             {\cf19 throw} std::runtime_error(error_msg);\par
+221         \}\par
+222         {\cf19 else} \{\par
+223             std::cerr << error_msg << {\cf23 '\\n'};\par
+224         \}\par
+225     \}\par
+226 \par
+227     {\cf19 return} \{ response_string, is_error, error_msg \};\par
+228 \}\par
+229 \par
+230 {\cf17 inline} std::string Session::easyEscape({\cf17 const} std::string& text) \{\par
+231     {\cf18 char} *encoded_output = curl_easy_escape(curl_, text.c_str(), {\cf17 static_cast<}{\cf18 int}{\cf17 >}(text.length()));\par
+232     {\cf17 const} {\cf17 auto} str = std::string\{ encoded_output \};\par
+233     curl_free(encoded_output);\par
+234     {\cf19 return} str;\par
+235 \}\par
+236 \par
+237 {\cf20 // forward declaration for category structures}\par
+238 {\cf17 class  }OpenAI;\par
+239 \par
+240 {\cf20 // https://platform.openai.com/docs/api-reference/models}\par
+241 {\cf20 // List and describe the various models available in the API. You can refer to the Models documentation to understand what models are available and the differences between them.}\par
+242 {\cf17 struct }CategoryModel \{\par
+243     Json list();\par
+244     Json retrieve({\cf17 const} std::string& model);\par
+245 \par
+246     CategoryModel(OpenAI& openai) : openai_\{openai\} \{\}\par
+247 {\cf17 private}:\par
+248     OpenAI& openai_;\par
+249 \};\par
+250 \par
+251 {\cf20 // https://platform.openai.com/docs/api-reference/completions}\par
+252 {\cf20 // Given a prompt, the model will return one or more predicted completions, and can also return the probabilities of alternative tokens at each position.}\par
+253 {\cf17 struct }CategoryCompletion \{\par
+254     Json create(Json input);\par
+255 \par
+256     CategoryCompletion(OpenAI& openai) : openai_\{openai\} \{\}\par
+257 \par
+258 {\cf17 private}:\par
+259     OpenAI& openai_;\par
+260 \};\par
+261 \par
+262 {\cf20 // https://platform.openai.com/docs/api-reference/chat}\par
+263 {\cf20 // Given a prompt, the model will return one or more predicted chat completions.}\par
+264 {\cf17 struct }CategoryChat \{\par
+265     Json create(Json input);\par
+266 \par
+267     CategoryChat(OpenAI& openai) : openai_\{openai\} \{\}\par
+268 \par
+269 {\cf17 private}:\par
+270     OpenAI& openai_;\par
+271 \};\par
+272 \par
+273 {\cf20 // https://platform.openai.com/docs/api-reference/audio}\par
+274 {\cf20 // Learn how to turn audio into text.}\par
+275 {\cf17 struct }CategoryAudio \{\par
+276     Json transcribe(Json input);\par
+277     Json translate(Json input);\par
+278 \par
+279     CategoryAudio(OpenAI& openai) : openai_\{openai\} \{\}\par
+280 \par
+281 {\cf17 private}:\par
+282     OpenAI& openai_;\par
+283 \};\par
+284 \par
+285 {\cf20 // https://platform.openai.com/docs/api-reference/edits}\par
+286 {\cf20 // Given a prompt and an instruction, the model will return an edited version of the prompt.}\par
+287 {\cf17 struct }CategoryEdit \{\par
+288     Json create(Json input);\par
+289 \par
+290     CategoryEdit(OpenAI& openai) : openai_\{openai\} \{\}\par
+291 \par
+292 {\cf17 private}:\par
+293     OpenAI& openai_;\par
+294 \};\par
+295 \par
+296 \par
+297 {\cf20 // https://platform.openai.com/docs/api-reference/images}\par
+298 {\cf20 // Given a prompt and/or an input image, the model will generate a new image.}\par
+299 {\cf17 struct }CategoryImage \{\par
+300     Json create(Json input);\par
+301     Json edit(Json input);\par
+302     Json variation(Json input);\par
+303 \par
+304     CategoryImage(OpenAI& openai) : openai_\{openai\} \{\}\par
+305 \par
+306 {\cf17 private}:\par
+307     OpenAI& openai_;\par
+308 \};\par
+309 \par
+310 {\cf20 // https://platform.openai.com/docs/api-reference/embeddings}\par
+311 {\cf20 // Get a vector representation of a given input that can be easily consumed by machine learning models and algorithms.}\par
+312 {\cf17 struct }CategoryEmbedding \{\par
+313     Json create(Json input);\par
+314     CategoryEmbedding(OpenAI& openai) : openai_\{openai\} \{\}\par
+315 \par
+316 {\cf17 private}:\par
+317     OpenAI& openai_;\par
+318 \};\par
+319 \par
+320 {\cf17 struct }FileRequest \{\par
+321     std::string file;\par
+322     std::string purpose;\par
+323 \};\par
+324 \par
+325 {\cf20 // https://platform.openai.com/docs/api-reference/files}\par
+326 {\cf20 // Files are used to upload documents that can be used with features like Fine-tuning.}\par
+327 {\cf17 struct }CategoryFile \{\par
+328     Json list();\par
+329     Json upload(Json input);\par
+330     Json del({\cf17 const} std::string& file); {\cf20 // TODO}\par
+331     Json retrieve({\cf17 const} std::string& file_id);\par
+332     Json content({\cf17 const} std::string& file_id);\par
+333 \par
+334     CategoryFile(OpenAI& openai) : openai_\{openai\} \{\}\par
+335 \par
+336 {\cf17 private}:\par
+337     OpenAI& openai_;\par
+338 \};\par
+339 \par
+340 {\cf20 // https://platform.openai.com/docs/api-reference/fine-tunes}\par
+341 {\cf20 // Manage fine-tuning jobs to tailor a model to your specific training data.}\par
+342 {\cf17 struct }CategoryFineTune \{\par
+343     Json create(Json input);\par
+344     Json list();\par
+345     Json retrieve({\cf17 const} std::string& fine_tune_id);\par
+346     Json content({\cf17 const} std::string& fine_tune_id);\par
+347     Json cancel({\cf17 const} std::string& fine_tune_id);\par
+348     Json events({\cf17 const} std::string& fine_tune_id);\par
+349     Json del({\cf17 const} std::string& model);\par
+350 \par
+351     CategoryFineTune(OpenAI& openai) : openai_\{openai\} \{\}\par
+352 \par
+353 {\cf17 private}:\par
+354     OpenAI& openai_;\par
+355 \};\par
+356 \par
+357 {\cf20 // https://platform.openai.com/docs/api-reference/moderations}\par
+358 {\cf20 // Given a input text, outputs if the model classifies it as violating OpenAI's content policy.}\par
+359 {\cf17 struct }CategoryModeration \{\par
+360     Json create(Json input);\par
+361 \par
+362     CategoryModeration(OpenAI& openai) : openai_\{openai\} \{\}\par
+363 \par
+364 {\cf17 private}:\par
+365     OpenAI& openai_;\par
+366 \};\par
+367 \par
+368 \par
+369 {\cf20 // OpenAI}\par
+370 {\cf17 class }OpenAI \{\par
+371 {\cf17 public}:\par
+372     OpenAI({\cf17 const} std::string& token = {\cf22 ""}, {\cf17 const} std::string& organization = {\cf22 ""}, {\cf18 bool} throw_exception = {\cf17 true}, {\cf17 const} std::string& api_base_url = {\cf22 ""})\par
+373         : session_\{throw_exception\}, token_\{token\}, organization_\{organization\}, throw_exception_\{throw_exception\} \{\par
+374         {\cf19 if} (token.empty()) \{\par
+375             {\cf19 if}({\cf17 const} {\cf18 char}* env_p = std::getenv({\cf22 "OPENAI_API_KEY"})) \{\par
+376                 token_ = std::string\{env_p\};\par
+377             \}\par
+378         \}\par
+379         {\cf19 if} (api_base_url.empty()) \{\par
+380             {\cf19 if}({\cf17 const} {\cf18 char}* env_p = std::getenv({\cf22 "OPENAI_API_BASE"})) \{\par
+381                 base_url = std::string\{env_p\} + {\cf22 "/"};\par
+382             \}\par
+383             {\cf19 else} \{\par
+384                 base_url = {\cf22 "https://api.openai.com/v1/"};\par
+385             \}\par
+386         \}\par
+387         {\cf19 else} \{\par
+388             base_url = api_base_url;\par
+389         \}\par
+390         session_.setUrl(base_url);\par
+391         session_.setToken(token_, organization_);\par
+392     \}\par
+393 \par
+394     OpenAI({\cf17 const} OpenAI&)               = {\cf17 delete};\par
+395     OpenAI& operator=({\cf17 const} OpenAI&)    = {\cf17 delete};\par
+396     OpenAI(OpenAI&&)                    = {\cf17 delete};\par
+397     OpenAI& operator=(OpenAI&&)         = {\cf17 delete};\par
+398 \par
+399     {\cf18 void} setProxy({\cf17 const} std::string& url) \{ session_.setProxyUrl(url); \}\par
+400 \par
+401     {\cf20 // void change_token(const std::string& token) \{ token_ = token; \};}\par
+402     {\cf18 void} setThrowException({\cf18 bool} throw_exception) \{ throw_exception_ = throw_exception; \}\par
+403 \par
+404     {\cf18 void} setMultiformPart({\cf17 const} std::pair<std::string, std::string>& filefield_and_filepath, {\cf17 const} std::map<std::string, std::string>& fields) \{ session_.setMultiformPart(filefield_and_filepath, fields); \}\par
+405 \par
+406     Json post({\cf17 const} std::string& suffix, {\cf17 const} std::string& data, {\cf17 const} std::string& contentType) \{\par
+407         setParameters(suffix, data, contentType);\par
+408         {\cf17 auto} response = session_.postPrepare(contentType);\par
+409         {\cf19 if} (response.is_error)\{\par
+410             trigger_error(response.error_message);\par
+411         \}\par
+412 \par
+413         Json json\{\};\par
+414         {\cf19 if} (isJson(response.text))\{\par
+415 \par
+416             json = Json::parse(response.text);\par
+417             checkResponse(json);\par
+418         \}\par
+419         {\cf19 else}\{\par
+420 {\cf21 #if OPENAI_VERBOSE_OUTPUT}\par
+421             std::cerr << {\cf22 "Response is not a valid JSON"};\par
+422             std::cout << {\cf22 "<< "} << response.text << {\cf22 "\\n"};\par
+423 {\cf21 #endif}\par
+424         \}\par
+425 \par
+426         {\cf19 return} json;\par
+427     \}\par
+428 \par
+429     Json get({\cf17 const} std::string& suffix, {\cf17 const} std::string& data = {\cf22 ""}) \{\par
+430         setParameters(suffix, data);\par
+431         {\cf17 auto} response = session_.getPrepare();\par
+432         {\cf19 if} (response.is_error) \{ trigger_error(response.error_message); \}\par
+433 \par
+434         Json json\{\};\par
+435         {\cf19 if} (isJson(response.text)) \{\par
+436             json = Json::parse(response.text);\par
+437             checkResponse(json);\par
+438         \}\par
+439         {\cf19 else} \{\par
+440 {\cf21 #if OPENAI_VERBOSE_OUTPUT}\par
+441             std::cerr << {\cf22 "Response is not a valid JSON\\n"};\par
+442             std::cout << {\cf22 "<< "} << response.text<< {\cf22 "\\n"};\par
+443 {\cf21 #endif}\par
+444         \}\par
+445         {\cf19 return} json;\par
+446     \}\par
+447 \par
+448     Json post({\cf17 const} std::string& suffix, {\cf17 const} Json& json, {\cf17 const} std::string& contentType={\cf22 "application/json"}) \{\par
+449         {\cf19 return} post(suffix, json.dump(), contentType);\par
+450     \}\par
+451 \par
+452     Json del({\cf17 const} std::string& suffix) \{\par
+453         setParameters(suffix, {\cf22 ""});\par
+454         {\cf17 auto} response = session_.deletePrepare();\par
+455         {\cf19 if} (response.is_error) \{ trigger_error(response.error_message); \}\par
+456 \par
+457         Json json\{\};\par
+458         {\cf19 if} (isJson(response.text)) \{\par
+459             json = Json::parse(response.text);\par
+460             checkResponse(json);\par
+461         \}\par
+462         {\cf19 else} \{\par
+463 {\cf21 #if OPENAI_VERBOSE_OUTPUT}\par
+464             std::cerr << {\cf22 "Response is not a valid JSON\\n"};\par
+465             std::cout << {\cf22 "<< "} << response.text<< {\cf22 "\\n"};\par
+466 {\cf21 #endif}\par
+467         \}\par
+468         {\cf19 return} json;\par
+469     \}\par
+470 \par
+471     std::string easyEscape({\cf17 const} std::string& text) \{ {\cf19 return} session_.easyEscape(text); \}\par
+472 \par
+473     {\cf18 void} debug(){\cf17  const }\{ std::cout << token_ << {\cf23 '\\n'}; \}\par
+474 \par
+475     {\cf18 void} setBaseUrl({\cf17 const} std::string &url) \{\par
+476         base_url = url;\par
+477     \}\par
+478 \par
+479     std::string getBaseUrl(){\cf17  const }\{\par
+480         {\cf19 return} base_url;\par
+481     \}\par
+482 \par
+483 {\cf17 private}:\par
+484     std::string base_url;\par
+485 \par
+486     {\cf18 void} setParameters({\cf17 const} std::string& suffix, {\cf17 const} std::string& data, {\cf17 const} std::string& contentType = {\cf22 ""}) \{\par
+487         {\cf17 auto} complete_url =  base_url+ suffix;\par
+488         session_.setUrl(complete_url);\par
+489 \par
+490         {\cf19 if} (contentType != {\cf22 "multipart/form-data"}) \{\par
+491             session_.setBody(data);\par
+492         \}\par
+493 \par
+494 {\cf21 #if OPENAI_VERBOSE_OUTPUT}\par
+495         std::cout << {\cf22 "<< request: "}<< complete_url << {\cf22 "  "} << data << {\cf23 '\\n'};\par
+496 {\cf21 #endif}\par
+497     \}\par
+498 \par
+499     {\cf18 void} checkResponse({\cf17 const} Json& json) \{\par
+500         {\cf19 if} (json.count({\cf22 "error"})) \{\par
+501             {\cf17 auto} reason = json[{\cf22 "error"}].dump();\par
+502             trigger_error(reason);\par
+503 \par
+504 {\cf21 #if OPENAI_VERBOSE_OUTPUT}\par
+505             std::cerr << {\cf22 ">> response error :\\n"} << json.dump(2) << {\cf22 "\\n"};\par
+506 {\cf21 #endif}\par
+507         \}\par
+508     \}\par
+509 \par
+510     {\cf20 // as of now the only way}\par
+511     {\cf18 bool} isJson({\cf17 const} std::string &data)\{\par
+512         {\cf18 bool} rc = {\cf17 true};\par
+513         {\cf19 try} \{\par
+514             {\cf17 auto} json = Json::parse(data); {\cf20 // throws if no json}\par
+515         \}\par
+516         {\cf19 catch} (std::exception &)\{\par
+517             rc = {\cf17 false};\par
+518         \}\par
+519         {\cf19 return}(rc);\par
+520     \}\par
+521 \par
+522     {\cf18 void} trigger_error({\cf17 const} std::string& msg) \{\par
+523         {\cf19 if} (throw_exception_) \{\par
+524             {\cf19 throw} std::runtime_error(msg);\par
+525         \}\par
+526         {\cf19 else} \{\par
+527             std::cerr << {\cf22 "[OpenAI] error. Reason: "} << msg << {\cf23 '\\n'};\par
+528         \}\par
+529     \}\par
+530 \par
+531 {\cf17 public}:\par
+532     CategoryModel           model     \{*{\cf17 this}\};\par
+533     CategoryCompletion      completion\{*{\cf17 this}\};\par
+534     CategoryEdit            edit      \{*{\cf17 this}\};\par
+535     CategoryImage           image     \{*{\cf17 this}\};\par
+536     CategoryEmbedding       embedding \{*{\cf17 this}\};\par
+537     CategoryFile            file      \{*{\cf17 this}\};\par
+538     CategoryFineTune        fine_tune \{*{\cf17 this}\};\par
+539     CategoryModeration      moderation\{*{\cf17 this}\};\par
+540     CategoryChat            chat      \{*{\cf17 this}\};\par
+541     CategoryAudio           audio     \{*{\cf17 this}\};\par
+542     {\cf20 // CategoryEngine          engine\{*this\}; // Not handled since deprecated (use Model instead)}\par
+543 \par
+544 {\cf17 private}:\par
+545     Session                 session_;\par
+546     std::string             token_;\par
+547     std::string             organization_;\par
+548     {\cf18 bool}                    throw_exception_;\par
+549 \};\par
+550 \par
+551 {\cf17 inline} std::string bool_to_string({\cf17 const} {\cf18 bool} b) \{\par
+552     std::ostringstream ss;\par
+553     ss << std::boolalpha << b;\par
+554     {\cf19 return} ss.str();\par
+555 \}\par
+556 \par
+557 {\cf17 inline} OpenAI& start({\cf17 const} std::string& token = {\cf22 ""}, {\cf17 const} std::string& organization = {\cf22 ""}, {\cf18 bool} throw_exception = {\cf17 true})  \{\par
+558     {\cf17 static} OpenAI instance\{token, organization, throw_exception\};\par
+559     {\cf19 return} instance;\par
+560 \}\par
+561 \par
+562 {\cf17 inline} OpenAI& instance() \{\par
+563     {\cf19 return} start();\par
+564 \}\par
+565 \par
+566 {\cf17 inline} Json post({\cf17 const} std::string& suffix, {\cf17 const} Json& json) \{\par
+567     {\cf19 return} instance().post(suffix, json);\par
+568 \}\par
+569 \par
+570 {\cf17 inline} Json get({\cf17 const} std::string& suffix{\cf20 /*, const Json& json*/}) \{\par
+571     {\cf19 return} instance().get(suffix);\par
+572 \}\par
+573 \par
+574 {\cf20 // Helper functions to get category structures instance()}\par
+575 \par
+576 {\cf17 inline} CategoryModel& model() \{\par
+577     {\cf19 return} instance().model;\par
+578 \}\par
+579 \par
+580 {\cf17 inline} CategoryCompletion& completion() \{\par
+581     {\cf19 return} instance().completion;\par
+582 \}\par
+583 \par
+584 {\cf17 inline} CategoryChat& chat() \{\par
+585     {\cf19 return} instance().chat;\par
+586 \}\par
+587 \par
+588 {\cf17 inline} CategoryAudio& audio() \{\par
+589     {\cf19 return} instance().audio;\par
+590 \}\par
+591 \par
+592 {\cf17 inline} CategoryEdit& edit() \{\par
+593     {\cf19 return} instance().edit;\par
+594 \}\par
+595 \par
+596 {\cf17 inline} CategoryImage& image() \{\par
+597     {\cf19 return} instance().image;\par
+598 \}\par
+599 \par
+600 {\cf17 inline} CategoryEmbedding& embedding() \{\par
+601     {\cf19 return} instance().embedding;\par
+602 \}\par
+603 \par
+604 {\cf17 inline} CategoryFile& file() \{\par
+605     {\cf19 return} instance().file;\par
+606 \}\par
+607 \par
+608 {\cf17 inline} CategoryFineTune& fineTune() \{\par
+609     {\cf19 return} instance().fine_tune;\par
+610 \}\par
+611 \par
+612 {\cf17 inline} CategoryModeration& moderation() \{\par
+613     {\cf19 return} instance().moderation;\par
+614 \}\par
+615 \par
+616 {\cf20 // Definitions of category methods}\par
+617 \par
+618 {\cf20 // GET https://api.openai.com/v1/models}\par
+619 {\cf20 // Lists the currently available models, and provides basic information about each one such as the owner and availability.}\par
+620 {\cf17 inline} Json CategoryModel::list() \{\par
+621     {\cf19 return} openai_.get({\cf22 "models"});\par
+622 \}\par
+623 \par
+624 {\cf20 // GET https://api.openai.com/v1/models/\{model\}}\par
+625 {\cf20 // Retrieves a model instance, providing basic information about the model such as the owner and permissioning.}\par
+626 {\cf17 inline} Json CategoryModel::retrieve({\cf17 const} std::string& model) \{\par
+627     {\cf19 return} openai_.get({\cf22 "models/"} + model);\par
+628 \}\par
+629 \par
+630 {\cf20 // POST https://api.openai.com/v1/completions}\par
+631 {\cf20 // Creates a completion for the provided prompt and parameters}\par
+632 {\cf17 inline} Json CategoryCompletion::create(Json input) \{\par
+633     {\cf19 return} openai_.post({\cf22 "completions"}, input);\par
+634 \}\par
+635 \par
+636 {\cf20 // POST https://api.openai.com/v1/chat/completions}\par
+637 {\cf20 // Creates a chat completion for the provided prompt and parameters}\par
+638 {\cf17 inline} Json CategoryChat::create(Json input) \{\par
+639     {\cf19 return} openai_.post({\cf22 "chat/completions"}, input);\par
+640 \}\par
+641 \par
+642 {\cf20 // POST https://api.openai.com/v1/audio/transcriptions}\par
+643 {\cf20 // Transcribes audio into the input language.}\par
+644 {\cf17 inline} Json CategoryAudio::transcribe(Json input) \{\par
+645     openai_.setMultiformPart(\{{\cf22 "file"}, input[{\cf22 "file"}].get<std::string>()\},\par
+646                              std::map<std::string, std::string>\{\{{\cf22 "model"}, input[{\cf22 "model"}].get<std::string>()\}\}\par
+647                              );\par
+648 \par
+649     {\cf19 return} openai_.post({\cf22 "audio/transcriptions"}, std::string\{{\cf22 ""}\}, {\cf22 "multipart/form-data"});\par
+650 \}\par
+651 \par
+652 {\cf20 // POST https://api.openai.com/v1/audio/translations}\par
+653 {\cf20 // Translates audio into into English..}\par
+654 {\cf17 inline} Json CategoryAudio::translate(Json input) \{\par
+655     openai_.setMultiformPart(\{{\cf22 "file"}, input[{\cf22 "file"}].get<std::string>()\},\par
+656                              std::map<std::string, std::string>\{\{{\cf22 "model"}, input[{\cf22 "model"}].get<std::string>()\}\}\par
+657                              );\par
+658 \par
+659     {\cf19 return} openai_.post({\cf22 "audio/translations"}, std::string\{{\cf22 ""}\}, {\cf22 "multipart/form-data"});\par
+660 \}\par
+661 \par
+662 {\cf20 // POST https://api.openai.com/v1/translations}\par
+663 {\cf20 // Creates a new edit for the provided input, instruction, and parameters}\par
+664 {\cf17 inline} Json CategoryEdit::create(Json input) \{\par
+665     {\cf19 return} openai_.post({\cf22 "edits"}, input);\par
+666 \}\par
+667 \par
+668 {\cf20 // POST https://api.openai.com/v1/images/generations}\par
+669 {\cf20 // Given a prompt and/or an input image, the model will generate a new image.}\par
+670 {\cf17 inline} Json CategoryImage::create(Json input) \{\par
+671     {\cf19 return} openai_.post({\cf22 "images/generations"}, input);\par
+672 \}\par
+673 \par
+674 {\cf20 // POST https://api.openai.com/v1/images/edits}\par
+675 {\cf20 // Creates an edited or extended image given an original image and a prompt.}\par
+676 {\cf17 inline} Json CategoryImage::edit(Json input) \{\par
+677     std::string prompt = input[{\cf22 "prompt"}].get<std::string>(); {\cf20 // required}\par
+678     {\cf20 // Default values}\par
+679     std::string mask = {\cf22 ""};\par
+680     {\cf18 int} n = 1;\par
+681     std::string size = {\cf22 "1024x1024"};\par
+682     std::string response_format = {\cf22 "url"};\par
+683     std::string user = {\cf22 ""};\par
+684 \par
+685     {\cf19 if} (input.contains({\cf22 "mask"})) \{\par
+686         mask = input[{\cf22 "mask"}].get<std::string>();\par
+687     \}\par
+688     {\cf19 if} (input.contains({\cf22 "n"})) \{\par
+689         n = input[{\cf22 "n"}].get<{\cf18 int}>();\par
+690     \}\par
+691     {\cf19 if} (input.contains({\cf22 "size"})) \{\par
+692         size = input[{\cf22 "size"}].get<std::string>();\par
+693     \}\par
+694     {\cf19 if} (input.contains({\cf22 "response_format"})) \{\par
+695         response_format = input[{\cf22 "response_format"}].get<std::string>();\par
+696     \}\par
+697     {\cf19 if} (input.contains({\cf22 "user"})) \{\par
+698         user = input[{\cf22 "user"}].get<std::string>();\par
+699     \}\par
+700     openai_.setMultiformPart(\{{\cf22 "image"},input[{\cf22 "image"}].get<std::string>()\},\par
+701                              std::map<std::string, std::string>\{\par
+702                                  \{{\cf22 "prompt"}, prompt\},\par
+703                                  \{{\cf22 "mask"}, mask\},\par
+704                                  \{{\cf22 "n"}, std::to_string(n)\},\par
+705                                  \{{\cf22 "size"}, size\},\par
+706                                  \{{\cf22 "response_format"}, response_format\},\par
+707                                  \{{\cf22 "user"}, user\}\par
+708                              \}\par
+709                              );\par
+710 \par
+711     {\cf19 return} openai_.post({\cf22 "images/edits"}, std::string\{{\cf22 ""}\}, {\cf22 "multipart/form-data"});\par
+712 \}\par
+713 \par
+714 {\cf20 // POST https://api.openai.com/v1/images/variations}\par
+715 {\cf20 // Creates a variation of a given image.}\par
+716 {\cf17 inline} Json CategoryImage::variation(Json input) \{\par
+717     {\cf20 // Default values}\par
+718     {\cf18 int} n = 1;\par
+719     std::string size = {\cf22 "1024x1024"};\par
+720     std::string response_format = {\cf22 "url"};\par
+721     std::string user = {\cf22 ""};\par
+722 \par
+723     {\cf19 if} (input.contains({\cf22 "n"})) \{\par
+724         n = input[{\cf22 "n"}].get<{\cf18 int}>();\par
+725     \}\par
+726     {\cf19 if} (input.contains({\cf22 "size"})) \{\par
+727         size = input[{\cf22 "size"}].get<std::string>();\par
+728     \}\par
+729     {\cf19 if} (input.contains({\cf22 "response_format"})) \{\par
+730         response_format = input[{\cf22 "response_format"}].get<std::string>();\par
+731     \}\par
+732     {\cf19 if} (input.contains({\cf22 "user"})) \{\par
+733         user = input[{\cf22 "user"}].get<std::string>();\par
+734     \}\par
+735     openai_.setMultiformPart(\{{\cf22 "image"},input[{\cf22 "image"}].get<std::string>()\},\par
+736                              std::map<std::string, std::string>\{\par
+737                                  \{{\cf22 "n"}, std::to_string(n)\},\par
+738                                  \{{\cf22 "size"}, size\},\par
+739                                  \{{\cf22 "response_format"}, response_format\},\par
+740                                  \{{\cf22 "user"}, user\}\par
+741                              \}\par
+742                              );\par
+743 \par
+744     {\cf19 return} openai_.post({\cf22 "images/variations"}, std::string\{{\cf22 ""}\}, {\cf22 "multipart/form-data"});\par
+745 \}\par
+746 \par
+747 {\cf17 inline} Json CategoryEmbedding::create(Json input) \{\par
+748     {\cf19 return} openai_.post({\cf22 "embeddings"}, input);\par
+749 \}\par
+750 \par
+751 {\cf17 inline} Json CategoryFile::list() \{\par
+752     {\cf19 return} openai_.get({\cf22 "files"});\par
+753 \}\par
+754 \par
+755 {\cf17 inline} Json CategoryFile::upload(Json input) \{\par
+756     openai_.setMultiformPart(\{{\cf22 "file"}, input[{\cf22 "file"}].get<std::string>()\},\par
+757                              std::map<std::string, std::string>\{\{{\cf22 "purpose"}, input[{\cf22 "purpose"}].get<std::string>()\}\}\par
+758                              );\par
+759 \par
+760     {\cf19 return} openai_.post({\cf22 "files"}, std::string\{{\cf22 ""}\}, {\cf22 "multipart/form-data"});\par
+761 \}\par
+762 \par
+763 {\cf17 inline} Json CategoryFile::del({\cf17 const} std::string& file_id) \{\par
+764     {\cf19 return} openai_.del({\cf22 "files/"} + file_id);\par
+765 \}\par
+766 \par
+767 {\cf17 inline} Json CategoryFile::retrieve({\cf17 const} std::string& file_id) \{\par
+768     {\cf19 return} openai_.get({\cf22 "files/"} + file_id);\par
+769 \}\par
+770 \par
+771 {\cf17 inline} Json CategoryFile::content({\cf17 const} std::string& file_id) \{\par
+772     {\cf19 return} openai_.get({\cf22 "files/"} + file_id + {\cf22 "/content"});\par
+773 \}\par
+774 \par
+775 {\cf17 inline} Json CategoryFineTune::create(Json input) \{\par
+776     {\cf19 return} openai_.post({\cf22 "fine-tunes"}, input);\par
+777 \}\par
+778 \par
+779 {\cf17 inline} Json CategoryFineTune::list() \{\par
+780     {\cf19 return} openai_.get({\cf22 "fine-tunes"});\par
+781 \}\par
+782 \par
+783 {\cf17 inline} Json CategoryFineTune::retrieve({\cf17 const} std::string& fine_tune_id) \{\par
+784     {\cf19 return} openai_.get({\cf22 "fine-tunes/"} + fine_tune_id);\par
+785 \}\par
+786 \par
+787 {\cf17 inline} Json CategoryFineTune::content({\cf17 const} std::string& fine_tune_id) \{\par
+788     {\cf19 return} openai_.get({\cf22 "fine-tunes/"} + fine_tune_id + {\cf22 "/content"});\par
+789 \}\par
+790 \par
+791 {\cf17 inline} Json CategoryFineTune::cancel({\cf17 const} std::string& fine_tune_id) \{\par
+792     {\cf19 return} openai_.post({\cf22 "fine-tunes/"} + fine_tune_id + {\cf22 "/cancel"}, Json\{\});\par
+793 \}\par
+794 \par
+795 {\cf17 inline} Json CategoryFineTune::events({\cf17 const} std::string& fine_tune_id) \{\par
+796     {\cf19 return} openai_.get({\cf22 "fine-tunes/"} + fine_tune_id + {\cf22 "/events"});\par
+797 \}\par
+798 \par
+799 {\cf17 inline} Json CategoryFineTune::del({\cf17 const} std::string& model) \{\par
+800     {\cf19 return} openai_.del({\cf22 "models/"} + model);\par
+801 \}\par
+802 \par
+803 {\cf17 inline} Json CategoryModeration::create(Json input) \{\par
+804     {\cf19 return} openai_.post({\cf22 "moderations"}, input);\par
+805 \}\par
+806 \par
+807 \} {\cf20 // namespace _detail}\par
+808 \par
+809 {\cf20 // Public interface}\par
+810 \par
+811 {\cf17 using }_detail::OpenAI;\par
+812 \par
+813 {\cf20 // instance}\par
+814 {\cf17 using }_detail::start;\par
+815 {\cf17 using }_detail::instance;\par
+816 \par
+817 {\cf20 // Generic methods}\par
+818 {\cf17 using }_detail::post;\par
+819 {\cf17 using }_detail::get;\par
+820 \par
+821 {\cf20 // Helper categories access}\par
+822 {\cf17 using }_detail::model;\par
+823 {\cf17 using }_detail::completion;\par
+824 {\cf17 using }_detail::edit;\par
+825 {\cf17 using }_detail::image;\par
+826 {\cf17 using }_detail::embedding;\par
+827 {\cf17 using }_detail::file;\par
+828 {\cf17 using }_detail::fineTune;\par
+829 {\cf17 using }_detail::moderation;\par
+830 {\cf17 using }_detail::chat;\par
+831 {\cf17 using }_detail::audio;\par
+832 \par
+833 {\cf17 using }_detail::Json;\par
+834 \par
+835 \} {\cf20 // namespace openai}\par
+836 \par
+837 {\cf21 #endif }{\cf20 // OPENAI_HPP_}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+settingswindow.h\par \pard\plain 
+{\bkmkstart AAAAAAAAAD}
+{\bkmkend AAAAAAAAAD}
+{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 1 {\cf21 #ifndef SETTINGSWINDOW_H}\par
+2 {\cf21 #define SETTINGSWINDOW_H}\par
+3 \par
+4 {\cf21 #include <QDialog>}\par
+5 {\cf21 #include <QMouseEvent>}\par
+6 {\cf21 #include <QPoint>}\par
+7 \par
+8 {\cf17 namespace }Ui \{\par
+9 {\cf17 class }SettingsWindow;\par
+10 \}\par
+11 \par
+12 {\cf17 class }SettingsWindow : {\cf17 public} QDialog\par
+13 \{\par
+14     Q_OBJECT\par
+15 \par
+16 {\cf17 public}:\par
+17     {\cf17 explicit} SettingsWindow(QWidget *parent = {\cf17 nullptr});\par
+18     ~SettingsWindow();\par
+19 \par
+20 {\cf17 private} slots:\par
+24     {\cf18 void} on_okbtn_clicked();\par
+28     {\cf18 void} on_standartbtn_clicked();\par
+32     {\cf18 void} on_probtn_clicked();\par
+33 \par
+34 {\cf17 private}:\par
+35     Ui::SettingsWindow *ui;\par
+36 \par
+37     {\cf18 void} mousePressEvent(QMouseEvent *event);\par
+38     {\cf18 void} mouseMoveEvent(QMouseEvent *event);\par
+39 \par
+40     QPoint cur_pos;\par
+41     QPoint new_pos;\par
+42 \};\par
+43 \par
+44 {\cf21 #endif }{\cf20 // SETTINGSWINDOW_H}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+test_mynotesmaker.h\par \pard\plain 
+{\bkmkstart AAAAAAAAAE}
+{\bkmkend AAAAAAAAAE}
+{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 1 {\cf21 #ifndef TEST_MYNOTESMAKER_H}\par
+2 {\cf21 #define TEST_MYNOTESMAKER_H}\par
+3 \par
+4 {\cf21 #include <QMainWindow>}\par
+5 {\cf21 #include <QObject>}\par
+6 {\cf21 #include <QWidget>}\par
+7 {\cf21 #include "QFontDialog"}\par
+8 {\cf21 #include <QTest>}\par
+9 {\cf21 #include <QMessageBox>}\par
+10 \par
+11 {\cf21 #include <nlohmann/json.hpp>}\par
+12 {\cf21 #include "mainwindow.h"}\par
+13 {\cf21 #include "historywindow.h"}\par
+14 \par
+15 {\cf17 class }Test_MyNotesMaker : {\cf17 public} QObject\par
+16 \{\par
+17     Q_OBJECT\par
+18 {\cf17 public}:\par
+19     {\cf17 explicit} Test_MyNotesMaker(QObject *parent = {\cf17 nullptr});\par
+20 \par
+21 signals:\par
+22 \par
+23 {\cf17 private} slots:\par
+24     {\cf20 // Unit Tests MainWindow}\par
+25     {\cf18 void} testMainWindowHideButton();\par
+26     {\cf18 void} testMainWindowPinButton();\par
+27     {\cf18 void} testMainWindowLineEdit();\par
+28     {\cf18 void} testMainWindowPlainTextEdit();\par
+29     {\cf18 void} testMainWindowLineEditEnter();\par
+30 \par
+31 \par
+32     {\cf20 // Unit Tests History}\par
+33     {\cf18 void} testHistoryOpenNote();\par
+34     {\cf18 void} testHistoryDeleteButton();\par
+35     {\cf18 void} testHistoryCancleButton();\par
+36 \};\par
+37 \par
+38 {\cf21 #endif }{\cf20 // TEST_MYNOTESMAKER_H}\par
+39 \par
+}
+
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Index\par 
+\pard\plain 
+{\tc \v Index}
+{\field\fldedit {\*\fldinst INDEX \\c2 \\*MERGEFORMAT}{\fldrslt INDEX}}
+}
