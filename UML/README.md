@@ -1,5 +1,5 @@
-# Lab 2 + lab 3 MyNotesMaker
+# UML
 
-QT Framework + openai-cpp https://github.com/olrea/openai-cpp
+QT Framework + Unit Tests + Doxygen https://pvasya.github.io/MyNotesMakerDoxygen/
 
-![screenshot](https://github.com/pvasya/OOOP/assets/48941205/721ea1e7-a9ab-4951-b70e-daed869d081f)
+![screenshot](https://github.com/pvasya/OOOP/blob/main/UML/screenshot.png)
