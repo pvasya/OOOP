@@ -58,7 +58,7 @@
     <string>GPT version</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="ukbtn">
+  <widget class="QPushButton" name="standartbtn">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -86,7 +86,7 @@ QPushButton:pressed {
     <string>3.5 turbo</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="enbtn">
+  <widget class="QPushButton" name="probtn">
    <property name="geometry">
     <rect>
      <x>130</x>

@@ -13,7 +13,7 @@ SettingsWindow::SettingsWindow(QWidget *parent) :
     ui->setupUi(this);
     QSettings settings(QDir::homePath()+ "/Desktop/mynotesmaker settings.ini", QSettings::IniFormat);
     if (settings.value("GPT version", "gpt-3.5-turbo") == "gpt-3.5-turbo"){
-        ui->enbtn->setStyleSheet("QPushButton {"
+        ui->probtn->setStyleSheet("QPushButton {"
                                  "    font: 700 10pt 'Segoe Script';"
                                  "    background-color: rgb(251, 230, 127);"
                                  "    border-radius: 30px;"
@@ -24,7 +24,7 @@ SettingsWindow::SettingsWindow(QWidget *parent) :
                                  "QPushButton:pressed {"
                                  "    background-color: rgb(255, 140, 0);"
                                  "}");
-        ui->ukbtn->setStyleSheet("QPushButton {"
+        ui->standartbtn->setStyleSheet("QPushButton {"
                                  "    font: 700 10pt 'Segoe Script';"
                                  "    background-color: rgb(251, 230, 127);"
                                  "    border-radius: 30px;"
@@ -38,7 +38,7 @@ SettingsWindow::SettingsWindow(QWidget *parent) :
                                  "}");
     }
     else{
-        ui->enbtn->setStyleSheet("QPushButton {"
+        ui->probtn->setStyleSheet("QPushButton {"
                                  "    font: 700 10pt 'Segoe Script';"
                                  "    background-color: rgb(251, 230, 127);"
                                  "    border-radius: 30px;"
@@ -50,7 +50,7 @@ SettingsWindow::SettingsWindow(QWidget *parent) :
                                  "QPushButton:pressed {"
                                  "    background-color: rgb(255, 140, 0);"
                                  "}");
-        ui->ukbtn->setStyleSheet("QPushButton {"
+        ui->standartbtn->setStyleSheet("QPushButton {"
                                  "    font: 700 10pt 'Segoe Script';"
                                  "    background-color: rgb(251, 230, 127);"
                                  "    border-radius: 30px;"
@@ -79,7 +79,7 @@ void SettingsWindow::on_standartbtn_clicked()
     QSettings settings(QDir::homePath()+ "/Desktop/mynotesmaker settings.ini", QSettings::IniFormat);
     settings.setValue("GPT version", "gpt-3.5-turbo");
     settings.sync();
-    ui->enbtn->setStyleSheet("QPushButton {"
+    ui->probtn->setStyleSheet("QPushButton {"
                              "    font: 700 10pt 'Segoe Script';"
                              "    background-color: rgb(251, 230, 127);"
                              "    border-radius: 30px;"
@@ -90,7 +90,7 @@ void SettingsWindow::on_standartbtn_clicked()
                              "QPushButton:pressed {"
                              "    background-color: rgb(255, 140, 0);"
                              "}");
-    ui->ukbtn->setStyleSheet("QPushButton {"
+    ui->standartbtn->setStyleSheet("QPushButton {"
                              "    font: 700 10pt 'Segoe Script';"
                              "    background-color: rgb(251, 230, 127);"
                              "    border-radius: 30px;"
@@ -109,7 +109,7 @@ void SettingsWindow::on_probtn_clicked()
     QSettings settings(QDir::homePath()+ "/Desktop/mynotesmaker settings.ini", QSettings::IniFormat);
     settings.setValue("GPT version", "gpt-3.5-turbo-16k");
     settings.sync();
-    ui->enbtn->setStyleSheet("QPushButton {"
+    ui->probtn->setStyleSheet("QPushButton {"
                              "    font: 700 10pt 'Segoe Script';"
                              "    background-color: rgb(251, 230, 127);"
                              "    border-radius: 30px;"
@@ -121,7 +121,7 @@ void SettingsWindow::on_probtn_clicked()
                              "QPushButton:pressed {"
                              "    background-color: rgb(255, 140, 0);"
                              "}");
-    ui->ukbtn->setStyleSheet("QPushButton {"
+    ui->standartbtn->setStyleSheet("QPushButton {"
                              "    font: 700 10pt 'Segoe Script';"
                              "    background-color: rgb(251, 230, 127);"
                              "    border-radius: 30px;"

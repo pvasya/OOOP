@@ -1,5 +1,5 @@
 #include "historywindow.h"
-#include "ui_history.h"
+#include "ui_historywindow.h"
 #include <QFile>
 #include <QDir>
 #include <QMessageBox>

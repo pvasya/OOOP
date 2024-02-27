@@ -31,6 +31,7 @@ private slots:
      */
     void on_probtn_clicked();
 
+
 private:
     Ui::SettingsWindow *ui;
 
