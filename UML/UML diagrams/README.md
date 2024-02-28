@@ -1,3 +1,7 @@
+Створено 7 типів діаграм(Use case, class, object, sequence, deployment, state, activity)
+
+
+
 Глосарій
 
 
