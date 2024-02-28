@@ -54,16 +54,16 @@ void HistoryWindow::on_deletebtn_clicked() {
     QListWidgetItem* selectedItem = ui->listWidget->currentItem();
     if (selectedItem) {
         QString itemName = selectedItem->text();
-        QMessageBox msgBox;
+        QMessageBox msgBoxDelete;
 
-        msgBox.setText("Are you sure you want to delete the note?");
-        msgBox.setGeometry(this->x(), this->y() + 50, 300, 480);
-        msgBox.setStyleSheet("background-color: rgb(253, 223, 70);");
-        msgBox.setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
-        msgBox.setStandardButtons(QMessageBox::Yes);
-        msgBox.addButton(QMessageBox::No);
-        msgBox.setDefaultButton(QMessageBox::No);
-        if(msgBox.exec() == QMessageBox::Yes){
+        msgBoxDelete.setText("Are you sure you want to delete the note?");
+        msgBoxDelete.setGeometry(this->x(), this->y() + 50, 300, 480);
+        msgBoxDelete.setStyleSheet("background-color: rgb(253, 223, 70);");
+        msgBoxDelete.setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
+        msgBoxDelete.setStandardButtons(QMessageBox::Yes);
+        msgBoxDelete.addButton(QMessageBox::No);
+        msgBoxDelete.setDefaultButton(QMessageBox::No);
+        if(msgBoxDelete.exec() == QMessageBox::Yes){
             delete selectedItem;
             QString filePath = QDir::homePath() + "/Desktop/mynotesmaker.json";
             nlohmann::json data;

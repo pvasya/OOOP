@@ -89,14 +89,14 @@ void MainWindow::on_hidebtn_clicked()
 void MainWindow::on_savebtn_clicked()
 {
     if (ui->lineEdit->text().isEmpty()) {
-        QMessageBox msgBox;
-        msgBox.setObjectName("msgBox");
-        msgBox.setIcon(QMessageBox::Warning);
-        msgBox.setText("Please name the note");
-        msgBox.setGeometry(this->x() + 50, this->y() + 50,300,480);
-        msgBox.setStyleSheet("background-color: rgb(253, 223, 70);");
-        msgBox.setWindowFlags(Qt::FramelessWindowHint);
-        msgBox.exec();
+        QMessageBox msgBoxEmpty;
+        msgBoxEmpty.setObjectName("msgBox");
+        msgBoxEmpty.setIcon(QMessageBox::Warning);
+        msgBoxEmpty.setText("Please name the note");
+        msgBoxEmpty.setGeometry(this->x() + 50, this->y() + 50,300,480);
+        msgBoxEmpty.setStyleSheet("background-color: rgb(253, 223, 70);");
+        msgBoxEmpty.setWindowFlags(Qt::FramelessWindowHint);
+        msgBoxEmpty.exec();
         return;
     }
 
@@ -118,14 +118,14 @@ void MainWindow::on_savebtn_clicked()
             std::string noteName = ui->lineEdit->text().toStdString();
             for (const auto& note : data) {
                 if (note["name"] == noteName) {
-                    QMessageBox msgBox;
-                    msgBox.setObjectName("msgBox");
-                    msgBox.setIcon(QMessageBox::Warning);
-                    msgBox.setText("A note with the same name already exists.\nPlease choose a different name.");
-                    msgBox.setGeometry(this->x(), this->y() + 50, 300, 480);
-                    msgBox.setStyleSheet("background-color: rgb(253, 223, 70);");
-                    msgBox.setWindowFlags(Qt::FramelessWindowHint);
-                    msgBox.exec();
+                    QMessageBox msgBoxSame;
+                    msgBoxSame.setObjectName("msgBox");
+                    msgBoxSame.setIcon(QMessageBox::Warning);
+                    msgBoxSame.setText("A note with the same name already exists.\nPlease choose a different name.");
+                    msgBoxSame.setGeometry(this->x(), this->y() + 50, 300, 480);
+                    msgBoxSame.setStyleSheet("background-color: rgb(253, 223, 70);");
+                    msgBoxSame.setWindowFlags(Qt::FramelessWindowHint);
+                    msgBoxSame.exec();
                     return;
                 }
             }

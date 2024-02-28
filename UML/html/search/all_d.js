@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['test_5fmynotesmaker_0',['Test_MyNotesMaker',['../class_test___my_notes_maker.html',1,'']]]
+  ['збереження_20нотаток_3a_0',['Збереження нотаток:',['../index.html#c_sec',1,'Збереження нотаток:'],['../index.html#f_sec',1,'Збереження нотаток:']]]
 ];

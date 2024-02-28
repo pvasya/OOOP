@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['filerequest_0',['FileRequest',['../structopenai_1_1__detail_1_1_file_request.html',1,'openai::_detail']]]
+  ['historywindow_0',['HistoryWindow',['../class_history_window.html',1,'']]]
 ];

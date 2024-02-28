@@ -36,7 +36,8 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
+private:
+    QString OpenAIKey;
 
 private slots:
     /*!
