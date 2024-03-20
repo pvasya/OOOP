@@ -2,6 +2,7 @@
 
 #include <QApplication>
 
+#include "frameless.h"
 #include "styles.h"
 
 #ifdef QT_DEBUG
@@ -13,11 +14,12 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    Styles& style = Styles::getInstance();
+    Styles& style = Styles::getInstance(&a);
 
-    a.setStyleSheet(style.returnStyle());
+    style.setStyle("MacOS");
 
     MainWindow w;
+    FrameLess f(&w);
     w.show();
 
     // Unit Tests

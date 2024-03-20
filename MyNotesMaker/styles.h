@@ -1,6 +1,7 @@
 #ifndef STYLES_H
 #define STYLES_H
 
+#include <QApplication>
 #include <QString>
 
 // QSS styles https://github.com/GTRONICK/QSS
@@ -13,14 +14,14 @@ private:
 
     static Styles* instance;
     QString style = "Aqua";
+    QApplication* app;
 
 public:
-    static Styles& getInstance();
+    static Styles& getInstance(QApplication* a);
 
     Styles(const Styles&) = delete;
     Styles& operator=(const Styles&) = delete;
 
-    QString returnStyle();
     QString getStyleName();
     void setStyle(QString);
 };

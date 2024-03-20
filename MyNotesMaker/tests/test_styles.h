@@ -10,6 +10,7 @@ class Test_Styles : public QObject
 public:
     explicit Test_Styles(QObject *parent = nullptr);
 
+
 signals:
 
 private slots:

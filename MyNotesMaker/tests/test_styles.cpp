@@ -8,36 +8,39 @@ Test_Styles::Test_Styles(QObject *parent)
     : QObject{parent}
 {}
 
+int argc = 0;
+char* argv[] = {nullptr};
+QApplication app(argc, argv);
+
+Styles& style = Styles::getInstance(&app);
+
 void Test_Styles::testAqua()
 {
-    Styles& style = Styles::getInstance();
-    QVERIFY(style.getStyleName() == "Aqua");
+    style.setStyle("Aqua");
+    QCOMPARE(style.getStyleName(), QString("Aqua"));
 }
+
 
 void Test_Styles::testAmoled()
 {
-    Styles& style = Styles::getInstance();
     style.setStyle("Amoled");
-    QVERIFY(style.getStyleName() == "Amoled");
+    QCOMPARE(style.getStyleName(), QString("Amoled"));
 }
 
 void Test_Styles::testMacOS()
 {
-    Styles& style = Styles::getInstance();
     style.setStyle("MacOS");
-    QVERIFY(style.getStyleName() == "MacOS");
+    QCOMPARE(style.getStyleName(), QString("MacOS"));
 }
 
 void Test_Styles::testElegantDark()
 {
-    Styles& style = Styles::getInstance();
     style.setStyle("ElegantDark");
-    QVERIFY(style.getStyleName() == "ElegantDark");
+    QCOMPARE(style.getStyleName(), QString("ElegantDark"));
 }
 
 void Test_Styles::testMaterial()
 {
-        Styles& style = Styles::getInstance();
-        style.setStyle("Material");
-        QVERIFY(style.getStyleName() == "Aqua");
+    style.setStyle("Material");
+    QCOMPARE(style.getStyleName(), QString("Aqua"));
 }
