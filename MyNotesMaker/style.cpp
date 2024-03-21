@@ -1,26 +1,26 @@
-#include "styles.h"
+#include "style.h"
 
 #include <QFile>
 #include <QApplication>
 
-Styles* Styles::instance = nullptr;
+Style* Style::instance = nullptr;
 
-Styles& Styles::getInstance(QApplication* a)
+Style& Style::getInstance(QApplication* a)
 {
     if (!instance) {
-        instance = new Styles();
+        instance = new Style();
         QApplication* app = a;
     }
     return *instance;
 }
 
 
-QString Styles::getStyleName()
+QString Style::getStyleName()
 {
     return style;
 }
 
-void Styles::setStyle(QString style_name)
+void Style::setStyle(QString style_name)
 {   
     QFile styleSheetFile(":/styles/styles/" + style_name + ".qss");
 

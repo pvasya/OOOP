@@ -1,6 +1,6 @@
 #include "test_styles.h"
 
-#include "../styles.h"
+#include "../style.h"
 
 #include <QTest>
 
@@ -12,7 +12,7 @@ int argc = 0;
 char* argv[] = {nullptr};
 QApplication app(argc, argv);
 
-Styles& style = Styles::getInstance(&app);
+Style& style = Style::getInstance(&app);
 
 void Test_Styles::testAqua()
 {

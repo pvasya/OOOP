@@ -17,4 +17,14 @@
         <file>styles/Ubuntu.qss</file>
         <file>styles/Amoled.qss</file>
     </qresource>
+    <qresource prefix="/img">
+        <file>img/icon.jpg</file>
+        <file>img/arrow_back_new_FILL0_wght400_GRAD0_opsz24.svg</file>
+        <file>img/close_FILL0_wght400_GRAD0_opsz24.svg</file>
+        <file>img/fullscreen_exit_FILL0_wght400_GRAD0_opsz24.svg</file>
+        <file>img/fullscreen_FILL0_wght400_GRAD0_opsz24.svg</file>
+        <file>img/location_on_FILL0_wght400_GRAD0_opsz24.svg</file>
+        <file>img/pin_drop_FILL0_wght400_GRAD0_opsz24.svg</file>
+        <file>img/minimize_FILL0_wght400_GRAD0_opsz24.svg</file>
+    </qresource>
 </RCC>

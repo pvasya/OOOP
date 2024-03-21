@@ -3,7 +3,7 @@
 #include <QApplication>
 
 #include "frameless.h"
-#include "styles.h"
+#include "style.h"
 
 #ifdef QT_DEBUG
 #include <QTest>
@@ -14,12 +14,13 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    Styles& style = Styles::getInstance(&a);
+    Style& style = Style::getInstance(&a);
 
-    style.setStyle("MacOS");
+    style.setStyle("Aqua");
 
-    MainWindow w;
+    MainWindow w(&style);
     FrameLess f(&w);
+    w.setAttribute(Qt::WA_TranslucentBackground, true);
     w.show();
 
     // Unit Tests

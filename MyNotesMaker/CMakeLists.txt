@@ -26,9 +26,10 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         styles.qrc
-        styles.h styles.cpp
+        style.h style.cpp
         tests/test_styles.h tests/test_styles.cpp
         frameless.h frameless.cpp
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET MyNotesMaker APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
