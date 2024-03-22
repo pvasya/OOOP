@@ -4,11 +4,13 @@
 #include <QObject>
 #include <QTest>
 
+#include "../style.h"
+
 class Test_Styles : public QObject
 {
     Q_OBJECT
 public:
-    explicit Test_Styles(QObject *parent = nullptr);
+    explicit Test_Styles(Style* style, QObject *parent = nullptr);
 
 
 signals:
@@ -20,6 +22,9 @@ private slots:
     void testMacOS();
     void testElegantDark();
     void testMaterial();
+
+private:
+    Style* style;
 
 };
 

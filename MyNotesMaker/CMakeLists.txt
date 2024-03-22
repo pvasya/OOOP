@@ -29,6 +29,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         style.h style.cpp
         tests/test_styles.h tests/test_styles.cpp
         frameless.h frameless.cpp
+        tests/test_frameless.h tests/test_frameless.cpp
 
     )
 # Define target properties for Android with Qt 6 as:

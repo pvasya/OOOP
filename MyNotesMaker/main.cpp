@@ -8,6 +8,7 @@
 #ifdef QT_DEBUG
 #include <QTest>
 #include "./tests/test_styles.h"
+#include "./tests/test_frameless.h"
 #endif
 
 int main(int argc, char *argv[])
@@ -25,7 +26,8 @@ int main(int argc, char *argv[])
 
     // Unit Tests
 #ifdef QT_DEBUG
-    QTest::qExec(new Test_Styles);
+    QTest::qExec(new Test_Styles(&style));
+    QTest::qExec(new Test_Frameless);
 #endif
     return a.exec();
 }
