@@ -20,7 +20,9 @@
 #include <QScroller>
 
 #include "style.h"
-#include "frameless.h"
+
+#include "searchwidget.h"
+#include "settingswidget.h"
 
 MainWindow::MainWindow(Style* st, QWidget *parent)
     : QMainWindow(parent)
@@ -39,23 +41,22 @@ MainWindow::MainWindow(Style* st, QWidget *parent)
 
 
 
-        QWidget* proxy = new QWidget(this);
+        SettingsWidget *st = new SettingsWidget();
 
         panel_right->setWidgetResizable(true);
-        panel_right->setWidget(proxy);
+        panel_right->setWidget(st);
     }
 
     // Bottom panel
     {
         auto* panel_bottom = new PanelBottomSide(ui->tab);
-        panel_bottom->setPanelSize(150);
+        panel_bottom->setPanelSize(180);
         panel_bottom->init();
 
-        QLabel* label = new QLabel("Bottom", this);
-        label->setAlignment(Qt::AlignCenter);
+        SearchWidget *sr = new SearchWidget();
 
         panel_bottom->setWidgetResizable(true);
-        panel_bottom->setWidget(label);
+        panel_bottom->setWidget(sr);
     }
 
 }

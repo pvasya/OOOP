@@ -46,6 +46,10 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         QSidePanel/SidePanel.hpp
         QSidePanel/SidePanelState.cpp
         QSidePanel/SidePanelState.hpp
+        searchwidget.h searchwidget.cpp searchwidget.ui
+        settingswidget.h settingswidget.cpp settingswidget.ui
+
+
 
     )
 # Define target properties for Android with Qt 6 as:
