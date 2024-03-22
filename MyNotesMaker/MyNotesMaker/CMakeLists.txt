@@ -25,11 +25,27 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(MyNotesMaker
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        styles.qrc
+        res.qrc
         style.h style.cpp
         tests/test_styles.h tests/test_styles.cpp
         frameless.h frameless.cpp
         tests/test_frameless.h tests/test_frameless.cpp
+        QSidePanel/math.cpp
+        QSidePanel/math.hpp
+        QSidePanel/PanelBottomSide.cpp
+        QSidePanel/PanelBottomSide.hpp
+        QSidePanel/PanelLeftSide.cpp
+        QSidePanel/PanelLeftSide.hpp
+        QSidePanel/PanelRightSide.cpp
+        QSidePanel/PanelRightSide.hpp
+        QSidePanel/PanelTopSide.cpp
+        QSidePanel/PanelTopSide.hpp
+        QSidePanel/side_panel_helpers.cpp
+        QSidePanel/side_panel_helpers.hpp
+        QSidePanel/SidePanel.cpp
+        QSidePanel/SidePanel.hpp
+        QSidePanel/SidePanelState.cpp
+        QSidePanel/SidePanelState.hpp
 
     )
 # Define target properties for Android with Qt 6 as:

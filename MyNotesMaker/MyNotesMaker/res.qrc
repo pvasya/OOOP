@@ -26,5 +26,14 @@
         <file>img/location_on_FILL0_wght400_GRAD0_opsz24.svg</file>
         <file>img/pin_drop_FILL0_wght400_GRAD0_opsz24.svg</file>
         <file>img/minimize_FILL0_wght400_GRAD0_opsz24.svg</file>
+        <file>img/settings_FILL0_wght400_GRAD0_opsz24.svg</file>
+        <file>img/prompt_suggestion_FILL0_wght400_GRAD0_opsz24.svg</file>
+        <file>img/border_color_FILL0_wght400_GRAD0_opsz24.svg</file>
+        <file>img/expand_more_FILL0_wght400_GRAD0_opsz24.svg</file>
+        <file>img/description_FILL0_wght400_GRAD0_opsz24.svg</file>
+        <file>img/history_FILL0_wght400_GRAD0_opsz24.svg</file>
+        <file>img/info_FILL0_wght400_GRAD0_opsz24.svg</file>
+        <file>img/save_FILL0_wght400_GRAD0_opsz24.svg</file>
+        <file>img/chat_FILL0_wght400_GRAD0_opsz24.svg</file>
     </qresource>
 </RCC>

@@ -1,12 +1,63 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 
+#include <QVBoxLayout>
+
+// ---------------------------
+
+#include "QSidePanel/PanelRightSide.hpp"
+
+#include "QSidePanel/PanelBottomSide.hpp"
+
+// ---------------------------
+
+#include <QTextEdit>
+#include <QLabel>
+
+// ---------------------------
+
+
+#include <QScroller>
+
+#include "style.h"
+#include "frameless.h"
+
 MainWindow::MainWindow(Style* st, QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
     , style(st)
 {
     ui->setupUi(this);
+
+    // Right panel
+    auto* panel_right = new PanelRightSide(ui->main_2);
+    {
+        panel_right->setOpenEasingCurve (QEasingCurve::Type::OutExpo);
+        panel_right->setCloseEasingCurve(QEasingCurve::Type::InExpo);
+        panel_right->setPanelSize(200);
+        panel_right->init();
+
+
+
+        QWidget* proxy = new QWidget(this);
+
+        panel_right->setWidgetResizable(true);
+        panel_right->setWidget(proxy);
+    }
+
+    // Bottom panel
+    {
+        auto* panel_bottom = new PanelBottomSide(ui->tab);
+        panel_bottom->setPanelSize(150);
+        panel_bottom->init();
+
+        QLabel* label = new QLabel("Bottom", this);
+        label->setAlignment(Qt::AlignCenter);
+
+        panel_bottom->setWidgetResizable(true);
+        panel_bottom->setWidget(label);
+    }
+
 }
 
 MainWindow::~MainWindow()
