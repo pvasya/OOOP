@@ -88,7 +88,7 @@ QRect q_sp::rect_opened_full_bottom(const int handler_height, const QRect &paren
 QRect q_sp::rect_aligned_left_center(const QRect &target, const QSize &size)
 {
     QRect rect(0, 0, size.width(), size.height());
-    rect.moveTopRight( {target.left(), target.height()-30} );
+    rect.moveTopRight( {target.left()-20, target.height()-30} );
     return rect;
 }
 

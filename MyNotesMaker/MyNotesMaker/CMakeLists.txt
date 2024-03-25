@@ -13,6 +13,7 @@ find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 find_package(Qt6 REQUIRED COMPONENTS Test)
+find_package(Qt6 REQUIRED COMPONENTS PrintSupport)
 
 set(PROJECT_SOURCES
         main.cpp
@@ -48,8 +49,18 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         QSidePanel/SidePanelState.hpp
         searchwidget.h searchwidget.cpp searchwidget.ui
         settingswidget.h settingswidget.cpp settingswidget.ui
-
-
+        ParticleLife/particlelifewidget.h ParticleLife/particlelifewidget.cpp ParticleLife/particlelifewidget.ui
+        FormattingCommand/command.h
+        FormattingCommand/bold.h FormattingCommand/bold.cpp
+        FormattingCommand/italic.h FormattingCommand/italic.cpp
+        FormattingCommand/underline.h FormattingCommand/underline.cpp
+        FormattingCommand/color.h FormattingCommand/color.cpp
+        FormattingCommand/backgroundcolor.h FormattingCommand/backgroundcolor.cpp
+        FormattingCommand/invoker.h FormattingCommand/invoker.cpp
+        ExportStrategy/export.h
+        ExportStrategy/pdf.h ExportStrategy/pdf.cpp
+        ExportStrategy/html.h ExportStrategy/html.cpp
+        ExportStrategy/exportcontext.h ExportStrategy/exportcontext.cpp
 
     )
 # Define target properties for Android with Qt 6 as:
@@ -72,6 +83,7 @@ endif()
 
 target_link_libraries(MyNotesMaker PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 target_link_libraries(MyNotesMaker PRIVATE Qt6::Test)
+target_link_libraries(MyNotesMaker PRIVATE Qt6::PrintSupport)
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an

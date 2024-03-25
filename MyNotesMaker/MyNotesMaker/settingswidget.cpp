@@ -6,6 +6,7 @@ SettingsWidget::SettingsWidget(QWidget *parent)
     , ui(new Ui::SettingsWidget)
 {
     ui->setupUi(this);
+
 }
 
 SettingsWidget::~SettingsWidget()

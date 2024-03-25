@@ -13,7 +13,7 @@ private:
     ~Style() = default;
     
     static Style* instance;
-    QString style = "Aqua";
+    QString style;
     QApplication* app;
 
 public:

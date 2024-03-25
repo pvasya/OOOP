@@ -65,11 +65,11 @@
 </string>
         </property>
         <property name="currentIndex">
-         <number>1</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="tab">
          <attribute name="title">
-          <string>Format</string>
+          <string>Formatting</string>
          </attribute>
          <layout class="QVBoxLayout" name="verticalLayout_3">
           <item alignment="Qt::AlignHCenter">
@@ -128,31 +128,12 @@
               <string>Underline</string>
              </property>
             </widget>
-            <widget class="QSpinBox" name="spinBox">
-             <property name="geometry">
-              <rect>
-               <x>120</x>
-               <y>40</y>
-               <width>81</width>
-               <height>26</height>
-              </rect>
-             </property>
-             <property name="minimum">
-              <number>6</number>
-             </property>
-             <property name="maximum">
-              <number>54</number>
-             </property>
-             <property name="value">
-              <number>12</number>
-             </property>
-            </widget>
             <widget class="QLabel" name="label_2">
              <property name="geometry">
               <rect>
                <x>120</x>
-               <y>10</y>
-               <width>91</width>
+               <y>50</y>
+               <width>211</width>
                <height>31</height>
               </rect>
              </property>
@@ -162,14 +143,14 @@
               </font>
              </property>
              <property name="text">
-              <string>Font size</string>
+              <string>Text background color</string>
              </property>
             </widget>
             <widget class="QLabel" name="label_3">
              <property name="geometry">
               <rect>
-               <x>220</x>
-               <y>10</y>
+               <x>200</x>
+               <y>-10</y>
                <width>91</width>
                <height>31</height>
               </rect>
@@ -186,8 +167,8 @@
             <widget class="QPushButton" name="pushButton_7">
              <property name="geometry">
               <rect>
-               <x>210</x>
-               <y>40</y>
+               <x>180</x>
+               <y>20</y>
                <width>93</width>
                <height>29</height>
               </rect>
@@ -199,14 +180,14 @@
             <widget class="QPushButton" name="pushButton_8">
              <property name="geometry">
               <rect>
-               <x>120</x>
-               <y>70</y>
+               <x>180</x>
+               <y>80</y>
                <width>93</width>
                <height>29</height>
               </rect>
              </property>
              <property name="text">
-              <string>Advanced</string>
+              <string>Pick</string>
              </property>
             </widget>
            </widget>

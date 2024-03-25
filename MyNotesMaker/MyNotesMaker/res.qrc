@@ -7,7 +7,6 @@
         <file>styles/QSS_IMG/object-select-symbolic.symbolic.png</file>
     </qresource>
     <qresource prefix="/styles">
-        <file>styles/Aqua.qss</file>
         <file>styles/ConsoleStyle.qss</file>
         <file>styles/ElegantDark.qss</file>
         <file>styles/MacOS.qss</file>
@@ -16,6 +15,7 @@
         <file>styles/NeonButtons.qss</file>
         <file>styles/Ubuntu.qss</file>
         <file>styles/Amoled.qss</file>
+        <file>styles/Aqua.qss</file>
     </qresource>
     <qresource prefix="/img">
         <file>img/icon.jpg</file>
@@ -34,6 +34,6 @@
         <file>img/history_FILL0_wght400_GRAD0_opsz24.svg</file>
         <file>img/info_FILL0_wght400_GRAD0_opsz24.svg</file>
         <file>img/save_FILL0_wght400_GRAD0_opsz24.svg</file>
-        <file>img/chat_FILL0_wght400_GRAD0_opsz24.svg</file>
+        <file>img/stadia_controller_FILL0_wght400_GRAD0_opsz24.svg</file>
     </qresource>
 </RCC>
