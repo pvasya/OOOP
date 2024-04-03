@@ -17,16 +17,28 @@ public:
 
 private slots:
 
+    void on_replaceAllBtn_clicked();
 
-    void on_pushButton_4_clicked();
+    void on_replaceBtn_clicked();
 
-    void on_pushButton_5_clicked();
+    void on_searchBtn_clicked();
 
-    void on_pushButton_6_clicked();
+    void on_boldBtn_clicked();
 
-    void on_pushButton_7_clicked();
+    void on_italicBtn_clicked();
 
-    void on_pushButton_8_clicked();
+    void on_underlineBtn_clicked();
+
+    void on_colorBtn_clicked();
+
+    void on_backgroundColorBtn_clicked();
+
+    void on_swapBtn_clicked();
+
+signals:
+    void find(QString text);
+    void replace(QString text, QString replaceText);
+    void replaceAll(QString text, QString replaceText);
 
 private:
     Ui::SearchWidget *ui;

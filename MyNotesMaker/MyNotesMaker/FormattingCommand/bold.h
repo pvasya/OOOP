@@ -1,17 +1,18 @@
 #ifndef BOLD_H
 #define BOLD_H
 
-#include "../mainwindow.h"
+#include <QtWidgets/QTextEdit>
 #include "command.h"
+#include "formatter.h"
 
 class Bold : public Command {
 
 private:
-    MainWindow& mainWindow;
+    Formatter& formatter;
 
 public:
-    Bold(MainWindow& mainWindow);
-    void execute();
+    Bold(Formatter& formatter);
+    void execute() override;
 };
 
 #endif // BOLD_H

@@ -4,10 +4,10 @@
 
 #include <QString>
 
-class Export
+class ExportStrategy
 {
 public:
-    virtual void doExport(bool& flag,QString file, QString text) = 0;
+    virtual bool doExport(QString file, QString text) = 0;
 };
 
 #endif // EXPORT_H

@@ -7,12 +7,12 @@
 class ExportContext
 {
 private:
-    Export* exporter;
+    ExportStrategy* exporter;
 
 public:
-    void setExport(Export* exporter);
+    void setExport(ExportStrategy* exporter);
 
-    void executeExport(bool& flag,QString file, QString text);
+    bool executeExport(QString file, QString text);
 };
 
 #endif // EXPORTCONTEXT_H

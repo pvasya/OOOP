@@ -8,22 +8,27 @@
 
 class Style
 {
+protected:
+    Style() {}
+
 private:
-    Style() = default;
-    ~Style() = default;
-    
-    static Style* instance;
-    QString style;
+    QString styleName;
     QApplication* app;
 
 public:
-    static Style& getInstance(QApplication* a);
-    
-    Style(const Style&) = delete;
-    Style& operator=(const Style&) = delete;
+    static Style& get(){
+        static Style style;
+        return style;
+    }
+    Style(Style const&) = delete;
+    Style(Style&&) = delete;
+    Style& operator=(Style const&) = delete;
+    Style& operator=(Style &&) = delete;
 
     QString getStyleName();
-    void setStyle(QString);
+    void setStyle(QString styleName);
+
+    void setApplication(QApplication* a);
 };
 
 #endif // STYLE_H

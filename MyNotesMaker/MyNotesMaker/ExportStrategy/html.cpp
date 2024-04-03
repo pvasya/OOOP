@@ -2,12 +2,11 @@
 #include <QFile>
 #include <QTextStream>
 
-void Html::doExport(bool& flag,QString file, QString text)
+bool Html::doExport(QString file, QString text)
 {
     QFile outputFile(file);
     if (!outputFile.open(QIODevice::WriteOnly | QIODevice::Text)) {
-        flag = false;
-        return;
+        return false;
     }
     else{
         QTextStream outputStream(&outputFile);
@@ -15,6 +14,6 @@ void Html::doExport(bool& flag,QString file, QString text)
 
         outputFile.close();
 
-        flag = true;
+        return true;
     }
 }

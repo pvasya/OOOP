@@ -1,9 +1,8 @@
 #include "bold.h"
-#include "../mainwindow.h"
 
-Bold::Bold(MainWindow& mainWindow) :
-    mainWindow(mainWindow) {}
+Bold::Bold(Formatter& formatter) :
+    formatter(formatter) {}
 
 void Bold::execute() {
-    mainWindow.Bold();
+    formatter.bold();
 }

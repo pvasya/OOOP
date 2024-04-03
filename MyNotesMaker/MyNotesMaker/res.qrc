@@ -35,5 +35,8 @@
         <file>img/info_FILL0_wght400_GRAD0_opsz24.svg</file>
         <file>img/save_FILL0_wght400_GRAD0_opsz24.svg</file>
         <file>img/stadia_controller_FILL0_wght400_GRAD0_opsz24.svg</file>
+        <file>img/swap_vert_FILL0_wght400_GRAD0_opsz24.svg</file>
+        <file>img/toggle_off_FILL0_wght400_GRAD0_opsz24.svg</file>
+        <file>img/toggle_on_FILL0_wght400_GRAD0_opsz24.svg</file>
     </qresource>
 </RCC>

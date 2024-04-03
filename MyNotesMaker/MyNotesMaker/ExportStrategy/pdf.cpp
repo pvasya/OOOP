@@ -8,7 +8,7 @@
 #include <QMessageBox>
 
 
-void Pdf::doExport(bool& flag,QString file, QString text)
+bool Pdf::doExport(QString file, QString text)
 {
     if (!file.isEmpty()) {
         QPrinter printer(QPrinter::PrinterResolution);
@@ -18,10 +18,8 @@ void Pdf::doExport(bool& flag,QString file, QString text)
         document.setHtml(text);
 
         document.print(&printer);
-
-        flag = true;
-        return;
+        return true;
     }
     else
-        flag = false;
+        return false;
 }

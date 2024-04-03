@@ -61,7 +61,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         ExportStrategy/pdf.h ExportStrategy/pdf.cpp
         ExportStrategy/html.h ExportStrategy/html.cpp
         ExportStrategy/exportcontext.h ExportStrategy/exportcontext.cpp
-
+        FormattingCommand/formatcommandsenum.h
+        FormattingCommand/formatter.h FormattingCommand/formatter.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET MyNotesMaker APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

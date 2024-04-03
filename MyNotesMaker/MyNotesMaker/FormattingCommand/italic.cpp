@@ -1,11 +1,8 @@
 #include "italic.h"
 
-Italic::Italic(MainWindow &mainWindow) : mainWindow(mainWindow)
-{
+Italic::Italic(Formatter& formatter) :
+    formatter(formatter) {}
 
-}
-
-void Italic::execute()
-{
-    mainWindow.Italic();
+void Italic::execute() {
+    formatter.italic();
 }

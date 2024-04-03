@@ -5,6 +5,12 @@
 
 #include "ExportStrategy/html.h"
 #include "ExportStrategy/pdf.h"
+#include "FormattingCommand/backgroundcolor.h"
+#include "FormattingCommand/bold.h"
+#include "FormattingCommand/color.h"
+#include "FormattingCommand/italic.h"
+#include "FormattingCommand/invoker.h"
+#include "FormattingCommand/underline.h"
 #include "QSidePanel/PanelRightSide.hpp"
 
 #include "QSidePanel/PanelBottomSide.hpp"
@@ -27,13 +33,9 @@
 #include <QTextCursor>
 #include <QMessageBox>
 
-//#include "./FormattingCommand/invoker.h"
-//#include "./FormattingCommand/bold.h"
-
-MainWindow::MainWindow(Style* st, QWidget *parent)
+MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
-    , style(st)
 {
     ui->setupUi(this);
 
@@ -77,6 +79,10 @@ MainWindow::MainWindow(Style* st, QWidget *parent)
 
     sr = new SearchWidget();
 
+    connect(sr, &SearchWidget::find, this, &MainWindow::find);
+    connect(sr, &SearchWidget::replace, this, &MainWindow::replace);
+    connect(sr, &SearchWidget::replaceAll, this, &MainWindow::replaceAll);
+
     panel_bottom->setWidgetResizable(true);
     panel_bottom->setWidget(sr);
 
@@ -86,6 +92,21 @@ MainWindow::MainWindow(Style* st, QWidget *parent)
     pdf = new Pdf();
 
     exporter->setExport(html);
+
+
+    // Command Pattern
+    formatter = new Formatter(/*this,*/ *ui->textEdit);
+    b = new Bold(*formatter);
+    i = new Italic(*formatter);
+    u = new Underline(*formatter);
+    c = new Color(*formatter);
+    bc = new BackgroundColor(*formatter);
+
+    Invoker::get().addCommand(b);
+    Invoker::get().addCommand(i);
+    Invoker::get().addCommand(u);
+    Invoker::get().addCommand(c);
+    Invoker::get().addCommand(bc);
 
 }
 
@@ -155,47 +176,115 @@ void MainWindow::on_about()
 
 void MainWindow::on_amoled()
 {
-    style->setStyle("Amoled");
+    Style::get().setStyle("Amoled");
+
 }
 
 void MainWindow::on_neon()
 {
-    style->setStyle("NeonButtons");
+    Style::get().setStyle("NeonButtons");
 }
 
 void MainWindow::on_ubuntu()
 {
-    style->setStyle("Ubuntu");
+    Style::get().setStyle("Ubuntu");
 }
+
+void MainWindow::find(QString text) {
+    QTextCursor currentCursor = ui->textEdit->textCursor();
+    QTextCursor cursor(ui->textEdit->document());
+
+    QList<QTextCursor> occurrences;
+    cursor = ui->textEdit->document()->find(text);
+    while (!cursor.isNull() && !cursor.atEnd()+1) {
+        occurrences.append(cursor);
+        cursor = ui->textEdit->document()->find(text, cursor);
+    }
+
+    if (!occurrences.isEmpty()) {
+        bool foundCurrentCursor = false;
+        for (const QTextCursor& foundCursor : occurrences) {
+            if (foundCursor.position() == currentCursor.position()) {
+                foundCurrentCursor = true;
+                continue;
+            }
+            if (foundCurrentCursor) {
+                ui->textEdit->setTextCursor(foundCursor);
+                return;
+            }
+        }
+        ui->textEdit->setTextCursor(occurrences.first());
+    }
+}
+
+void MainWindow::replace(QString text, QString replaceText) {
+    QTextCursor cursor = ui->textEdit->textCursor();
+    QString documentText = ui->textEdit->toPlainText();
+    int position = cursor.position()-text.length();
+
+    int index = documentText.indexOf(text, position);
+
+    if (index != -1) {
+        cursor.setPosition(index);
+        cursor.movePosition(QTextCursor::Right, QTextCursor::KeepAnchor, text.length());
+        cursor.removeSelectedText();
+        cursor.insertText(replaceText);
+    } else {
+        index = documentText.indexOf(text);
+
+        if (index != -1) {
+            cursor.setPosition(index);
+            cursor.movePosition(QTextCursor::Right, QTextCursor::KeepAnchor, text.length());
+            cursor.removeSelectedText();
+            cursor.insertText(replaceText);
+        }
+    }
+}
+
+void MainWindow::replaceAll(QString text, QString replaceText)
+{
+    QTextCursor cursor(ui->textEdit->document());
+
+    cursor.movePosition(QTextCursor::Start);
+
+    while (!cursor.isNull() && !cursor.atEnd()) {
+        cursor = ui->textEdit->document()->find(text, cursor);
+
+        if (!cursor.isNull()) {
+            cursor.insertText(replaceText);
+        }
+    }
+}
+
 
 void MainWindow::on_mac()
 {
-    style->setStyle("MacOS");
+    Style::get().setStyle("MacOS");
 }
 
 void MainWindow::on_materialdark()
 {
-    style->setStyle("MaterialDark");
+    Style::get().setStyle("MaterialDark");
 }
 
 void MainWindow::on_manjaro()
 {
-    style->setStyle("ManjaroMix");
+    Style::get().setStyle("ManjaroMix");
 }
 
 void MainWindow::on_console()
 {
-    style->setStyle("ConsoleStyle");
+    Style::get().setStyle("ConsoleStyle");
 }
 
 void MainWindow::on_aqua()
 {
-    style->setStyle("Aqua");
+    Style::get().setStyle("Aqua");
 }
 
 void MainWindow::on_elegantdark()
 {
-    style->setStyle("ElegantDark");
+    Style::get().setStyle("ElegantDark");
 }
 
 void MainWindow::resizeEvent(QResizeEvent *event)
@@ -210,104 +299,35 @@ void MainWindow::moveEvent(QMoveEvent *event)
     ui->fullbtn->setIcon(QIcon(":/img/img/fullscreen_FILL0_wght400_GRAD0_opsz24.svg"));
 }
 
-void MainWindow::Bold() {
-    QTextCharFormat format;
-    QTextCursor cursor = ui->textEdit->textCursor();
 
-    format = cursor.charFormat();
-
-    if (format.fontWeight() != QFont::Bold) {
-        format.setFontWeight(QFont::Bold);
-    } else {
-        format.setFontWeight(QFont::Normal);
-    }
-    cursor.mergeCharFormat(format);
-}
-
-void MainWindow::Italic() {
-    QTextCharFormat format;
-    QTextCursor cursor = ui->textEdit->textCursor();
-
-    format = cursor.charFormat();
-
-    if (!format.fontItalic()) {
-        format.setFontItalic(true);
-    } else {
-        format.setFontItalic(false);
-    }
-    cursor.mergeCharFormat(format);
-}
-
-void MainWindow::Underline() {
-    QTextCharFormat format;
-    QTextCursor cursor = ui->textEdit->textCursor();
-
-    format = cursor.charFormat();
-
-    if (!format.fontUnderline()) {
-        format.setFontUnderline(true);
-    } else {
-        format.setFontUnderline(false);
-    }
-    cursor.mergeCharFormat(format);
-}
-
-void MainWindow::Color() {
-    QColorDialog dialog(this);
-    dialog.setCurrentColor(ui->textEdit->textColor());
-    QColor color = dialog.getColor();
-
-    if (color.isValid()) {
-        QTextCharFormat format;
-        QTextCursor cursor = ui->textEdit->textCursor();
-        format = cursor.charFormat();
-        format.setForeground(color);
-        cursor.mergeCharFormat(format);
-    }
-}
-
-void MainWindow::BackgroundColor() {
-    QColorDialog dialog(this);
-    dialog.setCurrentColor(ui->textEdit->textBackgroundColor());
-    QColor color = dialog.getColor();
-
-    if (color.isValid()) {
-        QTextCharFormat format;
-        QTextCursor cursor = ui->textEdit->textCursor();
-        format = cursor.charFormat();
-        format.setBackground(color);
-        cursor.mergeCharFormat(format);
-    }
-}
-
-void MainWindow::on_pushButton_4_clicked()
+void MainWindow::on_exportBtn_clicked()
 {
     QString file;
-    QString str = ui->label_13->text() + "_" + ui->label_14->text();
-    if(ui->radioButton_3->isChecked())
-        file = QFileDialog::getSaveFileName(this, "Зберегти як", str, "HTML файл (*.html)");
-    else
-        file = QFileDialog::getSaveFileName(this, "Зберегти як", str, "PDF файл (*.pdf)");
+    QString str = ui->nameLabel->text() + "_" + ui->dateLabel->text();
+    if(ui->htmlRadioBtn->isChecked())
+        file = QFileDialog::getSaveFileName(this, "Save as", str, "HTML file (*.html)");
+    else if (ui->pdfRadioBtn->isChecked())
+        file = QFileDialog::getSaveFileName(this, "Save as", str, "PDF file (*.pdf)");
 
     if (file.isEmpty())
         return;
 
-    bool flag = true;
-    exporter->executeExport(flag, file, ui->textEdit->toHtml());
-    if (flag)
-        QMessageBox::information(this, "Успішно", "Файл успішно збережено.");
+    bool isSuccessful= exporter->executeExport(file, ui->textEdit->toHtml());
+
+    if (isSuccessful)
+        QMessageBox::information(this, "Successful", "File saved successfully.");
     else
-        QMessageBox::information(this, "Помилка", "Файл не вдалося зберегти.");
+        QMessageBox::information(this, "Unsuccessful", "The file could not be saved.");
 }
 
 
-void MainWindow::on_radioButton_3_clicked()
+void MainWindow::on_htmlRadioBtn_clicked()
 {
     exporter->setExport(html);
 }
 
 
-void MainWindow::on_radioButton_4_clicked()
+void MainWindow::on_pdfRadioBtn_clicked()
 {
     exporter->setExport(pdf);
 }

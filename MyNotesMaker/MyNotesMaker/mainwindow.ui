@@ -262,6 +262,9 @@ QLabel:hover {
                         <height>30</height>
                        </size>
                       </property>
+                      <property name="styleSheet">
+                       <string notr="true"/>
+                      </property>
                       <property name="text">
                        <string/>
                       </property>
@@ -331,7 +334,7 @@ QLabel:hover {
 </string>
                    </property>
                    <property name="currentIndex">
-                    <number>0</number>
+                    <number>1</number>
                    </property>
                    <widget class="QWidget" name="tab">
                     <attribute name="icon">
@@ -533,14 +536,14 @@ QLabel:hover {
                                       <widget class="QWidget" name="widget_18" native="true">
                                        <layout class="QVBoxLayout" name="verticalLayout_20">
                                         <item>
-                                         <widget class="QLabel" name="label_13">
+                                         <widget class="QLabel" name="nameLabel">
                                           <property name="text">
                                            <string>Unsaved</string>
                                           </property>
                                          </widget>
                                         </item>
                                         <item>
-                                         <widget class="QLabel" name="label_14">
+                                         <widget class="QLabel" name="dateLabel">
                                           <property name="text">
                                            <string>01.01.2024</string>
                                           </property>
@@ -553,7 +556,7 @@ QLabel:hover {
                                    </widget>
                                   </item>
                                   <item>
-                                   <widget class="QPushButton" name="pushButton_3">
+                                   <widget class="QPushButton" name="saveChangesBtn">
                                     <property name="minimumSize">
                                      <size>
                                       <width>0</width>
@@ -584,7 +587,26 @@ QLabel:hover {
                                  </property>
                                  <layout class="QVBoxLayout" name="verticalLayout_21">
                                   <item>
-                                   <widget class="QRadioButton" name="radioButton_3">
+                                   <spacer name="verticalSpacer">
+                                    <property name="orientation">
+                                     <enum>Qt::Vertical</enum>
+                                    </property>
+                                    <property name="sizeHint" stdset="0">
+                                     <size>
+                                      <width>20</width>
+                                      <height>40</height>
+                                     </size>
+                                    </property>
+                                   </spacer>
+                                  </item>
+                                  <item>
+                                   <widget class="QRadioButton" name="htmlRadioBtn">
+                                    <property name="minimumSize">
+                                     <size>
+                                      <width>0</width>
+                                      <height>40</height>
+                                     </size>
+                                    </property>
                                     <property name="text">
                                      <string>html</string>
                                     </property>
@@ -594,14 +616,20 @@ QLabel:hover {
                                    </widget>
                                   </item>
                                   <item>
-                                   <widget class="QRadioButton" name="radioButton_4">
+                                   <widget class="QRadioButton" name="pdfRadioBtn">
+                                    <property name="minimumSize">
+                                     <size>
+                                      <width>0</width>
+                                      <height>40</height>
+                                     </size>
+                                    </property>
                                     <property name="text">
                                      <string>pdf</string>
                                     </property>
                                    </widget>
                                   </item>
                                   <item>
-                                   <widget class="QPushButton" name="pushButton_4">
+                                   <widget class="QPushButton" name="exportBtn">
                                     <property name="minimumSize">
                                      <size>
                                       <width>0</width>
@@ -633,23 +661,7 @@ QLabel:hover {
                                 <height>16777215</height>
                                </size>
                               </property>
-                              <layout class="QVBoxLayout" name="verticalLayout_17">
-                               <item>
-                                <widget class="QLabel" name="label_10">
-                                 <property name="font">
-                                  <font>
-                                   <pointsize>14</pointsize>
-                                  </font>
-                                 </property>
-                                 <property name="text">
-                                  <string>12 latest backups</string>
-                                 </property>
-                                </widget>
-                               </item>
-                               <item>
-                                <widget class="QListView" name="listView_2"/>
-                               </item>
-                              </layout>
+                              <layout class="QVBoxLayout" name="verticalLayout_17"/>
                              </widget>
                             </item>
                            </layout>
@@ -685,7 +697,7 @@ QLabel:hover {
                       <normaloff>:/img/img/stadia_controller_FILL0_wght400_GRAD0_opsz24.svg</normaloff>:/img/img/stadia_controller_FILL0_wght400_GRAD0_opsz24.svg</iconset>
                     </attribute>
                     <attribute name="title">
-                     <string>Particle Life</string>
+                     <string>ParticleLife</string>
                     </attribute>
                     <layout class="QVBoxLayout" name="verticalLayout_9">
                      <property name="leftMargin">
@@ -824,8 +836,8 @@ QLabel:hover {
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>225</width>
-                   <height>703</height>
+                   <width>265</width>
+                   <height>595</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_3">

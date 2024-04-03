@@ -1,16 +1,17 @@
 #ifndef ITALIC_H
 #define ITALIC_H
 
-#include "../mainwindow.h"
 #include "command.h"
+#include "formatter.h"
+#include <QTextEdit>
 
 class Italic : public Command {
 
 private:
-    MainWindow& mainWindow;
+    Formatter& formatter;
 
 public:
-    Italic(MainWindow& mainWindow);
+    Italic(Formatter& formatter);
     void execute();
 };
 #endif // ITALIC_H

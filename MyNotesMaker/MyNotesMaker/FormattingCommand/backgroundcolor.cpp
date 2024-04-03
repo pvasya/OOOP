@@ -1,11 +1,11 @@
 #include "backgroundcolor.h"
 
-BackgroundColor::BackgroundColor(MainWindow &mainWindow) : mainWindow(mainWindow)
+BackgroundColor::BackgroundColor(Formatter &formatter) : formatter(formatter)
 {
 
 }
 
 void BackgroundColor::execute()
 {
-    mainWindow.BackgroundColor();
+    formatter.backgroundColor();
 }

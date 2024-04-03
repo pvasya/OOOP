@@ -65,7 +65,7 @@
 </string>
         </property>
         <property name="currentIndex">
-         <number>0</number>
+         <number>1</number>
         </property>
         <widget class="QWidget" name="tab">
          <attribute name="title">
@@ -89,7 +89,7 @@
             <property name="layoutDirection">
              <enum>Qt::LeftToRight</enum>
             </property>
-            <widget class="QPushButton" name="pushButton_4">
+            <widget class="QPushButton" name="boldBtn">
              <property name="geometry">
               <rect>
                <x>10</x>
@@ -102,7 +102,7 @@
               <string>Bold</string>
              </property>
             </widget>
-            <widget class="QPushButton" name="pushButton_5">
+            <widget class="QPushButton" name="italicBtn">
              <property name="geometry">
               <rect>
                <x>10</x>
@@ -115,7 +115,7 @@
               <string>Italic</string>
              </property>
             </widget>
-            <widget class="QPushButton" name="pushButton_6">
+            <widget class="QPushButton" name="underlineBtn">
              <property name="geometry">
               <rect>
                <x>10</x>
@@ -164,7 +164,7 @@
               <string>Color</string>
              </property>
             </widget>
-            <widget class="QPushButton" name="pushButton_7">
+            <widget class="QPushButton" name="colorBtn">
              <property name="geometry">
               <rect>
                <x>180</x>
@@ -177,7 +177,7 @@
               <string>Pick</string>
              </property>
             </widget>
-            <widget class="QPushButton" name="pushButton_8">
+            <widget class="QPushButton" name="backgroundColorBtn">
              <property name="geometry">
               <rect>
                <x>180</x>
@@ -231,7 +231,7 @@
             <property name="layoutDirection">
              <enum>Qt::LeftToRight</enum>
             </property>
-            <widget class="QPushButton" name="pushButton">
+            <widget class="QPushButton" name="searchBtn">
              <property name="geometry">
               <rect>
                <x>220</x>
@@ -244,7 +244,7 @@
               <string>Search</string>
              </property>
             </widget>
-            <widget class="QPushButton" name="pushButton_2">
+            <widget class="QPushButton" name="replaceBtn">
              <property name="geometry">
               <rect>
                <x>220</x>
@@ -257,7 +257,7 @@
               <string>Replace</string>
              </property>
             </widget>
-            <widget class="QPushButton" name="pushButton_3">
+            <widget class="QPushButton" name="replaceAllBtn">
              <property name="geometry">
               <rect>
                <x>220</x>
@@ -270,25 +270,7 @@
               <string>Replace all</string>
              </property>
             </widget>
-            <widget class="QLabel" name="label">
-             <property name="geometry">
-              <rect>
-               <x>80</x>
-               <y>90</y>
-               <width>63</width>
-               <height>32</height>
-              </rect>
-             </property>
-             <property name="font">
-              <font>
-               <pointsize>11</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>0/0</string>
-             </property>
-            </widget>
-            <widget class="QLineEdit" name="lineEdit">
+            <widget class="QLineEdit" name="searchLineEdit">
              <property name="geometry">
               <rect>
                <x>30</x>
@@ -297,15 +279,41 @@
                <height>26</height>
               </rect>
              </property>
+             <property name="maxLength">
+              <number>50</number>
+             </property>
             </widget>
-            <widget class="QLineEdit" name="lineEdit_2">
+            <widget class="QLineEdit" name="replaceLineEdit">
              <property name="geometry">
               <rect>
                <x>30</x>
-               <y>50</y>
+               <y>90</y>
                <width>171</width>
                <height>26</height>
               </rect>
+             </property>
+             <property name="maxLength">
+              <number>50</number>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="swapBtn">
+             <property name="geometry">
+              <rect>
+               <x>100</x>
+               <y>47</y>
+               <width>31</width>
+               <height>29</height>
+              </rect>
+             </property>
+             <property name="toolTip">
+              <string>swap</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="res.qrc">
+               <normaloff>:/img/img/swap_vert_FILL0_wght400_GRAD0_opsz24.svg</normaloff>:/img/img/swap_vert_FILL0_wght400_GRAD0_opsz24.svg</iconset>
              </property>
             </widget>
            </widget>
@@ -319,6 +327,8 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -2,6 +2,7 @@
 #include "ui_searchwidget.h"
 
 #include "./FormattingCommand/invoker.h"
+#include "./FormattingCommand/formatcommandsenum.h"
 
 SearchWidget::SearchWidget(QWidget *parent)
     : QWidget(parent)
@@ -16,38 +17,57 @@ SearchWidget::~SearchWidget()
     delete ui;
 }
 
-
-void SearchWidget::on_pushButton_4_clicked()
+void SearchWidget::on_searchBtn_clicked()
 {
-    Invoker& inv = Invoker::getInstance();
-    inv.startCommand(0);
+    emit find(ui->searchLineEdit->text());
 }
 
 
-void SearchWidget::on_pushButton_5_clicked()
+void SearchWidget::on_replaceBtn_clicked()
 {
-    Invoker& inv = Invoker::getInstance();
-    inv.startCommand(1);
+    emit replace(ui->searchLineEdit->text(), ui->replaceLineEdit->text());
 }
 
 
-void SearchWidget::on_pushButton_6_clicked()
+void SearchWidget::on_replaceAllBtn_clicked()
 {
-    Invoker& inv = Invoker::getInstance();
-    inv.startCommand(2);
+    emit replaceAll(ui->searchLineEdit->text(), ui->replaceLineEdit->text());
 }
 
 
-void SearchWidget::on_pushButton_7_clicked()
+void SearchWidget::on_swapBtn_clicked()
 {
-    Invoker& inv = Invoker::getInstance();
-    inv.startCommand(3);
+    QString temp = ui->searchLineEdit->text();
+    ui->searchLineEdit->setText(ui->replaceLineEdit->text());
+    ui->replaceLineEdit->setText(temp);
+}
+
+void SearchWidget::on_boldBtn_clicked()
+{
+    Invoker::get().startCommand(Format::Bold);
 }
 
 
-void SearchWidget::on_pushButton_8_clicked()
+void SearchWidget::on_italicBtn_clicked()
 {
-    Invoker& inv = Invoker::getInstance();
-    inv.startCommand(4);
+    Invoker::get().startCommand(Format::Italic);
+}
+
+
+void SearchWidget::on_underlineBtn_clicked()
+{
+    Invoker::get().startCommand(Format::Underline);
+}
+
+
+void SearchWidget::on_colorBtn_clicked()
+{
+    Invoker::get().startCommand(Format::Color);
+}
+
+
+void SearchWidget::on_backgroundColorBtn_clicked()
+{
+    Invoker::get().startCommand(Format::BackgroundColor);
 }
 

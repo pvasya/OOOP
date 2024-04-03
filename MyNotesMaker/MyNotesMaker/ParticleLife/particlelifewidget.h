@@ -2,6 +2,10 @@
 #define PARTICLELIFEWIDGET_H
 
 #include <QWidget>
+#include <QGraphicsView>
+#include <QGraphicsScene>
+#include <QGraphicsItem>
+#include <QGraphicsEllipseItem>
 
 namespace Ui {
 class ParticleLifeWidget;

@@ -1,11 +1,11 @@
 #include "exportcontext.h"
 
-void ExportContext::setExport(Export *exporter)
+void ExportContext::setExport(ExportStrategy *exporter)
 {
     this->exporter = exporter;
 }
 
-void ExportContext::executeExport(bool& flag,QString file, QString text)
+bool ExportContext::executeExport(QString file, QString text)
 {
-    exporter->doExport(flag, file, text);
+    return exporter->doExport(file, text);
 }

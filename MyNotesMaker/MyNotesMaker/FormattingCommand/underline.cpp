@@ -1,11 +1,11 @@
 #include "underline.h"
 
-Underline::Underline(MainWindow &mainWindow) : mainWindow(mainWindow)
+Underline::Underline(Formatter& formatter) : formatter(formatter)
 {
 
 }
 
 void Underline::execute()
 {
-    mainWindow.Underline();
+    formatter.underline();
 }

@@ -1,16 +1,17 @@
 #ifndef UNDERLINE_H
 #define UNDERLINE_H
 
-#include "../mainwindow.h"
 #include "command.h"
+#include "formatter.h"
+#include <QTextEdit>
 
 class Underline : public Command {
 
 private:
-    MainWindow& mainWindow;
+    Formatter& formatter;
 
 public:
-    Underline(MainWindow& mainWindow);
+    Underline(Formatter& formatter);
     void execute();
 };
 

@@ -4,10 +4,10 @@
 #include <QString>
 #include "export.h"
 
-class Pdf : public Export
+class Pdf : public ExportStrategy
 {
 public:
-    void doExport(bool& flag,QString file, QString text) override;
+    bool doExport(QString file, QString text) override;
 };
 
 #endif // PDF_H

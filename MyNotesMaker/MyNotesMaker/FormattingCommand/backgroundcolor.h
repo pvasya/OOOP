@@ -1,17 +1,17 @@
 #ifndef BACKGROUNDCOLOR_H
 #define BACKGROUNDCOLOR_H
 
-#include "../mainwindow.h"
 #include "command.h"
+#include "formatter.h"
 
 class BackgroundColor : public Command {
 
 private:
-    MainWindow& mainWindow;
+    Formatter& formatter;
 
 public:
-    BackgroundColor(MainWindow& BackgroundColor);
-    void execute();
+    BackgroundColor(Formatter& formatter);
+    void execute() override;
 };
 
 #endif // BACKGROUNDCOLOR_H

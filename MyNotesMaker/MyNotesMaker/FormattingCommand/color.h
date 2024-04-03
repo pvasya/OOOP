@@ -1,16 +1,17 @@
 #ifndef COLOR_H
 #define COLOR_H
 
-#include "../mainwindow.h"
 #include "command.h"
+#include "formatter.h"
+#include <QTextEdit>
 
 class Color : public Command {
 
 private:
-    MainWindow& mainWindow;
+    Formatter& formatter;
 
 public:
-    Color(MainWindow& Color);
+    Color(Formatter& formatter);
     void execute();
 };
 

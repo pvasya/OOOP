@@ -1,11 +1,11 @@
 #include "color.h"
 
-Color::Color(MainWindow &mainWindow) : mainWindow(mainWindow)
+Color::Color(Formatter& formatter) : formatter(formatter)
 {
 
 }
 
 void Color::execute()
 {
-    mainWindow.Color();
+    formatter.color();
 }
