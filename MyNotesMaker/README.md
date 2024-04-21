@@ -4,6 +4,9 @@ QT MyNotesMaker
 1. Singleton
 2. Command
 3. Strategy
+4. Iterator (QList)
+5. Factory Method
+6. State (QStateMachine)
 
 QSS styles https://github.com/GTRONICK/QSS
 
