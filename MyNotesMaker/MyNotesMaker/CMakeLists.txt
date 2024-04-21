@@ -14,6 +14,7 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 find_package(Qt6 REQUIRED COMPONENTS Test)
 find_package(Qt6 REQUIRED COMPONENTS PrintSupport)
+find_package(Qt6 REQUIRED COMPONENTS StateMachine)
 
 set(PROJECT_SOURCES
         main.cpp
@@ -63,6 +64,13 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         ExportStrategy/exportcontext.h ExportStrategy/exportcontext.cpp
         FormattingCommand/formatcommandsenum.h
         FormattingCommand/formatter.h FormattingCommand/formatter.cpp
+        ParticleLife/particle.h ParticleLife/particle.cpp
+        ParticleLife/particlefactorymethod.h ParticleLife/particlefactorymethod.cpp
+        ParticleLife/particleworker.h ParticleLife/particleworker.cpp
+        ParticleLife/customscene.h ParticleLife/customscene.cpp
+        ParticleLife/movetomouseworker.h ParticleLife/movetomouseworker.cpp
+
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET MyNotesMaker APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
@@ -85,6 +93,7 @@ endif()
 target_link_libraries(MyNotesMaker PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 target_link_libraries(MyNotesMaker PRIVATE Qt6::Test)
 target_link_libraries(MyNotesMaker PRIVATE Qt6::PrintSupport)
+target_link_libraries(MyNotesMaker PRIVATE Qt6::StateMachine)
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an

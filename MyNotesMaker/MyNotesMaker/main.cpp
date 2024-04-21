@@ -15,7 +15,6 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-
     // Singleton Pattern
     Style::get().setApplication(&a);
     Style::get().setStyle("Aqua");

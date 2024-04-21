@@ -312,9 +312,9 @@ void MainWindow::on_exportBtn_clicked()
     if (file.isEmpty())
         return;
 
-    bool isSuccessful= exporter->executeExport(file, ui->textEdit->toHtml());
+    bool is_successful= exporter->executeExport(file, ui->textEdit->toHtml());
 
-    if (isSuccessful)
+    if (is_successful)
         QMessageBox::information(this, "Successful", "File saved successfully.");
     else
         QMessageBox::information(this, "Unsuccessful", "The file could not be saved.");
@@ -331,3 +331,4 @@ void MainWindow::on_pdfRadioBtn_clicked()
 {
     exporter->setExport(pdf);
 }
+

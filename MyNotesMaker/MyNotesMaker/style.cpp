@@ -14,16 +14,16 @@ QString Style::getStyleName()
 void Style::setStyle(QString styleName)
 {
     if(!app)
-        qDebug()<<"set application";
+        qInfo()<<"set application";
     else{
         QFile styleSheetFile(":/styles/styles/" + styleName + ".qss");
 
         if (!styleSheetFile.open(QFile::ReadOnly)) {
-            qDebug() << "Error opening " << styleName;
+            qWarning() << "Error opening " << styleName;
             styleName = "Aqua";
             styleSheetFile.setFileName(":/styles/styles/Aqua.qss");
             if (!styleSheetFile.open(QFile::ReadOnly)) {
-                qDebug() << "Style 'Aqua' not found!";
+                qWarning() << "Style 'Aqua' not found!";
                 return;
             }
         }

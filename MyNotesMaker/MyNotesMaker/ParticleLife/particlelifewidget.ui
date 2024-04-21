@@ -144,17 +144,23 @@
           </item>
           <item>
            <widget class="QWidget" name="widget_2" native="true">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>175</height>
+             </size>
+            </property>
             <property name="maximumSize">
              <size>
               <width>16777215</width>
-              <height>178</height>
+              <height>175</height>
              </size>
             </property>
             <widget class="QSlider" name="redSlider">
              <property name="geometry">
               <rect>
                <x>60</x>
-               <y>60</y>
+               <y>0</y>
                <width>131</width>
                <height>22</height>
               </rect>
@@ -163,7 +169,7 @@
               <number>1000</number>
              </property>
              <property name="value">
-              <number>300</number>
+              <number>0</number>
              </property>
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
@@ -173,60 +179,16 @@
              <property name="geometry">
               <rect>
                <x>60</x>
-               <y>90</y>
-               <width>131</width>
-               <height>22</height>
-              </rect>
-             </property>
-             <property name="maximum">
-              <number>1000</number>
-             </property>
-             <property name="value">
-              <number>300</number>
-             </property>
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-            </widget>
-            <widget class="QSlider" name="sizeSlider">
-             <property name="geometry">
-              <rect>
-               <x>60</x>
                <y>30</y>
                <width>131</width>
                <height>22</height>
               </rect>
              </property>
-             <property name="minimum">
-              <number>1</number>
-             </property>
              <property name="maximum">
               <number>1000</number>
              </property>
              <property name="value">
-              <number>300</number>
-             </property>
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-            </widget>
-            <widget class="QSlider" name="GConstantSlider">
-             <property name="geometry">
-              <rect>
-               <x>60</x>
-               <y>0</y>
-               <width>131</width>
-               <height>22</height>
-              </rect>
-             </property>
-             <property name="minimum">
-              <number>1</number>
-             </property>
-             <property name="maximum">
-              <number>1000</number>
-             </property>
-             <property name="value">
-              <number>300</number>
+              <number>0</number>
              </property>
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
@@ -236,7 +198,7 @@
              <property name="geometry">
               <rect>
                <x>60</x>
-               <y>120</y>
+               <y>60</y>
                <width>131</width>
                <height>22</height>
               </rect>
@@ -245,7 +207,7 @@
               <number>1000</number>
              </property>
              <property name="value">
-              <number>300</number>
+              <number>0</number>
              </property>
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
@@ -255,7 +217,7 @@
              <property name="geometry">
               <rect>
                <x>10</x>
-               <y>60</y>
+               <y>0</y>
                <width>41</width>
                <height>20</height>
               </rect>
@@ -271,7 +233,7 @@
              <property name="geometry">
               <rect>
                <x>10</x>
-               <y>90</y>
+               <y>30</y>
                <width>41</width>
                <height>20</height>
               </rect>
@@ -287,7 +249,7 @@
              <property name="geometry">
               <rect>
                <x>10</x>
-               <y>120</y>
+               <y>60</y>
                <width>41</width>
                <height>20</height>
               </rect>
@@ -299,12 +261,31 @@
               <string>blue</string>
              </property>
             </widget>
-            <widget class="QLabel" name="label_6">
+            <widget class="QSlider" name="RedradiusSlider">
+             <property name="geometry">
+              <rect>
+               <x>60</x>
+               <y>90</y>
+               <width>131</width>
+               <height>22</height>
+              </rect>
+             </property>
+             <property name="maximum">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>80</number>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_8">
              <property name="geometry">
               <rect>
                <x>10</x>
-               <y>30</y>
-               <width>31</width>
+               <y>90</y>
+               <width>41</width>
                <height>20</height>
               </rect>
              </property>
@@ -312,15 +293,34 @@
               <string notr="true">color: rgb(255, 255, 255);</string>
              </property>
              <property name="text">
-              <string>size</string>
+              <string>red r</string>
              </property>
             </widget>
-            <widget class="QLabel" name="label_7">
+            <widget class="QSlider" name="GreenradiusSlider">
+             <property name="geometry">
+              <rect>
+               <x>60</x>
+               <y>120</y>
+               <width>131</width>
+               <height>22</height>
+              </rect>
+             </property>
+             <property name="maximum">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>80</number>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_9">
              <property name="geometry">
               <rect>
                <x>10</x>
-               <y>0</y>
-               <width>31</width>
+               <y>120</y>
+               <width>51</width>
                <height>20</height>
               </rect>
              </property>
@@ -328,10 +328,10 @@
               <string notr="true">color: rgb(255, 255, 255);</string>
              </property>
              <property name="text">
-              <string>G</string>
+              <string>green r</string>
              </property>
             </widget>
-            <widget class="QSlider" name="radiuSlider">
+            <widget class="QSlider" name="BlueradiusSlider">
              <property name="geometry">
               <rect>
                <x>60</x>
@@ -341,16 +341,16 @@
               </rect>
              </property>
              <property name="maximum">
-              <number>1000</number>
+              <number>100</number>
              </property>
              <property name="value">
-              <number>300</number>
+              <number>80</number>
              </property>
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
              </property>
             </widget>
-            <widget class="QLabel" name="label_8">
+            <widget class="QLabel" name="label_10">
              <property name="geometry">
               <rect>
                <x>10</x>
@@ -363,7 +363,7 @@
               <string notr="true">color: rgb(255, 255, 255);</string>
              </property>
              <property name="text">
-              <string>radius</string>
+              <string>blue r</string>
              </property>
             </widget>
            </widget>
@@ -402,10 +402,10 @@
               </rect>
              </property>
              <property name="minimum">
-              <number>-500</number>
+              <number>-50</number>
              </property>
              <property name="maximum">
-              <number>500</number>
+              <number>50</number>
              </property>
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
@@ -421,10 +421,10 @@
               </rect>
              </property>
              <property name="minimum">
-              <number>-500</number>
+              <number>-50</number>
              </property>
              <property name="maximum">
-              <number>500</number>
+              <number>50</number>
              </property>
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
@@ -440,10 +440,10 @@
               </rect>
              </property>
              <property name="minimum">
-              <number>-500</number>
+              <number>-50</number>
              </property>
              <property name="maximum">
-              <number>500</number>
+              <number>50</number>
              </property>
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
@@ -459,10 +459,10 @@
               </rect>
              </property>
              <property name="minimum">
-              <number>-500</number>
+              <number>-50</number>
              </property>
              <property name="maximum">
-              <number>500</number>
+              <number>50</number>
              </property>
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
@@ -478,10 +478,10 @@
               </rect>
              </property>
              <property name="minimum">
-              <number>-500</number>
+              <number>-50</number>
              </property>
              <property name="maximum">
-              <number>500</number>
+              <number>50</number>
              </property>
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
@@ -513,10 +513,10 @@
               </rect>
              </property>
              <property name="minimum">
-              <number>-500</number>
+              <number>-50</number>
              </property>
              <property name="maximum">
-              <number>500</number>
+              <number>50</number>
              </property>
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
@@ -532,10 +532,10 @@
               </rect>
              </property>
              <property name="minimum">
-              <number>-500</number>
+              <number>-50</number>
              </property>
              <property name="maximum">
-              <number>500</number>
+              <number>50</number>
              </property>
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
@@ -551,16 +551,16 @@
               </rect>
              </property>
              <property name="minimum">
-              <number>-500</number>
+              <number>-50</number>
              </property>
              <property name="maximum">
-              <number>500</number>
+              <number>50</number>
              </property>
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
              </property>
             </widget>
-            <widget class="QSlider" name="blueRedSlider_2">
+            <widget class="QSlider" name="blueBlueSlider">
              <property name="geometry">
               <rect>
                <x>60</x>
@@ -570,10 +570,10 @@
               </rect>
              </property>
              <property name="minimum">
-              <number>-500</number>
+              <number>-50</number>
              </property>
              <property name="maximum">
-              <number>500</number>
+              <number>50</number>
              </property>
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
@@ -835,22 +835,6 @@
               <string/>
              </property>
             </widget>
-            <widget class="QLabel" name="label_29">
-             <property name="geometry">
-              <rect>
-               <x>35</x>
-               <y>240</y>
-               <width>16</width>
-               <height>20</height>
-              </rect>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(255, 0, 0);</string>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-            </widget>
             <widget class="QPushButton" name="generateRandomBtn">
              <property name="geometry">
               <rect>
@@ -1045,6 +1029,22 @@ QCheckBox::indicator:unchecked{
              </property>
              <property name="checked">
               <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_29">
+             <property name="geometry">
+              <rect>
+               <x>35</x>
+               <y>240</y>
+               <width>16</width>
+               <height>20</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: #0000ff;</string>
+             </property>
+             <property name="text">
+              <string/>
              </property>
             </widget>
            </widget>

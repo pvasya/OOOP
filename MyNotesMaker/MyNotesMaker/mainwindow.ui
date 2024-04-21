@@ -334,7 +334,7 @@ QLabel:hover {
 </string>
                    </property>
                    <property name="currentIndex">
-                    <number>1</number>
+                    <number>0</number>
                    </property>
                    <widget class="QWidget" name="tab">
                     <attribute name="icon">
@@ -836,8 +836,8 @@ QLabel:hover {
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>265</width>
-                   <height>595</height>
+                   <width>225</width>
+                   <height>703</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_3">

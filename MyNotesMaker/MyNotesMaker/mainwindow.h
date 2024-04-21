@@ -14,7 +14,6 @@
 #include "ParticleLife/particlelifewidget.h"
 #include "searchwidget.h"
 #include "settingswidget.h"
-#include "style.h"
 
 
 #include "QSidePanel/PanelRightSide.hpp"
@@ -70,7 +69,6 @@ private slots:
     void on_htmlRadioBtn_clicked();
 
     void on_pdfRadioBtn_clicked();
-
 
 protected:
     void resizeEvent(QResizeEvent *event) override;

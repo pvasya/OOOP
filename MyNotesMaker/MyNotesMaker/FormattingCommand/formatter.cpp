@@ -54,7 +54,7 @@ void Formatter::underline()
 
 void Formatter::color()
 {
-    QColorDialog dialog(nullptr);
+    QColorDialog dialog;
     dialog.setCurrentColor(textEdit.textColor());
     QColor color = dialog.getColor();
 
@@ -69,7 +69,7 @@ void Formatter::color()
 
 void Formatter::backgroundColor()
 {
-    QColorDialog dialog(nullptr);
+    QColorDialog dialog;
     dialog.setCurrentColor(textEdit.textBackgroundColor());
     QColor color = dialog.getColor();
 
