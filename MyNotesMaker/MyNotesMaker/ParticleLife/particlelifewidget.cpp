@@ -20,9 +20,9 @@ ParticleLifeWidget::ParticleLifeWidget(QWidget *parent)
     ui->graphicsView->setScene(scene);
     ui->graphicsView->setRenderHint(QPainter::Antialiasing);
     //ui->graphicsView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-    // ui->graphicsView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    //ui->graphicsView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
-    scene->setSceneRect(0,0,1500,1500);
+    //scene->setSceneRect(0,0,1500,1500);
 
     statemachine = new QStateMachine(this);
 
@@ -150,16 +150,30 @@ void ParticleLifeWidget::animate(QList<Particle *> &firstGroup, QList<Particle *
             }
         }
 
-        a->vx = (a->vx + fx) * 0.5;
-        a->vy = (a->vy + fy) * 0.5;
+        a->setVX((a->getVX() + fx) * 0.5);
+        a->setVY((a->getVY() + fy) * 0.5);
+        a->moveBy(a->getVX(), a->getVY());
 
-        a->moveBy(a->vx, a->vy);
+
+        if(a->x() < 0){
+            a->setPos(10,a->y());
+        }
+        if(a->x() > 1500){
+            a->setPos(1480,a->y());
+        }
+        if(a->y() < 0){
+            a->setPos(a->x(),10);
+        }
+        if(a->y() > 1500){
+            a->setPos(a->x(),1480);
+        }
+
 
         if (a->x() <= 10 || a->x() >= screenWidth) {
-            a->vx *= -1;
+            a->setVX(a->getVX() * -1);
         }
         if (a->y() <=10 || a->y() >= screenHeight) {
-            a->vy *= -1;
+            a->setVY(a->getVY() * -1);
         }
     }
 }

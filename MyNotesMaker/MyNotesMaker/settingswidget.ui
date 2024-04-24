@@ -52,7 +52,7 @@
          <property name="maximumSize">
           <size>
            <width>16777215</width>
-           <height>155</height>
+           <height>125</height>
           </size>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -87,30 +87,11 @@
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="locationbtn">
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>35</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>16777215</width>
-              <height>40</height>
-             </size>
-            </property>
-            <property name="text">
-             <string>Location </string>
-            </property>
-           </widget>
-          </item>
-          <item>
            <widget class="QCommandLinkButton" name="aboutbtn">
             <property name="maximumSize">
              <size>
               <width>16777215</width>
-              <height>50</height>
+              <height>35</height>
              </size>
             </property>
             <property name="text">
@@ -144,6 +125,12 @@
        </item>
        <item>
         <widget class="QWidget" name="widget_2" native="true">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <layout class="QVBoxLayout" name="verticalLayout_2">
           <property name="spacing">
            <number>3</number>
@@ -162,10 +149,16 @@
           </property>
           <item alignment="Qt::AlignTop">
            <widget class="QScrollArea" name="scrollArea_2">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>380</height>
+             </size>
+            </property>
             <property name="maximumSize">
              <size>
               <width>16777215</width>
-              <height>350</height>
+              <height>407</height>
              </size>
             </property>
             <property name="widgetResizable">
@@ -177,7 +170,7 @@
                <x>0</x>
                <y>0</y>
                <width>173</width>
-               <height>317</height>
+               <height>378</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout">

@@ -7,6 +7,7 @@ QT MyNotesMaker
 4. Iterator (QList)
 5. Factory Method
 6. State (QStateMachine)
+7. Proxy
 
 QSS styles https://github.com/GTRONICK/QSS
 

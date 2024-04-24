@@ -69,6 +69,11 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         ParticleLife/particleworker.h ParticleLife/particleworker.cpp
         ParticleLife/customscene.h ParticleLife/customscene.cpp
         ParticleLife/movetomouseworker.h ParticleLife/movetomouseworker.cpp
+        note.h note.cpp
+        notemanager.h notemanager.cpp
+        realnotemanager.h realnotemanager.cpp
+        proxynotemanager.h proxynotemanager.cpp
+
 
 
     )

@@ -108,15 +108,35 @@ MainWindow::MainWindow(QWidget *parent)
     Invoker::get().addCommand(c);
     Invoker::get().addCommand(bc);
 
+    settings_app = new QSettings("MyNotesMaker", "MyNotesMaker", this);
+
+    loadSettings();
+
+    actOpen = new QAction("Open", this);
+    actDelete = new QAction("Delete", this);
+
+    connect(actOpen, &QAction::triggered, this, &MainWindow::OpenNote);
+    connect(actDelete, &QAction::triggered, this, &MainWindow::DeleteNote);
+
+    ui->noteListWidget->setContextMenuPolicy(Qt::ActionsContextMenu);
+    ui->noteListWidget->addActions({ actOpen, actDelete });
+
+    proxynotemanager = new ProxyNoteManager();
+
+    proxynotemanager->load();
 }
 
 MainWindow::~MainWindow()
 {
+    proxynotemanager->save();
+    saveSettings();
+
     delete game;
     delete sr;
     delete settings;
     delete panel_right;
     delete panel_bottom;
+    delete proxynotemanager;
     delete exporter;
     delete pdf;
     delete html;
@@ -302,8 +322,12 @@ void MainWindow::moveEvent(QMoveEvent *event)
 
 void MainWindow::on_exportBtn_clicked()
 {
+    if (ui->nameLabel->text()=="") {
+        QMessageBox::information(this, "Information", "Open a note");
+        return;
+    }
     QString file;
-    QString str = ui->nameLabel->text() + "_" + ui->dateLabel->text();
+    QString str = (ui->nameLabel->text() + "_" + ui->dateLabel->text()).replace(":", "-");;
     if(ui->htmlRadioBtn->isChecked())
         file = QFileDialog::getSaveFileName(this, "Save as", str, "HTML file (*.html)");
     else if (ui->pdfRadioBtn->isChecked())
@@ -312,7 +336,12 @@ void MainWindow::on_exportBtn_clicked()
     if (file.isEmpty())
         return;
 
-    bool is_successful= exporter->executeExport(file, ui->textEdit->toHtml());
+
+    QPair<QString, QString> noteData = proxynotemanager->getNote(ui->nameLabel->text());
+    QString noteText = noteData.first;
+
+
+    bool is_successful= exporter->executeExport(file, noteText);
 
     if (is_successful)
         QMessageBox::information(this, "Successful", "File saved successfully.");
@@ -331,4 +360,141 @@ void MainWindow::on_pdfRadioBtn_clicked()
 {
     exporter->setExport(pdf);
 }
+
+void MainWindow::saveSettings()
+{
+    settings_app->setValue("style", Style::get().getStyleName());
+    settings_app->setValue("geometry", geometry());
+}
+
+void MainWindow::loadSettings()
+{
+    Style::get().setStyle(settings_app->value("style","Aqua").toString());
+    setGeometry(settings_app->value("geometry",QRect(500,500,280,300)).toRect());
+}
+
+
+void MainWindow::on_noteListWidget_itemDoubleClicked(QListWidgetItem *item)
+{
+    QString title = item->text();
+    QPair<QString, QString> note = proxynotemanager->getNote(title);
+
+    ui->textEdit->setHtml(note.first);
+    ui->nameLabel->setText(title);
+    ui->dateLabel->setText(note.second);
+    ui->dateLabel->setToolTip(note.second);
+
+    ui->tabWidget->setCurrentIndex(0);
+}
+
+
+
+void MainWindow::on_saveNoteBtn_clicked()
+{
+    QString title = ui->titleLineEdit->text().trimmed().simplified();
+    QString text = ui->textEdit->toHtml();
+
+    if (!title.isEmpty()) {
+
+        if (!proxynotemanager->isExist(title)) {
+            QString currentDateTime = QDateTime::currentDateTime().toString(Qt::ISODate);
+            proxynotemanager->saveNote(title, text, currentDateTime);
+            ui->nameLabel->setText(title);
+            ui->dateLabel->setText(currentDateTime);
+            ui->dateLabel->setToolTip(currentDateTime);
+            QMessageBox::information(this, "Success", "The note saved.");
+            ui->titleLineEdit->clear();
+
+            QListWidgetItem *item = new QListWidgetItem(title);
+            item->setData(Qt::UserRole, text);
+
+            ui->noteListWidget->insertItem(0, item);
+
+            QString date = QDateTime::currentDateTime().toString(Qt::ISODate);
+            item->setToolTip(date);
+
+        } else {
+            QMessageBox::warning(this, "Note Exists", "A note with this title already exists!");
+        }
+    } else {
+        QMessageBox::warning(this, "Empty Title", "The title cannot be empty!");
+    }
+}
+
+
+
+void MainWindow::on_tabWidget_currentChanged(int index)
+{
+    if(index == 3){
+        int proxyNoteCount = proxynotemanager->getLenght();
+        int listWidgetCount = ui->noteListWidget->count();
+
+        if (proxyNoteCount > listWidgetCount) {
+            for (int i = listWidgetCount; i < proxyNoteCount; ++i) {
+                QPair<QString, QString> noteData = proxynotemanager->getNoteTitleDate(i);
+
+                QListWidgetItem *item = new QListWidgetItem(noteData.first);
+                item->setData(Qt::UserRole, noteData.second);
+                ui->noteListWidget->addItem(item);
+
+                item->setToolTip(noteData.second);
+            }
+        }
+    }
+}
+
+void MainWindow::on_saveChangesBtn_clicked()
+{
+    QString title = ui->nameLabel->text();
+    QString text = ui->textEdit->toHtml();
+    if(proxynotemanager->isExist(title)){
+        proxynotemanager->changeNote(title, text);
+        QMessageBox::information(this, "Success", "Changes saved.");
+    }
+}
+
+void MainWindow::OpenNote()
+{
+    QListWidgetItem* item = ui->noteListWidget->currentItem();
+    if (!item) {
+        return;
+    }
+
+    QString title = item->text();
+    QPair<QString, QString> note = proxynotemanager->getNote(title);
+
+    ui->textEdit->setHtml(note.first);
+    ui->nameLabel->setText(title);
+    ui->dateLabel->setText(note.second);
+    ui->dateLabel->setToolTip(note.second);
+
+    ui->tabWidget->setCurrentIndex(0);
+}
+
+void MainWindow::DeleteNote()
+{
+    QListWidgetItem* selectedItem = ui->noteListWidget->currentItem();
+    if (!selectedItem) {
+        return;
+    }
+
+    QMessageBox::StandardButton reply;
+    reply = QMessageBox::question(this, "Delete Note", "Are you sure you want to delete this note?", QMessageBox::Yes|QMessageBox::No);
+    if (reply == QMessageBox::No) {
+        return;
+    }
+
+    QString title = selectedItem->text();
+
+    proxynotemanager->deleteNote(title);
+
+    int row = ui->noteListWidget->row(selectedItem);
+    delete ui->noteListWidget->takeItem(row);
+
+    ui->textEdit->clear();
+    ui->nameLabel->clear();
+    ui->dateLabel->setText("Unsaved");
+}
+
+
 

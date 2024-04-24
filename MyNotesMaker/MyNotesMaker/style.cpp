@@ -6,7 +6,7 @@
 QString Style::getStyleName()
 {
     if(app==nullptr)
-        return "standart";
+        styleName = "Aqua";
 
     return styleName;
 }
@@ -20,7 +20,7 @@ void Style::setStyle(QString styleName)
 
         if (!styleSheetFile.open(QFile::ReadOnly)) {
             qWarning() << "Error opening " << styleName;
-            styleName = "Aqua";
+            this->styleName = "Aqua";
             styleSheetFile.setFileName(":/styles/styles/Aqua.qss");
             if (!styleSheetFile.open(QFile::ReadOnly)) {
                 qWarning() << "Style 'Aqua' not found!";
@@ -29,7 +29,7 @@ void Style::setStyle(QString styleName)
         }
 
         QString styleSheet = QLatin1String(styleSheetFile.readAll());
-
+        this->styleName = styleName;
         app->setStyleSheet(styleSheet);
     }
 }

@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QSettings>
+#include <QListWidgetItem>
 #include "ExportStrategy/exportcontext.h"
 #include "ExportStrategy/html.h"
 #include "ExportStrategy/pdf.h"
@@ -14,6 +16,8 @@
 #include "ParticleLife/particlelifewidget.h"
 #include "searchwidget.h"
 #include "settingswidget.h"
+#include "note.h"
+#include "proxynotemanager.h"
 
 
 #include "QSidePanel/PanelRightSide.hpp"
@@ -36,6 +40,9 @@ public:
 
 
 private slots:
+
+    void OpenNote();
+    void DeleteNote();
 
     void on_backBtn_clicked();
 
@@ -70,6 +77,18 @@ private slots:
 
     void on_pdfRadioBtn_clicked();
 
+    void saveSettings();
+    void loadSettings();
+
+    void on_noteListWidget_itemDoubleClicked(QListWidgetItem *item);
+
+    void on_saveNoteBtn_clicked();
+
+    void on_tabWidget_currentChanged(int index);
+
+    void on_saveChangesBtn_clicked();
+
+
 protected:
     void resizeEvent(QResizeEvent *event) override;
     void moveEvent(QMoveEvent *event) override;
@@ -92,6 +111,9 @@ private:
     Color* c;
     BackgroundColor* bc;
     Formatter* formatter;
-
+    QAction* actOpen;
+    QAction* actDelete;
+    QSettings* settings_app;
+    ProxyNoteManager* proxynotemanager;
 };
 #endif // MAINWINDOW_H

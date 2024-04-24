@@ -5,10 +5,15 @@
 
 class Particle : public QGraphicsEllipseItem
 {
-public:
-    int vx, vy;
+private:
+    double vx, vy;
 public:
     Particle(int xspread, int yspread, int radius, QColor color);
+
+    double getVX();
+    double getVY();
+    void setVX(double tx);
+    void setVY(double ty);
 };
 
 #endif // PARTICLE_H
