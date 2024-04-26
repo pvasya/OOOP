@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QKeyEvent>
 #include <QSettings>
 #include <QListWidgetItem>
 #include "ExportStrategy/exportcontext.h"
@@ -115,5 +116,9 @@ private:
     QAction* actDelete;
     QSettings* settings_app;
     ProxyNoteManager* proxynotemanager;
+
+    // QWidget interface
+protected:
+    void keyPressEvent(QKeyEvent *event);
 };
 #endif // MAINWINDOW_H

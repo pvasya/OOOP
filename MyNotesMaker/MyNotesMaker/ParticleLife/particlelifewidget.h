@@ -2,7 +2,6 @@
 #define PARTICLELIFEWIDGET_H
 
 #include "customscene.h"
-#include "movetomouseworker.h"
 #include "particleworker.h"
 #include <QWidget>
 #include <QGraphicsView>
@@ -105,8 +104,6 @@ private:
     ParticleWorker* particle_worker_green;
     ParticleWorker* particle_worker_blue;
 
-    MoveToMouseWorker* move_to_mouse_worker;
-    QThread* move_to_mouse_thread;
 
     QThread* red_thread;
     QThread* green_thread;
@@ -121,7 +118,11 @@ private:
     QList<Particle*> blueParticles;
 
 
+
 signals:
+    animateRed(double g1,double g2,double g3, int radius);
+    animateGreen(double g1,double g2,double g3, int radius);
+    animateBlue(double g1,double g2,double g3, int radius);
 
 };
 

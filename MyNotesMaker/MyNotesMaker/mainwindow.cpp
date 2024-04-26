@@ -319,6 +319,20 @@ void MainWindow::moveEvent(QMoveEvent *event)
     ui->fullbtn->setIcon(QIcon(":/img/img/fullscreen_FILL0_wght400_GRAD0_opsz24.svg"));
 }
 
+void MainWindow::keyPressEvent(QKeyEvent *event)
+{
+    if (event->key() == Qt::Key_F && event->modifiers() == Qt::AltModifier) {
+        if (isFullScreen()) {
+            showNormal();
+        } else {
+            showFullScreen();
+        }
+        event->accept();
+    } else {
+        QMainWindow::keyPressEvent(event);
+    }
+}
+
 
 void MainWindow::on_exportBtn_clicked()
 {

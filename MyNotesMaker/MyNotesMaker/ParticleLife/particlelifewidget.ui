@@ -157,6 +157,9 @@
              </size>
             </property>
             <widget class="QSlider" name="redSlider">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
              <property name="geometry">
               <rect>
                <x>60</x>

@@ -34,29 +34,28 @@ ParticleLifeWidget::ParticleLifeWidget(QWidget *parent)
     green_thread = new QThread();
     blue_thread = new QThread();
 
-    connect(this, &QObject::destroyed, red_thread, &QThread::quit);
-    connect(this, &QObject::destroyed, green_thread, &QThread::quit);
-    connect(this, &QObject::destroyed, blue_thread, &QThread::quit);
+    connect(this, &QObject::destroyed, red_thread, &QThread::deleteLater);
+    connect(this, &QObject::destroyed, green_thread, &QThread::deleteLater);
+    connect(this, &QObject::destroyed, blue_thread, &QThread::deleteLater);
+
 
     particle_worker_red = new ParticleWorker();
     particle_worker_green = new ParticleWorker();
     particle_worker_blue = new ParticleWorker();
 
+    connect(this,&ParticleLifeWidget::animateRed,particle_worker_red,&ParticleWorker::animation);
+    connect(this,&ParticleLifeWidget::animateGreen,particle_worker_green,&ParticleWorker::animation);
+    connect(this,&ParticleLifeWidget::animateBlue,particle_worker_blue,&ParticleWorker::animation);
 
-    move_to_mouse_worker = new MoveToMouseWorker();
+    particle_worker_red->setLists(&redParticles,&greenParticles,&blueParticles);
+    particle_worker_green->setLists(&greenParticles,&redParticles,&blueParticles);
+    particle_worker_blue->setLists(&blueParticles,&greenParticles,&redParticles);
 
-
-    move_to_mouse_thread = new QThread();
-    move_to_mouse_worker->moveToThread(move_to_mouse_thread);
-
-
-    connect(this, &QObject::destroyed, move_to_mouse_thread, &QThread::quit);
 
     particle_worker_red->moveToThread(red_thread);
     particle_worker_green->moveToThread(green_thread);
     particle_worker_blue->moveToThread(blue_thread);
 
-    move_to_mouse_thread->start();
     red_thread->start();
     green_thread->start();
     blue_thread->start();
@@ -71,6 +70,16 @@ ParticleLifeWidget::ParticleLifeWidget(QWidget *parent)
     statemachine->setInitialState(init_state);
     play_state->assignProperty(ui->multithreadBtn, "enabled", false);
     pause_state->assignProperty(ui->multithreadBtn, "enabled", true);
+    pause_state->assignProperty(ui->generateRandomBtn, "enabled", true);
+    play_state->assignProperty(ui->generateRandomBtn, "enabled", false);
+
+    pause_state->assignProperty(ui->redSlider, "enabled", true);
+    play_state->assignProperty(ui->redSlider, "enabled", false);
+    pause_state->assignProperty(ui->greenSlider, "enabled", true);
+    play_state->assignProperty(ui->greenSlider, "enabled", false);
+    pause_state->assignProperty(ui->blueSlider, "enabled", true);
+    play_state->assignProperty(ui->blueSlider, "enabled", false);
+
     play_state->assignProperty(ui->startBtn, "text", "Pause");
     pause_state->assignProperty(ui->startBtn, "text", "Resume");
     statemachine->start();
@@ -85,6 +94,15 @@ ParticleLifeWidget::ParticleLifeWidget(QWidget *parent)
     connect(scene, &CustomScene::signalTargetCoordinate, this, &ParticleLifeWidget::toMouse);
     connect(scene, &CustomScene::press, this, &ParticleLifeWidget::pressM);
     connect(scene, &CustomScene::release, this, &ParticleLifeWidget::releaseM);
+
+    /*
+    connect(this, &ParticleLifeWidget::animateRed, [&]() {
+        for (Particle* a : redParticles) {
+            a->moveBy(a->getVX(), a->getVY());
+        }
+        loop.quit();
+    });
+    */
 
 
 }
@@ -342,13 +360,66 @@ void ParticleLifeWidget::particleMovement()
 {
     if(statemachine->configuration().contains(play_state)){
         if(mouse_pressed){
-            if(ui->multithreadBtn->isChecked())
-                move_to_mouse_worker->animateToMouse(point, redParticles,greenParticles,blueParticles);
-            else
-                animateToMouse(point);
+            animateToMouse(point);
         }
 
         if(ui->multithreadBtn->isChecked()){
+            emit animateRed(-red_red/10,-red_green/10,-red_blue/10,ui->RedradiusSlider->sliderPosition());
+            emit animateGreen(-green_green/10,-green_red/10,-green_blue/10,ui->GreenradiusSlider->sliderPosition());
+            emit animateBlue(-blue_blue/10,-blue_green/10,-blue_red/10,ui->BlueradiusSlider->sliderPosition());
+            /*
+            animate(firstGroup,firstGroup,g1,radius);
+            animate(firstGroup,secondGroup,g2,radius);
+            animate(firstGroup,thirdGroup,g3,radius);
+            */
+            for (Particle* a : redParticles) {
+                a->moveBy(a->getVX(), a->getVY());
+                if(a->x() < 0){
+                    a->setPos(10,a->y());
+                }
+                if(a->x() > 1500){
+                    a->setPos(1480,a->y());
+                }
+                if(a->y() < 0){
+                    a->setPos(a->x(),10);
+                }
+                if(a->y() > 1500){
+                    a->setPos(a->x(),1480);
+                }
+            }
+            for (Particle* a : greenParticles) {
+                a->moveBy(a->getVX(), a->getVY());
+                if(a->x() < 0){
+                    a->setPos(10,a->y());
+                }
+                if(a->x() > 1500){
+                    a->setPos(1480,a->y());
+                }
+                if(a->y() < 0){
+                    a->setPos(a->x(),10);
+                }
+                if(a->y() > 1500){
+                    a->setPos(a->x(),1480);
+                }
+            }
+            for (Particle* a : blueParticles) {
+                a->moveBy(a->getVX(), a->getVY());
+                if(a->x() < 0){
+                    a->setPos(10,a->y());
+                }
+                if(a->x() > 1500){
+                    a->setPos(1480,a->y());
+                }
+                if(a->y() < 0){
+                    a->setPos(a->x(),10);
+                }
+                if(a->y() > 1500){
+                    a->setPos(a->x(),1480);
+                }
+            }
+
+
+            /*
             particle_worker_red->animate(redParticles,redParticles,-red_red/10,ui->RedradiusSlider->sliderPosition());
             particle_worker_red->animate(redParticles,greenParticles,-red_green/10,ui->RedradiusSlider->sliderPosition());
             particle_worker_red->animate(redParticles,blueParticles,-red_blue/10,ui->RedradiusSlider->sliderPosition());
@@ -358,6 +429,7 @@ void ParticleLifeWidget::particleMovement()
             particle_worker_blue->animate(blueParticles,redParticles,-blue_red/10,ui->BlueradiusSlider->sliderPosition());
             particle_worker_blue->animate(blueParticles,greenParticles,-blue_green/10,ui->BlueradiusSlider->sliderPosition());
             particle_worker_blue->animate(blueParticles,blueParticles,-blue_blue/10,ui->BlueradiusSlider->sliderPosition());
+            */
         }
         else{
             animate(redParticles,redParticles,-red_red/10, ui->RedradiusSlider->sliderPosition());
@@ -372,3 +444,5 @@ void ParticleLifeWidget::particleMovement()
         }
     }
 }
+
+

@@ -1,3 +1,0 @@
-C:/Users/qt/Desktop/OOOP/MyNotesMaker/MyNotesMaker/build/Desktop_Qt_6_7_0_MinGW_64_bit-Profile/CMakeFiles/CMakeScratch/TryCompile-7ie107/CMakeFiles/cmTC_dc1de.dir
-C:/Users/qt/Desktop/OOOP/MyNotesMaker/MyNotesMaker/build/Desktop_Qt_6_7_0_MinGW_64_bit-Profile/CMakeFiles/CMakeScratch/TryCompile-7ie107/CMakeFiles/edit_cache.dir
-C:/Users/qt/Desktop/OOOP/MyNotesMaker/MyNotesMaker/build/Desktop_Qt_6_7_0_MinGW_64_bit-Profile/CMakeFiles/CMakeScratch/TryCompile-7ie107/CMakeFiles/rebuild_cache.dir
