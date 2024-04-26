@@ -1,5 +1,7 @@
 QT MyNotesMaker
 
+Doxygen https://pvasya.github.io/MyNotesMakerDoxygenSite/
+
 Патерни
 1. Singleton
 2. Command

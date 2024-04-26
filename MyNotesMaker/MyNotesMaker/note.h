@@ -2,7 +2,9 @@
 #define NOTE_H
 
 #include <QApplication>
-
+/*!
+     * \brief Клас, що описує структуру нотатка в програмі
+     */
 class Note
 {
 private:

@@ -7,7 +7,9 @@
 namespace Ui {
 class SettingsWidget;
 }
-
+/*!
+     * \brief Вікно налаштувань
+     */
 class SettingsWidget : public QWidget
 {
     Q_OBJECT

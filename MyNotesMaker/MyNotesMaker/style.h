@@ -6,6 +6,10 @@
 
 // QSS styles https://github.com/GTRONICK/QSS
 
+
+/*!
+     * \brief Зміна стилів редактора нотаток
+     */
 class Style
 {
 protected:

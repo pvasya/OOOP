@@ -21,11 +21,7 @@ void Style::setStyle(QString styleName)
         if (!styleSheetFile.open(QFile::ReadOnly)) {
             qWarning() << "Error opening " << styleName;
             this->styleName = "Aqua";
-            styleSheetFile.setFileName(":/styles/styles/Aqua.qss");
-            if (!styleSheetFile.open(QFile::ReadOnly)) {
-                qWarning() << "Style 'Aqua' not found!";
-                return;
-            }
+            return;
         }
 
         QString styleSheet = QLatin1String(styleSheetFile.readAll());

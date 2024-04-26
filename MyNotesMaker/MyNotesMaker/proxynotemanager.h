@@ -4,6 +4,9 @@
 #include "notemanager.h"
 #include "realnotemanager.h"
 
+/*!
+     * \brief Патерн Proxy. Керує нотатками в пам'яті програми
+     */
 class ProxyNoteManager : public NoteManager
 {
 private:

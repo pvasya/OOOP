@@ -11,6 +11,9 @@
 #include <QFile>
 #include <QDir>
 
+/*!
+     * \brief Патерн Proxy. Керує нотатками в пам'яті програми
+     */
 class RealNoteManager : public NoteManager
 {
 public:

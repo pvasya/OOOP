@@ -3,7 +3,9 @@
 
 #include <QApplication>
 #include "note.h"
-
+/*!
+     * \brief Патерн Proxy. Керує нотатками в пам'яті програми
+     */
 class NoteManager
 {
 public:
