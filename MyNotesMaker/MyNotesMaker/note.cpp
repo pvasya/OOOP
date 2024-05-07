@@ -8,7 +8,7 @@ Note::Note(QString title, QString text, QString date_time) {
 
 void Note::setTitle(QString name)
 {
-    this->title = title;
+    this->title = name;
 }
 
 void Note::setText(QString text)

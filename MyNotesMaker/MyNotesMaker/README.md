@@ -10,6 +10,7 @@ Doxygen https://pvasya.github.io/MyNotesMakerDoxygenSite/
 5. Factory Method
 6. State (QStateMachine)
 7. Proxy
+8. Flyweight
 
 QSS styles https://github.com/GTRONICK/QSS
 

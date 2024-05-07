@@ -1,8 +1,9 @@
 #include "particle.h"
 #include "qbrush.h"
 
-Particle::Particle(int xspread, int yspread, int radius, QColor color):QGraphicsEllipseItem(0)
-{
+Particle::Particle(int xspread, int yspread, int radius, QColor color, const ParticleData *data):QGraphicsEllipseItem(0)
+{   
+    this->data = data;
     this->vx = 0;
     this->vy = 0;
     setBrush(color);
@@ -29,3 +30,14 @@ void Particle::setVY(double ty)
 {
     this->vy = ty;
 }
+
+QString Particle::getColor()
+{
+    return data->color;
+}
+
+double Particle::getRadius()
+{
+    return data->radius;
+}
+

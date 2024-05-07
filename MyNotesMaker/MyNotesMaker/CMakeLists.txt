@@ -31,7 +31,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         style.h style.cpp
         tests/test_styles.h tests/test_styles.cpp
         frameless.h frameless.cpp
-        tests/test_frameless.h tests/test_frameless.cpp
+
         QSidePanel/math.cpp
         QSidePanel/math.hpp
         QSidePanel/PanelBottomSide.cpp
@@ -68,11 +68,12 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         ParticleLife/particlefactorymethod.h ParticleLife/particlefactorymethod.cpp
         ParticleLife/particleworker.h ParticleLife/particleworker.cpp
         ParticleLife/customscene.h ParticleLife/customscene.cpp
-
         note.h note.cpp
         notemanager.h notemanager.cpp
         realnotemanager.h realnotemanager.cpp
         proxynotemanager.h proxynotemanager.cpp
+        tests/test_note.h tests/test_note.cpp
+        tests/test_proxymanager.h tests/test_proxymanager.cpp
 
 
 

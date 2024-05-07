@@ -75,9 +75,9 @@ private:
     void animate(QList<Particle*>& firstGroup, QList<Particle*>& secondGroup, double g, int radius);
 
     int radius;
-    int red_count;
-    int green_count;
-    int blue_count;
+    int redCount;
+    int greenCount;
+    int blueCount;
     int red_red;
     int red_green;
     int red_blue;

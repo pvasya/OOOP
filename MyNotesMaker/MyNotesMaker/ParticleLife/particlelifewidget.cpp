@@ -130,9 +130,9 @@ void ParticleLifeWidget::releaseM()
 void ParticleLifeWidget::initialize()
 {
     radius = ui->RedradiusSlider->value();
-    red_count = ui->redSlider->value();
-    green_count = ui->greenSlider->value();
-    blue_count = ui->blueSlider->value();
+    redCount = ui->redSlider->value();
+    greenCount = ui->greenSlider->value();
+    blueCount = ui->blueSlider->value();
     red_red = ui->redRedSlider->value();
     red_green = ui->redGreenSlider->value();
     red_blue = ui->redBlueSlider->value();
@@ -167,31 +167,16 @@ void ParticleLifeWidget::animate(QList<Particle *> &firstGroup, QList<Particle *
                 fy += (F * dy);
             }
         }
-
         a->setVX((a->getVX() + fx) * 0.5);
         a->setVY((a->getVY() + fy) * 0.5);
-        a->moveBy(a->getVX(), a->getVY());
-
-
-        if(a->x() < 0){
-            a->setPos(10,a->y());
-        }
-        if(a->x() > 1500){
-            a->setPos(1480,a->y());
-        }
-        if(a->y() < 0){
-            a->setPos(a->x(),10);
-        }
-        if(a->y() > 1500){
-            a->setPos(a->x(),1480);
-        }
+        //a->moveBy(a->getVX(), a->getVY());
 
 
         if (a->x() <= 10 || a->x() >= screenWidth) {
-            a->setVX(a->getVX() * -1);
+            a->setVX(-1*a->getVX());
         }
         if (a->y() <=10 || a->y() >= screenHeight) {
-            a->setVY(a->getVY() * -1);
+            a->setVY(-1*a->getVY());
         }
     }
 }
@@ -216,9 +201,9 @@ void ParticleLifeWidget::moveParticlesToTarget(QList<Particle *> &particles, QPo
 
 void ParticleLifeWidget::on_redSlider_valueChanged(int value)
 {
-    red_count = ui->redSlider->value();
+    redCount = ui->redSlider->value();
 
-    while (redParticles.count() < red_count) {
+    while (redParticles.count() < redCount) {
         Particle *newParticle = particleFactory->createParticle(
             QRandomGenerator::global()->bounded(10, 1450),
             QRandomGenerator::global()->bounded(10, 1450),
@@ -228,7 +213,7 @@ void ParticleLifeWidget::on_redSlider_valueChanged(int value)
         scene->addItem(newParticle);
     }
 
-    while (redParticles.count() > red_count) {
+    while (redParticles.count() > redCount) {
         Particle *particle = redParticles.last();
         scene->removeItem(particle);
         redParticles.removeLast();
@@ -240,9 +225,9 @@ void ParticleLifeWidget::on_redSlider_valueChanged(int value)
 
 void ParticleLifeWidget::on_greenSlider_valueChanged(int value)
 {
-    green_count = ui->greenSlider->value();
+    greenCount = ui->greenSlider->value();
 
-    while (greenParticles.count() < green_count) {
+    while (greenParticles.count() < greenCount) {
         Particle *newParticle = particleFactory->createParticle(
             QRandomGenerator::global()->bounded(10, 1450),
             QRandomGenerator::global()->bounded(10, 1450),
@@ -252,7 +237,7 @@ void ParticleLifeWidget::on_greenSlider_valueChanged(int value)
         scene->addItem(newParticle);
     }
 
-    while (greenParticles.count() > green_count) {
+    while (greenParticles.count() > greenCount) {
         Particle *particle = greenParticles.last();
         scene->removeItem(particle);
         greenParticles.removeLast();
@@ -263,9 +248,9 @@ void ParticleLifeWidget::on_greenSlider_valueChanged(int value)
 
 void ParticleLifeWidget::on_blueSlider_valueChanged(int value)
 {
-    blue_count = ui->blueSlider->value();
+    blueCount = ui->blueSlider->value();
 
-    while (blueParticles.count() < blue_count) {
+    while (blueParticles.count() < blueCount) {
         Particle *newParticle = particleFactory->createParticle(
             QRandomGenerator::global()->bounded(10, 1450),
             QRandomGenerator::global()->bounded(10, 1450),
@@ -275,7 +260,7 @@ void ParticleLifeWidget::on_blueSlider_valueChanged(int value)
         scene->addItem(newParticle);
     }
 
-    while (blueParticles.count() > blue_count) {
+    while (blueParticles.count() > blueCount) {
         Particle *particle = blueParticles.last();
         scene->removeItem(blueParticles.last());
         blueParticles.removeLast();
@@ -373,6 +358,82 @@ void ParticleLifeWidget::particleMovement()
             animate(firstGroup,thirdGroup,g3,radius);
             */
             for (Particle* a : redParticles) {
+                //qDebug()<<a->getColor();
+                //qDebug()<<a->getRadius();
+                a->moveBy(a->getVX(), a->getVY());
+                if(a->x() < 0){
+                    a->setPos(10,a->y());
+                }
+                if(a->x() > 1500){
+                    a->setPos(1480,a->y());
+                }
+                if(a->y() < 0){
+                    a->setPos(a->x(),10);
+                }
+                if(a->y() > 1500){
+                    a->setPos(a->x(),1480);
+                }
+            }
+            for (Particle* a : greenParticles) {
+                //qDebug()<<a->getColor();
+                //qDebug()<<a->getRadius();
+                a->moveBy(a->getVX(), a->getVY());
+                if(a->x() < 0){
+                    a->setPos(10,a->y());
+                }
+                if(a->x() > 1500){
+                    a->setPos(1480,a->y());
+                }
+                if(a->y() < 0){
+                    a->setPos(a->x(),10);
+                }
+                if(a->y() > 1500){
+                    a->setPos(a->x(),1480);
+                }
+            }
+            for (Particle* a : blueParticles) {
+                //qDebug()<<a->getColor();
+                //qDebug()<<a->getRadius();
+                a->moveBy(a->getVX(), a->getVY());
+                if(a->x() < 0){
+                    a->setPos(10,a->y());
+                }
+                if(a->x() > 1500){
+                    a->setPos(1480,a->y());
+                }
+                if(a->y() < 0){
+                    a->setPos(a->x(),10);
+                }
+                if(a->y() > 1500){
+                    a->setPos(a->x(),1480);
+                }
+            }
+
+
+            /*
+            particle_worker_red->animate(redParticles,redParticles,-red_red/10,ui->RedradiusSlider->sliderPosition());
+            particle_worker_red->animate(redParticles,greenParticles,-red_green/10,ui->RedradiusSlider->sliderPosition());
+            particle_worker_red->animate(redParticles,blueParticles,-red_blue/10,ui->RedradiusSlider->sliderPosition());
+            particle_worker_green->animate(greenParticles,redParticles,-green_red/10,ui->GreenradiusSlider->sliderPosition());
+            particle_worker_green->animate(greenParticles,greenParticles,-green_green/10,ui->GreenradiusSlider->sliderPosition());
+            particle_worker_green->animate(greenParticles,blueParticles,-green_blue/10,ui->GreenradiusSlider->sliderPosition());
+            particle_worker_blue->animate(blueParticles,redParticles,-blue_red/10,ui->BlueradiusSlider->sliderPosition());
+            particle_worker_blue->animate(blueParticles,greenParticles,-blue_green/10,ui->BlueradiusSlider->sliderPosition());
+            particle_worker_blue->animate(blueParticles,blueParticles,-blue_blue/10,ui->BlueradiusSlider->sliderPosition());
+            */
+        }
+        else{
+            animate(redParticles,redParticles,-red_red/10, ui->RedradiusSlider->sliderPosition());
+            animate(redParticles,greenParticles,-red_green/10, ui->RedradiusSlider->sliderPosition());
+            animate(redParticles,blueParticles,-red_blue/10, ui->RedradiusSlider->sliderPosition());
+            animate(greenParticles,redParticles,-green_red/10, ui->GreenradiusSlider->sliderPosition());
+            animate(greenParticles,greenParticles,-green_green/10, ui->GreenradiusSlider->sliderPosition());
+            animate(greenParticles,blueParticles,-green_blue/10, ui->GreenradiusSlider->sliderPosition());
+            animate(blueParticles,redParticles,-blue_red/10, ui->BlueradiusSlider->sliderPosition());
+            animate(blueParticles,greenParticles,-blue_green/10, ui->BlueradiusSlider->sliderPosition());
+            animate(blueParticles,blueParticles,-blue_blue/10, ui->BlueradiusSlider->sliderPosition());
+
+            for (Particle* a : redParticles) {
                 a->moveBy(a->getVX(), a->getVY());
                 if(a->x() < 0){
                     a->setPos(10,a->y());
@@ -417,30 +478,6 @@ void ParticleLifeWidget::particleMovement()
                     a->setPos(a->x(),1480);
                 }
             }
-
-
-            /*
-            particle_worker_red->animate(redParticles,redParticles,-red_red/10,ui->RedradiusSlider->sliderPosition());
-            particle_worker_red->animate(redParticles,greenParticles,-red_green/10,ui->RedradiusSlider->sliderPosition());
-            particle_worker_red->animate(redParticles,blueParticles,-red_blue/10,ui->RedradiusSlider->sliderPosition());
-            particle_worker_green->animate(greenParticles,redParticles,-green_red/10,ui->GreenradiusSlider->sliderPosition());
-            particle_worker_green->animate(greenParticles,greenParticles,-green_green/10,ui->GreenradiusSlider->sliderPosition());
-            particle_worker_green->animate(greenParticles,blueParticles,-green_blue/10,ui->GreenradiusSlider->sliderPosition());
-            particle_worker_blue->animate(blueParticles,redParticles,-blue_red/10,ui->BlueradiusSlider->sliderPosition());
-            particle_worker_blue->animate(blueParticles,greenParticles,-blue_green/10,ui->BlueradiusSlider->sliderPosition());
-            particle_worker_blue->animate(blueParticles,blueParticles,-blue_blue/10,ui->BlueradiusSlider->sliderPosition());
-            */
-        }
-        else{
-            animate(redParticles,redParticles,-red_red/10, ui->RedradiusSlider->sliderPosition());
-            animate(redParticles,greenParticles,-red_green/10, ui->RedradiusSlider->sliderPosition());
-            animate(redParticles,blueParticles,-red_blue/10, ui->RedradiusSlider->sliderPosition());
-            animate(greenParticles,redParticles,-green_red/10, ui->GreenradiusSlider->sliderPosition());
-            animate(greenParticles,greenParticles,-green_green/10, ui->GreenradiusSlider->sliderPosition());
-            animate(greenParticles,blueParticles,-green_blue/10, ui->GreenradiusSlider->sliderPosition());
-            animate(blueParticles,redParticles,-blue_red/10, ui->BlueradiusSlider->sliderPosition());
-            animate(blueParticles,greenParticles,-blue_green/10, ui->BlueradiusSlider->sliderPosition());
-            animate(blueParticles,blueParticles,-blue_blue/10, ui->BlueradiusSlider->sliderPosition());
         }
     }
 }

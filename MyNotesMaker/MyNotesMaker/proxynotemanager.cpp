@@ -11,11 +11,6 @@ ProxyNoteManager::~ProxyNoteManager()
     delete realmanager;
 }
 
-QPair<QString, QString> ProxyNoteManager::getNoteTitleDate(int i)
-{
-    return realmanager->getNoteTitleDate(i);
-}
-
 void ProxyNoteManager::writeLog(const QString &message)
 {
     QString filePath = QDir(QApplication::applicationDirPath()).filePath("mynotesmaker.txt");
@@ -72,10 +67,10 @@ void ProxyNoteManager::changeNote(QString title, QString text)
     writeLog("Changed note with title: " + title);
 }
 
-QPair<QString, QString> ProxyNoteManager::getNote(QString title)
+Note ProxyNoteManager::getNote(QString title)
 {
-    QPair<QString, QString> note = realmanager->getNote(title);
-    writeLog("Get note with title: " + title);
+    Note note = realmanager->getNote(title);
+    writeLog("Get note with title: " + note.getTitle());
     return note;
 }
 

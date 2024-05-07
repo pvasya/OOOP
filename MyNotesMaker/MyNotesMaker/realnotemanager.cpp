@@ -37,15 +37,15 @@ void RealNoteManager::changeNote(QString title, QString text)
     }
 }
 
-QPair<QString, QString> RealNoteManager::getNote(QString title)
+Note RealNoteManager::getNote(QString title)
 {
     for(int i = 0; i<list->length();i++){
         if(list->at(i).getTitle() == title){
-            return QPair(list->at(i).getText(), list->at(i).getDateTime());
+            return list->at(i);
             break;
         }
     }
-    return QPair("?", "?");
+    return list->at(0);
 }
 
 int RealNoteManager::getLenght()
@@ -124,12 +124,6 @@ void RealNoteManager::save()
 
     file.close();
 }
-
-QPair<QString, QString> RealNoteManager::getNoteTitleDate(int i)
-{
-    return QPair(list->at(i).getTitle(),list->at(i).getDateTime());
-}
-
 
 bool RealNoteManager::isExist(QString title)
 {

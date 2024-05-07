@@ -351,8 +351,8 @@ void MainWindow::on_exportBtn_clicked()
         return;
 
 
-    QPair<QString, QString> noteData = proxynotemanager->getNote(ui->nameLabel->text());
-    QString noteText = noteData.first;
+    Note noteData = proxynotemanager->getNote(ui->nameLabel->text());
+    QString noteText = noteData.getText();
 
 
     bool is_successful= exporter->executeExport(file, noteText);
@@ -391,12 +391,12 @@ void MainWindow::loadSettings()
 void MainWindow::on_noteListWidget_itemDoubleClicked(QListWidgetItem *item)
 {
     QString title = item->text();
-    QPair<QString, QString> note = proxynotemanager->getNote(title);
+    Note note = proxynotemanager->getNote(title);
 
-    ui->textEdit->setHtml(note.first);
+    ui->textEdit->setHtml(note.getText());
     ui->nameLabel->setText(title);
-    ui->dateLabel->setText(note.second);
-    ui->dateLabel->setToolTip(note.second);
+    ui->dateLabel->setText(note.getDateTime());
+    ui->dateLabel->setToolTip(note.getDateTime());
 
     ui->tabWidget->setCurrentIndex(0);
 }
@@ -445,13 +445,13 @@ void MainWindow::on_tabWidget_currentChanged(int index)
 
         if (proxyNoteCount > listWidgetCount) {
             for (int i = listWidgetCount; i < proxyNoteCount; ++i) {
-                QPair<QString, QString> noteData = proxynotemanager->getNoteTitleDate(i);
+                Note noteData = proxynotemanager->getNote(i);
 
-                QListWidgetItem *item = new QListWidgetItem(noteData.first);
-                item->setData(Qt::UserRole, noteData.second);
+                QListWidgetItem *item = new QListWidgetItem(noteData.getTitle());
+                item->setData(Qt::UserRole, noteData.getDateTime());
                 ui->noteListWidget->addItem(item);
 
-                item->setToolTip(noteData.second);
+                item->setToolTip(noteData.getDateTime());
             }
         }
     }
@@ -475,12 +475,12 @@ void MainWindow::OpenNote()
     }
 
     QString title = item->text();
-    QPair<QString, QString> note = proxynotemanager->getNote(title);
+    Note note = proxynotemanager->getNote(title);
 
-    ui->textEdit->setHtml(note.first);
+    ui->textEdit->setHtml(note.getText());
     ui->nameLabel->setText(title);
-    ui->dateLabel->setText(note.second);
-    ui->dateLabel->setToolTip(note.second);
+    ui->dateLabel->setText(note.getDateTime());
+    ui->dateLabel->setToolTip(note.getDateTime());
 
     ui->tabWidget->setCurrentIndex(0);
 }
