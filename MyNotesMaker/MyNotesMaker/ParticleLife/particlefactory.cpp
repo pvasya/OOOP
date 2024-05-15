@@ -11,9 +11,7 @@ ParticleFactory::ParticleFactory() {
 
 ParticleFactory::~ParticleFactory()
 {
-    for (auto it = dataMap.begin(); it != dataMap.end(); ++it) {
-        delete it.value();
-    }
+    qDeleteAll(dataMap);
     dataMap.clear();
 }
 // dataSet["redSmall"] = {"red", 7};
@@ -22,5 +20,9 @@ ParticleFactory::~ParticleFactory()
 //return new Particle(x, y, data->radius, data->getColor(), data);
 Particle *ParticleFactory::createParticle(int x, int y, QString name)
 {
-    return new Particle(x, y, dataMap[name]);
+    if (dataMap.contains(name)) {
+        return new Particle(x, y, dataMap[name]);
+    } else {
+        throw std::logic_error("Name not found in dataMap");
+    }
 }
