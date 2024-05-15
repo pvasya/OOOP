@@ -14,7 +14,7 @@
 #include <QTimer>
 #include <QList>
 #include "particle.h"
-#include "particlefactorymethod.h"
+#include "particlefactory.h"
 
 namespace Ui {
 class ParticleLifeWidget;
@@ -67,12 +67,7 @@ private slots:
 private:
     Ui::ParticleLifeWidget *ui;
 
-    void initialize();
-
     bool mouse_pressed;
-
-
-    void animate(QList<Particle*>& firstGroup, QList<Particle*>& secondGroup, double g, int radius);
 
     int radius;
     int redCount;
@@ -90,10 +85,7 @@ private:
 
     CustomScene *scene;
 
-    QPointF point;
-
-    void animateToMouse(QPointF point);
-    void moveParticlesToTarget(QList<Particle*>& particles, QPointF point);
+    QPointF mouseCoords;
 
     QStateMachine* statemachine;
     QState* init_state;
@@ -104,20 +96,38 @@ private:
     ParticleWorker* particle_worker_green;
     ParticleWorker* particle_worker_blue;
 
-
     QThread* red_thread;
     QThread* green_thread;
     QThread* blue_thread;
 
     QTimer* animation;
 
-    ParticleFactoryMethod* particleFactory;
+    ParticleFactory* particleFactory;
 
     QList<Particle*> redParticles;
     QList<Particle*> greenParticles;
     QList<Particle*> blueParticles;
 
-
+private:
+    //! Initializes the sliders.
+    void initialize();
+    //! Animate particles on the scene.
+    void animate(QList<Particle*>& firstGroup, QList<Particle*>& secondGroup, double g, int radius);
+    /*!
+     * @brief Animate particles to mouse.
+     * @code
+     *  moveParticlesToTarget(redParticles, point);
+     *  moveParticlesToTarget(greenParticles, point);
+     *  moveParticlesToTarget(blueParticles, point);
+     * @endcode
+     */
+    void animateToMouse(QPointF point);
+    //! Animate particles to mouse.
+    void moveParticlesToTarget(QList<Particle*>& particles, QPointF point);
+    //! Setup workers and threads.
+    void setupThreads();
+    //! Setup states and state machine.
+    void setupStates();
 
 signals:
     animateRed(double g1,double g2,double g3, int radius);

@@ -624,7 +624,7 @@
               </rect>
              </property>
              <property name="styleSheet">
-              <string notr="true">background-color: #00ff00;</string>
+              <string notr="true">background-color:rgb(4,125,4);</string>
              </property>
              <property name="text">
               <string/>
@@ -672,7 +672,7 @@
               </rect>
              </property>
              <property name="styleSheet">
-              <string notr="true">background-color: #00ff00;</string>
+              <string notr="true">background-color:rgb(4,125,4);</string>
              </property>
              <property name="text">
               <string/>
@@ -704,7 +704,7 @@
               </rect>
              </property>
              <property name="styleSheet">
-              <string notr="true">background-color: #00ff00;</string>
+              <string notr="true">background-color:rgb(4,125,4);</string>
              </property>
              <property name="text">
               <string/>
@@ -720,7 +720,7 @@
               </rect>
              </property>
              <property name="styleSheet">
-              <string notr="true">background-color: #00ff00;</string>
+              <string notr="true">background-color:rgb(4,125,4);</string>
              </property>
              <property name="text">
               <string/>
@@ -736,7 +736,7 @@
               </rect>
              </property>
              <property name="styleSheet">
-              <string notr="true">background-color: #00ff00;</string>
+              <string notr="true">background-color:rgb(4,125,4);</string>
              </property>
              <property name="text">
               <string/>
@@ -816,7 +816,7 @@
               </rect>
              </property>
              <property name="styleSheet">
-              <string notr="true">background-color: #00ff00;</string>
+              <string notr="true">background-color:rgb(4,125,4);</string>
              </property>
              <property name="text">
               <string/>

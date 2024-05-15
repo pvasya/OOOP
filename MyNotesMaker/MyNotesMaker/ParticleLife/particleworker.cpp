@@ -10,9 +10,9 @@ void ParticleWorker::animate(QList<Particle *> *firstGroup, QList<Particle *> *s
     int screenHeight = 1480;
 
     for (auto it_a = firstGroup->begin(); it_a != firstGroup->end(); ++it_a) {
+        Particle *a = *it_a;
         double fx = 0;
         double fy = 0;
-        Particle *a = *it_a;
 
         for (auto it_b = secondGroup->begin(); it_b != secondGroup->end(); ++it_b) {
             Particle *b = *it_b;

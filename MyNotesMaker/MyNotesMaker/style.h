@@ -8,16 +8,17 @@
 
 
 /*!
-     * \brief Зміна стилів редактора нотаток
-     */
+ * \brief The Style class for changing the application's styles.
+ */
 class Style
 {
 protected:
     Style() {}
 
 private:
-    QString styleName;
-    QApplication* app;
+    QString styleName; /**< The name of the style. */
+    QApplication* app; /**< Pointer to the application object. */
+
 
 public:
     static Style& get(){
@@ -29,8 +30,15 @@ public:
     Style& operator=(Style const&) = delete;
     Style& operator=(Style &&) = delete;
 
+    /**
+     * @brief Gets the name of the current style.
+     */
     QString getStyleName();
-    void setStyle(QString styleName);
+    /**
+     * @brief Sets the style of the application.
+     * @param styleName The name of the style to set.
+     */
+    void setStyleName(QString styleName);
 
     void setApplication(QApplication* a);
 };

@@ -3,11 +3,11 @@
 
 enum Format
 {
-    Bold = 0,
-    Italic = 1,
-    Underline = 2,
-    Color = 3,
-    BackgroundColor = 4,
+    Bold,
+    Italic,
+    Underline,
+    Color,
+    BackgroundColor,
 };
 
 

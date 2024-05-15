@@ -117,6 +117,8 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(actOpen, &QAction::triggered, this, &MainWindow::OpenNote);
     connect(actDelete, &QAction::triggered, this, &MainWindow::DeleteNote);
+    connect(ui->noteListWidget->selectionModel(), &QItemSelectionModel::selectionChanged, this, &MainWindow::updateContextMenu);
+
 
     ui->noteListWidget->setContextMenuPolicy(Qt::ActionsContextMenu);
     ui->noteListWidget->addActions({ actOpen, actDelete });
@@ -189,6 +191,17 @@ void MainWindow::on_fullbtn_clicked()
 
 }
 
+void MainWindow::updateContextMenu() {
+    QList<QListWidgetItem*> selectedItems = ui->noteListWidget->selectedItems();
+    if (selectedItems.size() > 1) {
+        actOpen->setVisible(false);
+        actDelete->setVisible(true);
+    } else {
+        actOpen->setVisible(true);
+        actDelete->setVisible(true);
+    }
+}
+
 void MainWindow::on_about()
 {
     ui->stackedWidget->setCurrentIndex(1);
@@ -196,18 +209,18 @@ void MainWindow::on_about()
 
 void MainWindow::on_amoled()
 {
-    Style::get().setStyle("Amoled");
+    Style::get().setStyleName("Amoled");
 
 }
 
 void MainWindow::on_neon()
 {
-    Style::get().setStyle("NeonButtons");
+    Style::get().setStyleName("NeonButtons");
 }
 
 void MainWindow::on_ubuntu()
 {
-    Style::get().setStyle("Ubuntu");
+    Style::get().setStyleName("Ubuntu");
 }
 
 void MainWindow::find(QString text) {
@@ -279,32 +292,32 @@ void MainWindow::replaceAll(QString text, QString replaceText)
 
 void MainWindow::on_mac()
 {
-    Style::get().setStyle("MacOS");
+    Style::get().setStyleName("MacOS");
 }
 
 void MainWindow::on_materialdark()
 {
-    Style::get().setStyle("MaterialDark");
+    Style::get().setStyleName("MaterialDark");
 }
 
 void MainWindow::on_manjaro()
 {
-    Style::get().setStyle("ManjaroMix");
+    Style::get().setStyleName("ManjaroMix");
 }
 
 void MainWindow::on_console()
 {
-    Style::get().setStyle("ConsoleStyle");
+    Style::get().setStyleName("ConsoleStyle");
 }
 
 void MainWindow::on_aqua()
 {
-    Style::get().setStyle("Aqua");
+    Style::get().setStyleName("Aqua");
 }
 
 void MainWindow::on_elegantdark()
 {
-    Style::get().setStyle("ElegantDark");
+    Style::get().setStyleName("ElegantDark");
 }
 
 void MainWindow::resizeEvent(QResizeEvent *event)
@@ -383,7 +396,7 @@ void MainWindow::saveSettings()
 
 void MainWindow::loadSettings()
 {
-    Style::get().setStyle(settings_app->value("style","Aqua").toString());
+    Style::get().setStyleName(settings_app->value("style","Aqua").toString());
     setGeometry(settings_app->value("geometry",QRect(500,500,280,300)).toRect());
 }
 
@@ -435,12 +448,10 @@ void MainWindow::on_saveNoteBtn_clicked()
     }
 }
 
-
-
 void MainWindow::on_tabWidget_currentChanged(int index)
 {
     if(index == 3){
-        int proxyNoteCount = proxynotemanager->getLenght();
+        int proxyNoteCount = proxynotemanager->getLength();
         int listWidgetCount = ui->noteListWidget->count();
 
         if (proxyNoteCount > listWidgetCount) {
@@ -487,28 +498,23 @@ void MainWindow::OpenNote()
 
 void MainWindow::DeleteNote()
 {
-    QListWidgetItem* selectedItem = ui->noteListWidget->currentItem();
-    if (!selectedItem) {
-        return;
-    }
+    QList<QListWidgetItem*> selectedItems = ui->noteListWidget->selectedItems();
+    int selectedCount = selectedItems.size();
 
     QMessageBox::StandardButton reply;
-    reply = QMessageBox::question(this, "Delete Note", "Are you sure you want to delete this note?", QMessageBox::Yes|QMessageBox::No);
+    reply = QMessageBox::question(this, "Delete Note", QString("Are you sure you want to delete %1 selected note(s)?").arg(selectedCount), QMessageBox::Yes|QMessageBox::No);
     if (reply == QMessageBox::No) {
         return;
     }
 
-    QString title = selectedItem->text();
-
-    proxynotemanager->deleteNote(title);
-
-    int row = ui->noteListWidget->row(selectedItem);
-    delete ui->noteListWidget->takeItem(row);
+    for (QListWidgetItem* selectedItem : selectedItems) {
+        QString title = selectedItem->text();
+        proxynotemanager->deleteNote(title);
+        int row = ui->noteListWidget->row(selectedItem);
+        delete ui->noteListWidget->takeItem(row);
+    }
 
     ui->textEdit->clear();
     ui->nameLabel->clear();
     ui->dateLabel->setText("Unsaved");
 }
-
-
-

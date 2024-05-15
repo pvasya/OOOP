@@ -12,6 +12,8 @@ class ProxyNoteManager : public NoteManager
 private:
     RealNoteManager* realmanager;
 
+    void writeLog(const QString &message);
+
 
 public:
     ProxyNoteManager();
@@ -24,9 +26,8 @@ public:
     void load() override;
     void save() override;
     bool isExist(QString title) override;
-    void writeLog(const QString &message);
     Note getNote(int i) override;
-    int getLenght() override;
+    int getLength() override;
 };
 
 #endif // PROXYNOTEMANAGER_H

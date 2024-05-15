@@ -48,7 +48,7 @@ Note RealNoteManager::getNote(QString title)
     return list->at(0);
 }
 
-int RealNoteManager::getLenght()
+int RealNoteManager::getLength()
 {
     return list->length();
 }

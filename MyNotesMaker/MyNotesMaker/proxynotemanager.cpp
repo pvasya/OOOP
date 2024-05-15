@@ -15,15 +15,6 @@ void ProxyNoteManager::writeLog(const QString &message)
 {
     QString filePath = QDir(QApplication::applicationDirPath()).filePath("mynotesmaker.txt");
 
-    if (!QFile::exists(filePath)) {
-        QFile file(filePath);
-        if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
-            qDebug() << "Cannot create log file: " << file.errorString();
-            return;
-        }
-        file.close();
-    }
-
     QFile file(filePath);
     if (!file.open(QIODevice::Append | QIODevice::Text)) {
         qDebug() << "Cannot open log file for writing: " << file.errorString();
@@ -42,9 +33,9 @@ Note ProxyNoteManager::getNote(int i)
     return realmanager->getNote(i);
 }
 
-int ProxyNoteManager::getLenght()
+int ProxyNoteManager::getLength()
 {
-    return realmanager->getLenght();
+    return realmanager->getLength();
 }
 
 

@@ -6,12 +6,12 @@
 QString Style::getStyleName()
 {
     if(app==nullptr)
-        styleName = "Aqua";
+        return "Aqua";
 
     return styleName;
 }
 
-void Style::setStyle(QString styleName)
+void Style::setStyleName(QString styleName)
 {
     if(!app)
         qInfo()<<"set application";
@@ -32,6 +32,7 @@ void Style::setStyle(QString styleName)
 
 void Style::setApplication(QApplication *a)
 {
-    app = a;
+    if(!app)
+        app = a;
 }
 

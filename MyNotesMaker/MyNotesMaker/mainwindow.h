@@ -65,6 +65,7 @@ private slots:
 
     void OpenNote();
     void DeleteNote();
+    void updateContextMenu();
 
     void on_backBtn_clicked();
 

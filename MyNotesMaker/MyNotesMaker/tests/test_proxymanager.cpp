@@ -16,11 +16,11 @@ void Test_ProxyManager::testSave()
 void Test_ProxyManager::testDelete()
 {
     ProxyNoteManager manager;
-    QCOMPARE(manager.getLenght(),0);
+    QCOMPARE(manager.getLength(),0);
     manager.saveNote("test","text","01.01.2001");
-    QCOMPARE(manager.getLenght(),1);
+    QCOMPARE(manager.getLength(),1);
     manager.deleteNote("test");
-    QCOMPARE(manager.getLenght(),0);
+    QCOMPARE(manager.getLength(),0);
 }
 
 void Test_ProxyManager::testChange()
@@ -40,15 +40,15 @@ void Test_ProxyManager::testLenght()
 {
     ProxyNoteManager manager;
     manager.saveNote("test1","text","01.01.2001");
-    QCOMPARE(manager.getLenght(),1);
+    QCOMPARE(manager.getLength(),1);
     manager.saveNote("test2","text","01.01.2001");
-    QCOMPARE(manager.getLenght(),2);
+    QCOMPARE(manager.getLength(),2);
     manager.saveNote("test3","text","01.01.2001");
-    QCOMPARE(manager.getLenght(),3);
+    QCOMPARE(manager.getLength(),3);
     manager.saveNote("test4","text","01.01.2001");
-    QCOMPARE(manager.getLenght(),4);
+    QCOMPARE(manager.getLength(),4);
     manager.saveNote("test5","text","01.01.2001");
-    QCOMPARE(manager.getLenght(),5);
+    QCOMPARE(manager.getLength(),5);
 
 }
 

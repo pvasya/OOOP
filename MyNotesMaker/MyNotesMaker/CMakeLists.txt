@@ -65,7 +65,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         FormattingCommand/formatcommandsenum.h
         FormattingCommand/formatter.h FormattingCommand/formatter.cpp
         ParticleLife/particle.h ParticleLife/particle.cpp
-        ParticleLife/particlefactorymethod.h ParticleLife/particlefactorymethod.cpp
+        ParticleLife/particlefactory.h ParticleLife/particlefactory.cpp
         ParticleLife/particleworker.h ParticleLife/particleworker.cpp
         ParticleLife/customscene.h ParticleLife/customscene.cpp
         note.h note.cpp

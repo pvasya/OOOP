@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 
     // Singleton Pattern
     Style::get().setApplication(&a);
-    Style::get().setStyle("Aqua");
+    Style::get().setStyleName("Aqua");
 
     MainWindow w;
     FrameLess f(&w);
